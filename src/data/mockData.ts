@@ -1,0 +1,316 @@
+import type { TeamMember, Publication, NewsItem, Project } from "../types";
+
+// 示例团队成员数据
+export const mockTeamMembers: TeamMember[] = [
+  {
+    id: "1",
+    name: "张教授",
+    nameEn: "Prof. Zhang",
+    role: "faculty",
+    avatar: "/images/avatars/zhang.jpg",
+    email: "zhang@university.edu.cn",
+    website: "https://faculty.university.edu.cn/zhang",
+    researchInterests: [
+      "计算机视觉",
+      "3D重建",
+      "深度学习",
+      "机器学习",
+      "图像处理",
+    ],
+    bio: "计算机视觉领域的资深专家，专注于3D重建和深度学习技术研究。在国际顶级会议和期刊发表论文50余篇，主持多项国家级科研项目。",
+    joinYear: 2010,
+    education: [
+      {
+        degree: "博士学位",
+        institution: "斯坦福大学",
+        year: 2008,
+        major: "计算机科学",
+      },
+      {
+        degree: "硕士学位",
+        institution: "清华大学",
+        year: 2004,
+        major: "计算机科学与技术",
+      },
+      {
+        degree: "学士学位",
+        institution: "北京大学",
+        year: 2002,
+        major: "数学与应用数学",
+      },
+    ],
+    publications: ["1", "2"],
+  },
+  {
+    id: "2",
+    name: "李明",
+    nameEn: "Ming Li",
+    role: "phd",
+    avatar: "/images/avatars/li.jpg",
+    email: "liming@university.edu.cn",
+    researchInterests: ["虚拟现实", "增强现实", "人机交互", "3D建模"],
+    bio: "博士研究生，专注于虚拟现实和增强现实技术，在相关领域有深入研究和实践经验。",
+    joinYear: 2022,
+    education: [
+      {
+        degree: "硕士学位",
+        institution: "北京理工大学",
+        year: 2022,
+        major: "计算机科学与技术",
+      },
+      {
+        degree: "学士学位",
+        institution: "华中科技大学",
+        year: 2020,
+        major: "软件工程",
+      },
+    ],
+    publications: ["2"],
+  },
+  {
+    id: "3",
+    name: "王小华",
+    nameEn: "Xiaohua Wang",
+    role: "master",
+    avatar: "/images/avatars/wang.jpg",
+    email: "wangxh@university.edu.cn",
+    researchInterests: ["图像处理", "模式识别", "深度学习"],
+    bio: "硕士研究生，主要研究方向为图像处理和模式识别，积极参与实验室的各项研究工作。",
+    joinYear: 2023,
+    education: [
+      {
+        degree: "学士学位",
+        institution: "西安交通大学",
+        year: 2023,
+        major: "计算机科学与技术",
+      },
+    ],
+    publications: ["3"],
+  },
+  {
+    id: "4",
+    name: "刘志强",
+    nameEn: "Zhiqiang Liu",
+    role: "alumni",
+    graduationYear: 2023,
+    currentPosition: "腾讯高级工程师",
+    researchInterests: ["机器学习", "计算机视觉", "推荐系统"],
+    bio: "实验室优秀毕业生，现就职于腾讯，从事推荐系统和机器学习相关工作。",
+    education: [
+      {
+        degree: "硕士学位",
+        institution: "北京大学",
+        year: 2023,
+        major: "计算机科学与技术",
+      },
+      {
+        degree: "学士学位",
+        institution: "电子科技大学",
+        year: 2021,
+        major: "软件工程",
+      },
+    ],
+    publications: ["3"],
+  },
+];
+
+// 示例论文数据
+export const mockPublications: Publication[] = [
+  {
+    id: "1",
+    title: "Deep Learning Approaches for 3D Reconstruction from Multiple Views",
+    authors: ["张教授", "李明", "王小华"],
+    venue: "IEEE Conference on Computer Vision and Pattern Recognition (CVPR)",
+    year: 2024,
+    type: "conference",
+    abstract:
+      "This paper presents a novel deep learning approach for 3D reconstruction from multiple view images...",
+    featured: true,
+    doi: "10.1109/CVPR.2024.00001",
+  },
+  {
+    id: "2",
+    title: "Real-time Object Detection in Virtual Reality Environments",
+    authors: ["李明", "张教授"],
+    venue: "ACM Transactions on Graphics",
+    year: 2023,
+    type: "journal",
+    abstract:
+      "We propose a real-time object detection system specifically designed for VR applications...",
+    featured: true,
+  },
+  {
+    id: "3",
+    title: "Efficient Image Segmentation Using Attention Mechanisms",
+    authors: ["王小华", "张教授"],
+    venue: "International Conference on Computer Vision (ICCV)",
+    year: 2023,
+    type: "conference",
+    abstract:
+      "This work introduces an efficient image segmentation method based on attention mechanisms...",
+  },
+];
+
+// 示例新闻数据
+export const mockNews: NewsItem[] = [
+  {
+    id: "1",
+    title: "实验室在CVPR 2024发表重要论文",
+    category: "publication",
+    content:
+      '我们的最新研究成果"Deep Learning Approaches for 3D Reconstruction"被CVPR 2024接收...',
+    publishDate: "2024-01-15",
+    status: "published",
+    featured: true,
+    tags: ["CVPR", "3D重建", "深度学习"],
+  },
+  {
+    id: "2",
+    title: "实验室获得国家自然科学基金资助",
+    category: "award",
+    content:
+      '我们的项目"基于深度学习的3D场景理解技术研究"获得国家自然科学基金重点项目资助...',
+    publishDate: "2024-01-10",
+    status: "published",
+    featured: true,
+    tags: ["基金", "科研项目"],
+  },
+  {
+    id: "3",
+    title: "实验室成功举办3D视觉技术研讨会",
+    category: "activity",
+    content:
+      "2024年度3D视觉技术研讨会在我校成功举办，来自全国各地的专家学者参与交流...",
+    publishDate: "2024-01-05",
+    status: "published",
+    tags: ["研讨会", "学术交流"],
+  },
+];
+
+// 示例项目数据
+export const mockProjects: Project[] = [
+  {
+    id: "1",
+    title: "基于深度学习的3D场景理解技术研究",
+    description:
+      "本项目旨在研究基于深度学习的3D场景理解技术，包括场景重建、目标检测和语义分割等关键技术。",
+    type: "national",
+    status: "ongoing",
+    startDate: "2024-01-01",
+    endDate: "2026-12-31",
+    funding: 500000,
+    leader: "张教授",
+    members: ["李明", "王小华"],
+    relatedPublications: ["1", "2"],
+  },
+  {
+    id: "2",
+    title: "虚拟现实环境中的实时渲染优化",
+    description: "研究VR环境中的实时渲染优化算法，提高渲染效率和视觉质量。",
+    type: "provincial",
+    status: "ongoing",
+    startDate: "2023-06-01",
+    endDate: "2025-05-31",
+    funding: 200000,
+    leader: "李明",
+    members: ["王小华"],
+    relatedPublications: ["2"],
+  },
+  {
+    id: "3",
+    title: "智能图像处理系统开发",
+    description: "开发基于AI的智能图像处理系统，应用于医疗影像分析。",
+    type: "enterprise",
+    status: "completed",
+    startDate: "2022-01-01",
+    endDate: "2023-12-31",
+    funding: 300000,
+    leader: "张教授",
+    members: ["刘志强"],
+    relatedPublications: ["3"],
+  },
+];
+
+// 示例画廊图片数据
+export const mockGalleryImages = [
+  {
+    id: "1",
+    url: "https://picsum.photos/400/600?random=1",
+    thumbnail: "https://picsum.photos/400/600?random=1",
+    title: "CVPR 2024 会议交流",
+    description: "团队成员在CVPR 2024国际计算机视觉会议上展示最新研究成果",
+    category: "conference" as const,
+    date: "2024-06-20",
+    tags: ["CVPR", "学术会议", "论文展示"],
+  },
+  {
+    id: "2",
+    url: "https://picsum.photos/300/400?random=2",
+    thumbnail: "https://picsum.photos/300/400?random=2",
+    title: "实验室团建活动",
+    description: "年度团队建设活动，增进团队成员间的交流与合作",
+    category: "team" as const,
+    date: "2024-05-15",
+    tags: ["团建", "团队活动"],
+  },
+  {
+    id: "3",
+    url: "https://picsum.photos/350/500?random=3",
+    thumbnail: "https://picsum.photos/350/500?random=3",
+    title: "学术研讨会现场",
+    description: "3D视觉技术研讨会在我校举办，各界专家学者齐聚一堂",
+    category: "academic" as const,
+    date: "2024-04-10",
+    tags: ["研讨会", "学术交流", "3D视觉"],
+  },
+  {
+    id: "4",
+    url: "https://picsum.photos/400/300?random=4",
+    thumbnail: "https://picsum.photos/400/300?random=4",
+    title: "实验室日常工作",
+    description: "团队成员在实验室进行学术研究和技术开发",
+    category: "daily" as const,
+    date: "2024-03-20",
+    tags: ["实验室", "研究工作", "日常"],
+  },
+  {
+    id: "5",
+    url: "https://picsum.photos/300/500?random=5",
+    thumbnail: "https://picsum.photos/300/500?random=5",
+    title: "获奖颁奖典礼",
+    description: "实验室在国际学术竞赛中获得优异成绩",
+    category: "academic" as const,
+    date: "2024-02-28",
+    tags: ["获奖", "学术竞赛", "荣誉"],
+  },
+  {
+    id: "6",
+    url: "https://picsum.photos/450/350?random=6",
+    thumbnail: "https://picsum.photos/450/350?random=6",
+    title: "新年聚餐活动",
+    description: "实验室全体成员新年聚餐，共庆佳节",
+    category: "team" as const,
+    date: "2024-01-15",
+    tags: ["聚餐", "新年", "团队"],
+  },
+  {
+    id: "7",
+    url: "https://picsum.photos/320/480?random=7",
+    thumbnail: "https://picsum.photos/320/480?random=7",
+    title: "ICCV 会议参展",
+    description: "团队在ICCV国际计算机视觉会议上展示研究成果",
+    category: "conference" as const,
+    date: "2023-12-08",
+    tags: ["ICCV", "国际会议", "展示"],
+  },
+  {
+    id: "8",
+    url: "https://picsum.photos/380/320?random=8",
+    thumbnail: "https://picsum.photos/380/320?random=8",
+    title: "实验设备调试",
+    description: "团队成员调试新购置的实验设备",
+    category: "daily" as const,
+    date: "2023-11-22",
+    tags: ["设备", "调试", "实验"],
+  },
+];
