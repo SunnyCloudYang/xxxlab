@@ -16,7 +16,7 @@ import NotFound from "../pages/NotFound";
 
 const AppRouter: React.FC = () => {
   return (
-    <Router>
+    <Router basename="/xxxlab">
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
