@@ -4,6 +4,7 @@ import react from "@vitejs/plugin-react";
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
+  base: "/xxxlab/", // Add prefix to all static asset paths
   build: {
     outDir: "docs",
     emptyOutDir: true, // Clean the output directory before each build
