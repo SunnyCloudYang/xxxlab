@@ -34,7 +34,7 @@ const MemberBasicInfo: React.FC<MemberBasicInfoProps> = ({ member }) => {
   };
 
   return (
-    <Card className="mb-8" padding="lg">
+    <Card className="mb-8" padding="lg" variant="flat">
       <div className="flex flex-col lg:flex-row lg:items-start lg:space-x-8">
         {/* 头像 */}
         <div className="flex-shrink-0 mb-6 lg:mb-0">

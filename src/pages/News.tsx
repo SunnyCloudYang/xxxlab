@@ -2,7 +2,10 @@ import React, { useState, useMemo } from "react";
 import { Link } from "react-router-dom";
 import {
   CalendarIcon,
-  EyeIcon,
+  GlobeAltIcon,
+  LinkIcon,
+  UserIcon,
+  MapPinIcon,
 } from "@heroicons/react/24/outline";
 import Container from "../components/layout/Container";
 import {
@@ -19,7 +22,7 @@ const News: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [currentPage, setCurrentPage] = useState(1);
-  const [sortBy, setSortBy] = useState("date-desc");
+  const [sortBy, setSortBy] = useState("category");
 
   const pageSize = 10; // 每页显示的数量
 
@@ -36,10 +39,9 @@ const News: React.FC = () => {
     }, {} as Record<string, number>);
 
     const categoryLabels = {
-      publication: "学术发表",
-      award: "获奖荣誉",
-      activity: "学术活动",
-      conference: "会议交流",
+      conference: "学术会议",
+      talk: "学术报告",
+      thesis: "学位论文",
     };
 
     return [
@@ -54,6 +56,7 @@ const News: React.FC = () => {
   }, []);
 
   const sortOptions = [
+    { value: "category", label: "按类别" },
     { value: "date-desc", label: "日期（新到旧）" },
     { value: "date-asc", label: "日期（旧到新）" },
     { value: "title", label: "标题（A-Z）" },
@@ -84,6 +87,18 @@ const News: React.FC = () => {
     // 排序
     filtered.sort((a, b) => {
       switch (sortBy) {
+        case "category": {
+          // 类别优先级：conference > talk > thesis
+          const categoryOrder = { conference: 1, talk: 2, thesis: 3 };
+          const orderA = categoryOrder[a.category] || 99;
+          const orderB = categoryOrder[b.category] || 99;
+          if (orderA !== orderB) return orderA - orderB;
+          // 同类别按日期倒序
+          return (
+            new Date(b.publishDate).getTime() -
+            new Date(a.publishDate).getTime()
+          );
+        }
         case "date-desc":
           return (
             new Date(b.publishDate).getTime() -
@@ -123,30 +138,20 @@ const News: React.FC = () => {
     setCurrentPage(1);
   }, [searchQuery, selectedCategory, sortBy]);
 
-  const formatDate = (dateString: string) => {
-    return new Date(dateString).toLocaleDateString("zh-CN", {
-      year: "numeric",
-      month: "long",
-      day: "numeric",
-    });
-  };
-
   const getCategoryDisplayName = (category: NewsItem["category"]) => {
     const categoryMap = {
-      publication: "学术发表",
-      award: "获奖荣誉",
-      activity: "学术活动",
-      conference: "会议交流",
+      conference: "学术会议",
+      talk: "学术报告",
+      thesis: "学位论文",
     };
     return categoryMap[category];
   };
 
   const getCategoryColor = (category: NewsItem["category"]) => {
     const colorMap = {
-      publication: "bg-blue-100 text-blue-800",
-      award: "bg-yellow-100 text-yellow-800",
-      activity: "bg-green-100 text-green-800",
       conference: "bg-purple-100 text-purple-800",
+      talk: "bg-blue-100 text-blue-800",
+      thesis: "bg-green-100 text-green-800",
     };
     return colorMap[category];
   };
@@ -154,7 +159,7 @@ const News: React.FC = () => {
   const handleClearFilters = () => {
     setSearchQuery("");
     setSelectedCategory("all");
-    setSortBy("date-desc");
+    setSortBy("category");
     setCurrentPage(1);
   };
 
@@ -232,13 +237,7 @@ const News: React.FC = () => {
                         分类
                       </th>
                       <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                        发布日期
-                      </th>
-                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                        标签
-                      </th>
-                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                        操作
+                        详细信息
                       </th>
                     </tr>
                   </thead>
@@ -250,15 +249,15 @@ const News: React.FC = () => {
                       >
                         <td className="px-6 py-4">
                           <div className="flex items-start space-x-3">
-                            {news.featured && (
-                              <span className="inline-block bg-red-500 text-white text-xs px-2 py-1 rounded-full font-medium">
-                                推荐
-                              </span>
-                            )}
                             <div className="flex-1 min-w-0">
-                              <h3 className="text-sm font-medium text-gray-900 line-clamp-2">
-                                {news.title}
-                              </h3>
+                              <Link
+                                to={`/news/${news.id}`}
+                                className="hover:underline"
+                              >
+                                <h3 className="text-sm font-medium text-gray-900 line-clamp-2">
+                                  {news.title}
+                                </h3>
+                              </Link>
                               <p className="text-sm text-gray-500 mt-1 line-clamp-2">
                                 {news.content}
                               </p>
@@ -274,39 +273,61 @@ const News: React.FC = () => {
                             {getCategoryDisplayName(news.category)}
                           </span>
                         </td>
-                        <td className="px-6 py-4 whitespace-nowrap">
-                          <div className="flex items-center text-sm text-gray-500">
-                            <CalendarIcon className="h-4 w-4 mr-1" />
-                            {formatDate(news.publishDate)}
-                          </div>
-                        </td>
                         <td className="px-6 py-4">
-                          <div className="flex flex-wrap gap-1">
-                            {news.tags?.slice(0, 2).map((tag, index) => (
-                              <span
-                                key={index}
-                                className="inline-block bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded"
-                              >
-                                #{tag}
-                              </span>
-                            ))}
-                            {news.tags && news.tags.length > 2 && (
-                              <span className="inline-block text-gray-500 text-xs px-2 py-1">
-                                +{news.tags.length - 2}
-                              </span>
-                            )}
-                          </div>
-                        </td>
-                        <td className="px-6 py-4 whitespace-nowrap">
-                          <Link to={`/news/${news.id}`}>
-                            <Button
-                              variant="ghost"
-                              size="sm"
-                              icon={<EyeIcon className="h-4 w-4" />}
-                            >
-                              查看
-                            </Button>
-                          </Link>
+                          {/* 根据不同分类显示不同字段 */}
+                          {news.category === "conference" && (
+                            <div className="space-y-2 text-sm">
+                              <div className="flex items-center">
+                                <GlobeAltIcon className="h-4 w-4 text-gray-500 mr-2" />
+                                <span>{news.conferenceName}</span>
+                              </div>
+                              <div className="flex items-center">
+                                <CalendarIcon className="h-4 w-4 text-gray-500 mr-2" />
+                                <span>{news.conferenceDate}</span>
+                              </div>
+                              {news.conferenceLink && (
+                                <div className="flex items-center">
+                                  <LinkIcon className="h-4 w-4 text-gray-500 mr-2" />
+                                  <a
+                                    href={news.conferenceLink}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-blue-600 hover:underline"
+                                  >
+                                    访问链接
+                                  </a>
+                                </div>
+                              )}
+                            </div>
+                          )}
+                          {news.category === "talk" && (
+                            <div className="space-y-2 text-sm">
+                              <div className="flex items-center">
+                                <UserIcon className="h-4 w-4 text-gray-500 mr-2" />
+                                <span>{news.talkSpeaker}</span>
+                              </div>
+                              <div className="flex items-center">
+                                <CalendarIcon className="h-4 w-4 text-gray-500 mr-2" />
+                                <span>{news.talkTime}</span>
+                              </div>
+                              <div className="flex items-center">
+                                <MapPinIcon className="h-4 w-4 text-gray-500 mr-2" />
+                                <span>{news.talkLocation}</span>
+                              </div>
+                            </div>
+                          )}
+                          {news.category === "thesis" && (
+                            <div className="space-y-2 text-sm">
+                              <div className="flex items-center">
+                                <UserIcon className="h-4 w-4 text-gray-500 mr-2" />
+                                <span>{news.thesisAuthor}</span>
+                              </div>
+                              <div className="flex items-center">
+                                <CalendarIcon className="h-4 w-4 text-gray-500 mr-2" />
+                                <span>{news.thesisYear}</span>
+                              </div>
+                            </div>
+                          )}
                         </td>
                       </tr>
                     ))}

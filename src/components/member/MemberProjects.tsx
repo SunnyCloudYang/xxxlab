@@ -90,7 +90,7 @@ const MemberProjects: React.FC<MemberProjectsProps> = ({ member }) => {
   };
 
   return (
-    <Card className="mb-8">
+    <Card className="mb-8" variant="flat">
       <CardHeader>
         <CardTitle className="flex items-center space-x-2">
           <FolderIcon className="h-6 w-6 text-primary-600" />
@@ -105,7 +105,7 @@ const MemberProjects: React.FC<MemberProjectsProps> = ({ member }) => {
           {memberProjects.map((project) => (
             <div
               key={project.id}
-              className="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow"
+              className="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow bg-white"
             >
               <div className="space-y-4">
                 {/* 项目标题和状态 */}

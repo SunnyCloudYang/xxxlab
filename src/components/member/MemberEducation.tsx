@@ -13,7 +13,7 @@ const MemberEducation: React.FC<MemberEducationProps> = ({ member }) => {
   }
 
   return (
-    <Card className="mb-8">
+    <Card className="mb-8" variant="flat">
       <CardHeader>
         <CardTitle className="flex items-center space-x-2">
           <AcademicCapIcon className="h-6 w-6 text-primary-600" />

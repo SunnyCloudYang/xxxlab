@@ -39,9 +39,9 @@ const Header: React.FC = () => {
     <Disclosure
       as="nav"
       className={clsx(
-        "fixed top-0 w-full z-50 transition-colors duration-200 border-b",
+        "fixed top-0 w-full z-50 transition-all duration-200 border-b backdrop-blur-lg",
         isScrolled
-          ? "bg-white/95 border-gray-200"
+          ? "bg-white/90 border-gray-200"
           : "bg-transparent border-transparent"
       )}
     >

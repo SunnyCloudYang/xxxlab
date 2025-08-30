@@ -30,7 +30,7 @@ const MemberPublications: React.FC<MemberPublicationsProps> = ({ member }) => {
   }
 
   return (
-    <Card className="mb-8">
+    <Card className="mb-8" variant="flat">
       <CardHeader>
         <CardTitle className="flex items-center space-x-2">
           <DocumentTextIcon className="h-6 w-6 text-primary-600" />

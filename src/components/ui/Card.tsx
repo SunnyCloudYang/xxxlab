@@ -2,7 +2,7 @@ import React from "react";
 import clsx from "clsx";
 
 export interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
-  variant?: "default" | "bordered" | "shadow" | "elevated";
+  variant?: "default" | "bordered" | "shadow" | "elevated" | "flat";
   padding?: "none" | "sm" | "md" | "lg" | "xl";
   rounded?: "none" | "sm" | "md" | "lg" | "xl" | "full";
   hoverable?: boolean;
@@ -22,7 +22,7 @@ const Card = React.forwardRef<HTMLDivElement, CardProps>(
     ref
   ) => {
     const baseStyles = clsx(
-      "bg-white",
+      variant !== "flat" && "bg-white",
       hoverable &&
         "transition-colors duration-150 cursor-pointer hover:bg-secondary-50/40"
     );
@@ -32,6 +32,7 @@ const Card = React.forwardRef<HTMLDivElement, CardProps>(
       bordered: "border border-gray-300",
       shadow: "border border-gray-100 shadow-sm",
       elevated: "border border-gray-100 shadow-md",
+      flat: "",
     };
 
     const paddings = {

@@ -17,20 +17,18 @@ const NewsCard: React.FC<NewsCardProps> = ({
 }) => {
   const getCategoryDisplayName = (category: NewsItem["category"]) => {
     const categoryMap = {
-      publication: "学术发表",
-      award: "获奖荣誉",
-      activity: "学术活动",
-      conference: "会议交流",
+      conference: "学术会议",
+      talk: "学术报告",
+      thesis: "学位论文",
     };
     return categoryMap[category];
   };
 
   const getCategoryColor = (category: NewsItem["category"]) => {
     const colorMap = {
-      publication: "bg-blue-100 text-blue-800",
-      award: "bg-yellow-100 text-yellow-800",
-      activity: "bg-green-100 text-green-800",
       conference: "bg-purple-100 text-purple-800",
+      talk: "bg-blue-100 text-blue-800",
+      thesis: "bg-green-100 text-green-800",
     };
     return colorMap[category];
   };

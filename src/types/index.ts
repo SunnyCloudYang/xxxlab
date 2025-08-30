@@ -45,7 +45,7 @@ export interface Publication {
 export interface NewsItem {
   id: string;
   title: string;
-  category: "conference" | "award" | "activity" | "publication";
+  category: "conference" | "talk" | "thesis";
   content: string;
   publishDate: string;
   status: "published" | "draft";
@@ -53,6 +53,20 @@ export interface NewsItem {
   tags?: string[];
   author?: string;
   featured?: boolean;
+
+  // 会议特有字段
+  conferenceName?: string;
+  conferenceDate?: string;
+  conferenceLink?: string;
+
+  // 学术报告特有字段
+  talkSpeaker?: string;
+  talkTime?: string;
+  talkLocation?: string;
+
+  // 学位论文特有字段
+  thesisAuthor?: string;
+  thesisYear?: number;
 }
 
 // 科研项目类型
