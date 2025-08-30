@@ -11,23 +11,23 @@ import { mockTeamMembers, mockNews, mockPublications } from "../data/mockData";
 
 const Home: React.FC = () => {
   // 滚动到指定部分的函数，添加顶部偏移量以避免导航栏遮挡
-  const scrollToSection = (sectionId: string) => {
-    const section = document.getElementById(sectionId);
-    if (section) {
-      // 获取元素的位置
-      const elementPosition = section.getBoundingClientRect().top;
-      // 当前滚动位置
-      const offsetPosition = elementPosition + window.pageYOffset;
-      // 添加偏移量（这里设置为80px，可根据导航栏高度调整）
-      const offsetY = 120;
+  // const scrollToSection = (sectionId: string) => {
+  //   const section = document.getElementById(sectionId);
+  //   if (section) {
+  //     // 获取元素的位置
+  //     const elementPosition = section.getBoundingClientRect().top;
+  //     // 当前滚动位置
+  //     const offsetPosition = elementPosition + window.pageYOffset;
+  //     // 添加偏移量（这里设置为80px，可根据导航栏高度调整）
+  //     const offsetY = 120;
 
-      // 滚动到目标位置减去偏移量
-      window.scrollTo({
-        top: offsetPosition - offsetY,
-        behavior: "smooth",
-      });
-    }
-  };
+  //     // 滚动到目标位置减去偏移量
+  //     window.scrollTo({
+  //       top: offsetPosition - offsetY,
+  //       behavior: "smooth",
+  //     });
+  //   }
+  // };
   return (
     <div className="space-y-16">
       {/* Hero Section */}
@@ -45,7 +45,7 @@ const Home: React.FC = () => {
                 致力于计算机视觉、3D重建、虚拟现实等前沿技术研究，
                 推动人工智能与视觉技术的创新发展，培养具有国际视野的优秀人才。
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
+              {/* <div className="flex flex-col sm:flex-row gap-4">
                 <Button
                   size="lg"
                   variant="secondary"
@@ -61,7 +61,7 @@ const Home: React.FC = () => {
                 >
                   加入我们
                 </Button>
-              </div>
+              </div> */}
             </div>
           </div>
         </Container>
@@ -165,7 +165,7 @@ const Home: React.FC = () => {
       </section>
 
       {/* 联系我们 */}
-      <section id="contact-section" className="bg-gray-50">
+      {/* <section id="contact-section" className="bg-gray-50">
         <Container>
           <div className="pb-16">
             <div className="text-center mb-12">
@@ -178,7 +178,6 @@ const Home: React.FC = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {/* 联系信息 */}
               <div className="bg-white rounded-lg shadow-sm p-6 space-y-4">
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">
                   联系方式
@@ -245,7 +244,6 @@ const Home: React.FC = () => {
                 </div>
               </div>
 
-              {/* 招生信息 */}
               <div className="bg-white rounded-lg shadow-sm p-6">
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">
                   加入我们
@@ -283,7 +281,7 @@ const Home: React.FC = () => {
             </div>
           </div>
         </Container>
-      </section>
+      </section> */}
     </div>
   );
 };
