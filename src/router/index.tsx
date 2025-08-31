@@ -10,7 +10,7 @@ import Publications from "../pages/Publications";
 import News from "../pages/News";
 import NewsDetail from "../pages/NewsDetail";
 import Gallery from "../pages/Gallery";
-import Projects from "../pages/Projects";
+import Research from "../pages/Projects"; // Renamed from Projects to Research
 import ProjectDetail from "../pages/ProjectDetail";
 import NotFound from "../pages/NotFound";
 
@@ -26,7 +26,7 @@ const AppRouter: React.FC = () => {
           <Route path="/news" element={<News />} />
           <Route path="/news/:id" element={<NewsDetail />} />
           <Route path="/gallery" element={<Gallery />} />
-          <Route path="/projects" element={<Projects />} />
+          <Route path="/research" element={<Research />} />
           <Route path="/projects/:id" element={<ProjectDetail />} />
 
           {/* 404 页面 */}

@@ -10,9 +10,9 @@ const navigation: NavItem[] = [
   { name: "首页", path: "/" },
   { name: "团队信息", path: "/team" },
   { name: "学术论文", path: "/publications" },
-  { name: "学术动态", path: "/news" },
+  { name: "学术讲座", path: "/news" },
   { name: "团队风采", path: "/gallery" },
-  { name: "科研项目", path: "/projects" },
+  { name: "研究方向", path: "/research" },
 ];
 
 const Header: React.FC = () => {

@@ -2,10 +2,10 @@ import React, { useState, useMemo } from "react";
 import { Link } from "react-router-dom";
 import {
   CalendarIcon,
-  GlobeAltIcon,
-  LinkIcon,
   UserIcon,
   MapPinIcon,
+  Bars3Icon,
+  ClockIcon,
 } from "@heroicons/react/24/outline";
 import Container from "../components/layout/Container";
 import {
@@ -16,89 +16,48 @@ import {
   Button,
 } from "../components/ui";
 import { mockNews } from "../data/mockData";
-import type { NewsItem } from "../types";
 
 const News: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState("all");
   const [currentPage, setCurrentPage] = useState(1);
-  const [sortBy, setSortBy] = useState("category");
+  const [sortBy, setSortBy] = useState("date-desc");
+  const [viewMode, setViewMode] = useState<"table" | "timeline">("table");
 
   const pageSize = 10; // 每页显示的数量
 
-  // 获取分类选项
-  const categoryOptions = useMemo(() => {
-    const categories = Array.from(
-      new Set(mockNews.map((news) => news.category))
-    );
-    const counts = categories.reduce((acc, category) => {
-      acc[category] = mockNews.filter(
-        (news) => news.category === category
-      ).length;
-      return acc;
-    }, {} as Record<string, number>);
-
-    const categoryLabels = {
-      conference: "学术会议",
-      talk: "学术报告",
-      thesis: "学位论文",
-    };
-
-    return [
-      { value: "all", label: "全部分类", count: mockNews.length },
-      ...categories.map((category) => ({
-        value: category,
-        label:
-          categoryLabels[category as keyof typeof categoryLabels] || category,
-        count: counts[category],
-      })),
-    ];
+  // 只显示学术报告类别的新闻
+  const academicTalks = useMemo(() => {
+    return mockNews.filter((news) => news.category === "talk");
   }, []);
 
   const sortOptions = [
-    { value: "category", label: "按类别" },
     { value: "date-desc", label: "日期（新到旧）" },
     { value: "date-asc", label: "日期（旧到新）" },
     { value: "title", label: "标题（A-Z）" },
-    { value: "featured", label: "推荐优先" },
+    { value: "speaker", label: "主讲人（A-Z）" },
   ];
 
   // 筛选和搜索逻辑
-  const filteredNews = useMemo(() => {
-    let filtered = mockNews;
+  const filteredTalks = useMemo(() => {
+    let filtered = academicTalks;
 
     // 搜索过滤
     if (searchQuery) {
       const query = searchQuery.toLowerCase();
       filtered = filtered.filter(
-        (news) =>
-          news.title.toLowerCase().includes(query) ||
-          news.content.toLowerCase().includes(query) ||
-          (news.tags &&
-            news.tags.some((tag) => tag.toLowerCase().includes(query)))
+        (talk) =>
+          talk.title.toLowerCase().includes(query) ||
+          talk.content.toLowerCase().includes(query) ||
+          talk.talkSpeaker?.toLowerCase().includes(query) ||
+          talk.talkLocation?.toLowerCase().includes(query) ||
+          (talk.tags &&
+            talk.tags.some((tag) => tag.toLowerCase().includes(query)))
       );
-    }
-
-    // 分类过滤
-    if (selectedCategory !== "all") {
-      filtered = filtered.filter((news) => news.category === selectedCategory);
     }
 
     // 排序
     filtered.sort((a, b) => {
       switch (sortBy) {
-        case "category": {
-          // 类别优先级：conference > talk > thesis
-          const categoryOrder = { conference: 1, talk: 2, thesis: 3 };
-          const orderA = categoryOrder[a.category] || 99;
-          const orderB = categoryOrder[b.category] || 99;
-          if (orderA !== orderB) return orderA - orderB;
-          // 同类别按日期倒序
-          return (
-            new Date(b.publishDate).getTime() -
-            new Date(a.publishDate).getTime()
-          );
-        }
         case "date-desc":
           return (
             new Date(b.publishDate).getTime() -
@@ -111,24 +70,19 @@ const News: React.FC = () => {
           );
         case "title":
           return a.title.localeCompare(b.title);
-        case "featured":
-          if (a.featured && !b.featured) return -1;
-          if (!a.featured && b.featured) return 1;
-          return (
-            new Date(b.publishDate).getTime() -
-            new Date(a.publishDate).getTime()
-          );
+        case "speaker":
+          return (a.talkSpeaker || "").localeCompare(b.talkSpeaker || "");
         default:
           return 0;
       }
     });
 
     return filtered;
-  }, [searchQuery, selectedCategory, sortBy]);
+  }, [searchQuery, sortBy, academicTalks]);
 
   // 分页逻辑
-  const totalPages = Math.ceil(filteredNews.length / pageSize);
-  const paginatedNews = filteredNews.slice(
+  const totalPages = Math.ceil(filteredTalks.length / pageSize);
+  const paginatedTalks = filteredTalks.slice(
     (currentPage - 1) * pageSize,
     currentPage * pageSize
   );
@@ -136,34 +90,15 @@ const News: React.FC = () => {
   // 重置页码当筛选条件变化时
   React.useEffect(() => {
     setCurrentPage(1);
-  }, [searchQuery, selectedCategory, sortBy]);
-
-  const getCategoryDisplayName = (category: NewsItem["category"]) => {
-    const categoryMap = {
-      conference: "学术会议",
-      talk: "学术报告",
-      thesis: "学位论文",
-    };
-    return categoryMap[category];
-  };
-
-  const getCategoryColor = (category: NewsItem["category"]) => {
-    const colorMap = {
-      conference: "bg-purple-100 text-purple-800",
-      talk: "bg-blue-100 text-blue-800",
-      thesis: "bg-green-100 text-green-800",
-    };
-    return colorMap[category];
-  };
+  }, [searchQuery, sortBy]);
 
   const handleClearFilters = () => {
     setSearchQuery("");
-    setSelectedCategory("all");
-    setSortBy("category");
+    setSortBy("date-desc");
     setCurrentPage(1);
   };
 
-  const hasActiveFilters = searchQuery || selectedCategory !== "all";
+  const hasActiveFilters = searchQuery;
 
   return (
     <div className="py-16">
@@ -171,10 +106,10 @@ const News: React.FC = () => {
         {/* 页面标题 */}
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            学术动态
+            学术讲座
           </h1>
           <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            及时了解实验室的最新研究进展、学术活动、获奖信息和会议交流
+            汇聚学术前沿，分享研究成果，邀请知名专家学者进行精彩的学术报告和技术分享
           </p>
         </div>
 
@@ -185,7 +120,7 @@ const News: React.FC = () => {
             <SearchBox
               value={searchQuery}
               onChange={setSearchQuery}
-              placeholder="搜索动态标题、内容、标签..."
+              placeholder="搜索讲座标题、主讲人、内容..."
               className="max-w-2xl mx-auto"
             />
           </div>
@@ -193,13 +128,6 @@ const News: React.FC = () => {
           {/* 筛选控制 */}
           <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 mb-6">
             <div className="flex flex-wrap items-center gap-4">
-              <FilterSelect
-                value={selectedCategory}
-                onChange={setSelectedCategory}
-                options={categoryOptions}
-                placeholder="选择分类"
-                className="w-48"
-              />
               {hasActiveFilters && (
                 <Button variant="ghost" onClick={handleClearFilters}>
                   清除筛选
@@ -208,8 +136,34 @@ const News: React.FC = () => {
             </div>
 
             <div className="flex items-center space-x-4">
+              {/* 视图切换 */}
+              <div className="flex items-center bg-gray-100 rounded-lg p-1">
+                <button
+                  onClick={() => setViewMode("table")}
+                  className={`flex items-center px-3 py-1.5 text-sm font-medium rounded-md transition-colors ${
+                    viewMode === "table"
+                      ? "bg-white text-gray-900 shadow-sm"
+                      : "text-gray-600 hover:text-gray-900"
+                  }`}
+                >
+                  <Bars3Icon className="h-4 w-4 mr-1.5" />
+                  列表视图
+                </button>
+                <button
+                  onClick={() => setViewMode("timeline")}
+                  className={`flex items-center px-3 py-1.5 text-sm font-medium rounded-md transition-colors ${
+                    viewMode === "timeline"
+                      ? "bg-white text-gray-900 shadow-sm"
+                      : "text-gray-600 hover:text-gray-900"
+                  }`}
+                >
+                  <ClockIcon className="h-4 w-4 mr-1.5" />
+                  时间线
+                </button>
+              </div>
+
               <span className="text-sm text-gray-600">
-                共 {filteredNews.length} 条动态
+                共 {filteredTalks.length} 场讲座
               </span>
               <FilterSelect
                 value={sortBy}
@@ -221,120 +175,145 @@ const News: React.FC = () => {
           </div>
         </div>
 
-        {/* 动态列表 */}
-        {paginatedNews.length > 0 ? (
+        {/* 讲座列表 */}
+        {paginatedTalks.length > 0 ? (
           <>
-            {/* 表格视图 */}
-            <div className="bg-white rounded-lg border border-gray-200 overflow-hidden mb-8">
-              <div className="overflow-x-auto">
-                <table className="min-w-full divide-y divide-gray-200">
-                  <thead className="bg-gray-50">
-                    <tr>
-                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                        标题
-                      </th>
-                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                        分类
-                      </th>
-                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                        详细信息
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody className="bg-white divide-y divide-gray-200">
-                    {paginatedNews.map((news) => (
-                      <tr
-                        key={news.id}
-                        className="hover:bg-gray-50 transition-colors"
-                      >
-                        <td className="px-6 py-4">
-                          <div className="flex items-start space-x-3">
-                            <div className="flex-1 min-w-0">
-                              <Link
-                                to={`/news/${news.id}`}
-                                className="hover:underline"
-                              >
-                                <h3 className="text-sm font-medium text-gray-900 line-clamp-2">
-                                  {news.title}
-                                </h3>
-                              </Link>
-                              <p className="text-sm text-gray-500 mt-1 line-clamp-2">
-                                {news.content}
-                              </p>
+            {viewMode === "table" ? (
+              /* 表格视图 */
+              <div className="bg-white rounded-lg border border-gray-200 overflow-hidden mb-8">
+                <div className="overflow-x-auto">
+                  <table className="min-w-full divide-y divide-gray-200">
+                    <thead className="bg-gray-50">
+                      <tr>
+                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                          讲座标题
+                        </th>
+                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                          主讲人
+                        </th>
+                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                          详细信息
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody className="bg-white divide-y divide-gray-200">
+                      {paginatedTalks.map((talk) => (
+                        <tr
+                          key={talk.id}
+                          className="hover:bg-gray-50 transition-colors"
+                        >
+                          <td className="px-6 py-4">
+                            <div className="flex items-start space-x-3">
+                              <div className="flex-1 min-w-0">
+                                <Link
+                                  to={`/news/${talk.id}`}
+                                  className="hover:underline"
+                                >
+                                  <h3 className="text-sm font-medium text-gray-900 line-clamp-2">
+                                    {talk.title}
+                                  </h3>
+                                </Link>
+                                <p className="text-sm text-gray-500 mt-1 line-clamp-2">
+                                  {talk.content}
+                                </p>
+                              </div>
                             </div>
-                          </div>
-                        </td>
-                        <td className="px-6 py-4 whitespace-nowrap">
-                          <span
-                            className={`inline-block px-3 py-1 rounded-full text-xs font-medium ${getCategoryColor(
-                              news.category
-                            )}`}
-                          >
-                            {getCategoryDisplayName(news.category)}
-                          </span>
-                        </td>
-                        <td className="px-6 py-4">
-                          {/* 根据不同分类显示不同字段 */}
-                          {news.category === "conference" && (
+                          </td>
+                          <td className="px-6 py-4 whitespace-nowrap">
+                            <div className="flex items-center">
+                              <UserIcon className="h-5 w-5 text-gray-400 mr-2" />
+                              <span className="text-sm text-gray-900">
+                                {talk.talkSpeaker || "待定"}
+                              </span>
+                            </div>
+                          </td>
+                          <td className="px-6 py-4">
                             <div className="space-y-2 text-sm">
                               <div className="flex items-center">
-                                <GlobeAltIcon className="h-4 w-4 text-gray-500 mr-2" />
-                                <span>{news.conferenceName}</span>
-                              </div>
-                              <div className="flex items-center">
                                 <CalendarIcon className="h-4 w-4 text-gray-500 mr-2" />
-                                <span>{news.conferenceDate}</span>
-                              </div>
-                              {news.conferenceLink && (
-                                <div className="flex items-center">
-                                  <LinkIcon className="h-4 w-4 text-gray-500 mr-2" />
-                                  <a
-                                    href={news.conferenceLink}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="text-blue-600 hover:underline"
-                                  >
-                                    访问链接
-                                  </a>
-                                </div>
-                              )}
-                            </div>
-                          )}
-                          {news.category === "talk" && (
-                            <div className="space-y-2 text-sm">
-                              <div className="flex items-center">
-                                <UserIcon className="h-4 w-4 text-gray-500 mr-2" />
-                                <span>{news.talkSpeaker}</span>
-                              </div>
-                              <div className="flex items-center">
-                                <CalendarIcon className="h-4 w-4 text-gray-500 mr-2" />
-                                <span>{news.talkTime}</span>
+                                <span>{talk.talkTime || "时间待定"}</span>
                               </div>
                               <div className="flex items-center">
                                 <MapPinIcon className="h-4 w-4 text-gray-500 mr-2" />
-                                <span>{news.talkLocation}</span>
+                                <span>{talk.talkLocation || "地点待定"}</span>
                               </div>
                             </div>
-                          )}
-                          {news.category === "thesis" && (
-                            <div className="space-y-2 text-sm">
-                              <div className="flex items-center">
-                                <UserIcon className="h-4 w-4 text-gray-500 mr-2" />
-                                <span>{news.thesisAuthor}</span>
-                              </div>
-                              <div className="flex items-center">
-                                <CalendarIcon className="h-4 w-4 text-gray-500 mr-2" />
-                                <span>{news.thesisYear}</span>
-                              </div>
-                            </div>
-                          )}
-                        </td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
               </div>
-            </div>
+            ) : (
+              /* 时间线视图 */
+              <div className="space-y-8 mb-8">
+                <div className="relative">
+                  {/* 时间线背景线 */}
+                  <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gray-200"></div>
+
+                  {paginatedTalks.map((talk) => (
+                    <div
+                      key={talk.id}
+                      className="relative flex items-start space-x-6 pb-8"
+                    >
+                      {/* 时间线节点 */}
+                      <div className="flex-shrink-0 w-16 h-16 bg-white border-4 border-blue-500 rounded-full flex items-center justify-center relative z-10">
+                        <UserIcon className="h-6 w-6 text-blue-500" />
+                      </div>
+
+                      {/* 内容卡片 */}
+                      <div className="flex-1 bg-white rounded-lg border border-gray-200 p-6 shadow-sm hover:shadow-md transition-shadow">
+                        <div className="flex items-start justify-between mb-4">
+                          <div className="flex-1">
+                            <Link
+                              to={`/news/${talk.id}`}
+                              className="hover:underline"
+                            >
+                              <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                                {talk.title}
+                              </h3>
+                            </Link>
+                            <p className="text-gray-600 mb-4 line-clamp-3">
+                              {talk.content}
+                            </p>
+                          </div>
+                        </div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm text-gray-600">
+                          <div className="flex items-center">
+                            <UserIcon className="h-4 w-4 mr-2" />
+                            <span>主讲人：{talk.talkSpeaker || "待定"}</span>
+                          </div>
+                          <div className="flex items-center">
+                            <CalendarIcon className="h-4 w-4 mr-2" />
+                            <span>时间：{talk.talkTime || "待定"}</span>
+                          </div>
+                          <div className="flex items-center">
+                            <MapPinIcon className="h-4 w-4 mr-2" />
+                            <span>地点：{talk.talkLocation || "待定"}</span>
+                          </div>
+                        </div>
+
+                        {/* 标签 */}
+                        {talk.tags && talk.tags.length > 0 && (
+                          <div className="flex flex-wrap gap-2 mt-4">
+                            {talk.tags.map((tag, tagIndex) => (
+                              <span
+                                key={tagIndex}
+                                className="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full"
+                              >
+                                #{tag}
+                              </span>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
 
             {/* 分页 */}
             {totalPages > 1 && (
@@ -349,11 +328,11 @@ const News: React.FC = () => {
         ) : (
           <EmptyState
             type={hasActiveFilters ? "no-results" : "no-data"}
-            title={hasActiveFilters ? "未找到匹配的动态" : "暂无动态数据"}
+            title={hasActiveFilters ? "未找到匹配的讲座" : "暂无讲座数据"}
             description={
               hasActiveFilters
-                ? "请尝试修改搜索关键词或筛选条件"
-                : "实验室动态数据正在整理中"
+                ? "请尝试修改搜索关键词"
+                : "实验室学术讲座信息正在整理中"
             }
             action={
               hasActiveFilters ? (
