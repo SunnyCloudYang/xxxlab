@@ -10,7 +10,8 @@ const navigation: NavItem[] = [
   { name: "首页", path: "/" },
   { name: "团队信息", path: "/team" },
   { name: "学术论文", path: "/publications" },
-  { name: "学术讲座", path: "/news" },
+  { name: "新闻动态", path: "/news" },
+  { name: "学术讲座", path: "/lectures" },
   { name: "团队风采", path: "/gallery" },
   { name: "研究方向", path: "/research" },
 ];

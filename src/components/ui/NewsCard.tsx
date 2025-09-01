@@ -20,12 +20,20 @@ const NewsCard: React.FC<NewsCardProps> = ({
       conference: "学术会议",
       talk: "学术报告",
       thesis: "学位论文",
+      achievement: "科研成果",
+      collaboration: "合作交流",
+      activity: "学术活动",
+      personnel: "人员动态",
     };
     return categoryMap[category];
   };
 
   const getCategoryColor = (category: NewsItem["category"]) => {
     const colorMap = {
+      achievement: "bg-yellow-100 text-yellow-800",
+      collaboration: "bg-indigo-100 text-indigo-800",
+      activity: "bg-red-100 text-red-800",
+      personnel: "bg-gray-100 text-gray-800",
       conference: "bg-purple-100 text-purple-800",
       talk: "bg-blue-100 text-blue-800",
       thesis: "bg-green-100 text-green-800",
@@ -81,17 +89,6 @@ const NewsCard: React.FC<NewsCardProps> = ({
         className={`group hover:shadow-lg transition-all duration-200 ${className}`}
         hoverable
       >
-        {/* 图片 - 仅在有图片时显示 */}
-        {news.images && news.images.length > 0 && (
-          <div className="h-48 rounded-lg mb-4 group-hover:scale-[1.02] transition-transform overflow-hidden">
-            <img
-              src={news.images[0]}
-              alt={news.title}
-              className="w-full h-full object-cover"
-            />
-          </div>
-        )}
-
         <div className="space-y-3">
           {/* 标签和日期 */}
           <div className="flex items-center justify-between">
@@ -136,8 +133,6 @@ const NewsCard: React.FC<NewsCardProps> = ({
               )}
             </div>
           )}
-
-          {/* 移除查看详情按钮 */}
         </div>
       </Card>
     </Link>

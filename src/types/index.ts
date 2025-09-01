@@ -45,7 +45,14 @@ export interface Publication {
 export interface NewsItem {
   id: string;
   title: string;
-  category: "conference" | "talk" | "thesis";
+  category:
+    | "conference"
+    | "talk"
+    | "thesis"
+    | "achievement"
+    | "collaboration"
+    | "activity"
+    | "personnel";
   content: string;
   publishDate: string;
   status: "published" | "draft";

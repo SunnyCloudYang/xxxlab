@@ -51,6 +51,10 @@ const NewsDetail: React.FC = () => {
       conference: "学术会议",
       talk: "学术报告",
       thesis: "学位论文",
+      achievement: "科研成果",
+      collaboration: "学术合作",
+      activity: "学术活动",
+      personnel: "人事动态",
     };
     return categoryMap[category];
   };
@@ -60,6 +64,10 @@ const NewsDetail: React.FC = () => {
       conference: "bg-purple-100 text-purple-800",
       talk: "bg-blue-100 text-blue-800",
       thesis: "bg-green-100 text-green-800",
+      achievement: "bg-yellow-100 text-yellow-800",
+      collaboration: "bg-indigo-100 text-indigo-800",
+      activity: "bg-red-100 text-red-800",
+      personnel: "bg-gray-100 text-gray-800",
     };
     return colorMap[category];
   };

@@ -1,4 +1,5 @@
 import React, { useState, useMemo } from "react";
+import { Link } from "react-router-dom";
 import {
   AcademicCapIcon,
   BeakerIcon,
@@ -202,73 +203,82 @@ const Research: React.FC = () => {
           <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
             {filteredAreas.map((area) => (
               <div key={area.id} className="break-inside-avoid group">
-                <Card
-                  className="hover:shadow-xl transition-all duration-300 group-hover:scale-[1.02] overflow-hidden"
-                  hoverable
-                  padding="none"
-                >
-                  {/* 图片 */}
-                  <div className="h-48 overflow-hidden">
-                    <img
-                      src={area.image}
-                      alt={area.title}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                      loading="lazy"
-                    />
-                  </div>
+                <Link to={`/research/${area.id}`}>
+                  <Card
+                    className="hover:shadow-xl transition-all duration-300 group-hover:scale-[1.02] overflow-hidden cursor-pointer"
+                    hoverable
+                    padding="none"
+                  >
+                    {/* 图片 */}
+                    <div className="h-48 overflow-hidden">
+                      <img
+                        src={area.image}
+                        alt={area.title}
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                        loading="lazy"
+                      />
+                    </div>
 
-                  <div className="p-6 space-y-4">
-                    {/* 标题和图标 */}
-                    <div className="flex items-center space-x-3">
-                      <div className={`p-2 rounded-lg ${area.color}`}>
-                        {area.icon}
+                    <div className="p-6 space-y-4">
+                      {/* 标题和图标 */}
+                      <div className="flex items-center space-x-3">
+                        <div className={`p-2 rounded-lg ${area.color}`}>
+                          {area.icon}
+                        </div>
+                        <h3 className="font-bold text-lg text-gray-900 line-clamp-2">
+                          {area.title}
+                        </h3>
                       </div>
-                      <h3 className="font-bold text-lg text-gray-900 line-clamp-2">
-                        {area.title}
-                      </h3>
-                    </div>
 
-                    {/* 描述 */}
-                    <p className="text-gray-600 text-sm leading-relaxed">
-                      {area.description}
-                    </p>
+                      {/* 描述 */}
+                      <p className="text-gray-600 text-sm leading-relaxed">
+                        {area.description}
+                      </p>
 
-                    {/* 技术栈 */}
-                    <div className="space-y-2">
-                      <h4 className="font-medium text-sm text-gray-900">
-                        核心技术
-                      </h4>
-                      <div className="flex flex-wrap gap-1">
-                        {area.technologies.map((tech, index) => (
-                          <span
-                            key={index}
-                            className="inline-block bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded-full"
-                          >
-                            {tech}
-                          </span>
-                        ))}
+                      {/* 技术栈 */}
+                      <div className="space-y-2">
+                        <h4 className="font-medium text-sm text-gray-900">
+                          核心技术
+                        </h4>
+                        <div className="flex flex-wrap gap-1">
+                          {area.technologies.map((tech, index) => (
+                            <span
+                              key={index}
+                              className="inline-block bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded-full"
+                            >
+                              {tech}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+
+                      {/* 研究成果 */}
+                      <div className="space-y-2">
+                        <h4 className="font-medium text-sm text-gray-900">
+                          主要成果
+                        </h4>
+                        <ul className="space-y-1">
+                          {area.achievements.map((achievement, index) => (
+                            <li
+                              key={index}
+                              className="text-xs text-gray-600 flex items-start"
+                            >
+                              <span className="w-1 h-1 bg-gray-400 rounded-full mt-2 mr-2 flex-shrink-0"></span>
+                              <span>{achievement}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+
+                      {/* 查看详情提示 */}
+                      <div className="text-center pt-2">
+                        <span className="text-xs text-blue-600 group-hover:text-blue-800">
+                          点击查看详情 →
+                        </span>
                       </div>
                     </div>
-
-                    {/* 研究成果 */}
-                    <div className="space-y-2">
-                      <h4 className="font-medium text-sm text-gray-900">
-                        主要成果
-                      </h4>
-                      <ul className="space-y-1">
-                        {area.achievements.map((achievement, index) => (
-                          <li
-                            key={index}
-                            className="text-xs text-gray-600 flex items-start"
-                          >
-                            <span className="w-1 h-1 bg-gray-400 rounded-full mt-2 mr-2 flex-shrink-0"></span>
-                            <span>{achievement}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-                </Card>
+                  </Card>
+                </Link>
               </div>
             ))}
           </div>

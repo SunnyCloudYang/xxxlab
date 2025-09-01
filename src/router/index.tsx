@@ -8,9 +8,11 @@ import Team from "../pages/Team";
 import MemberDetail from "../pages/MemberDetail";
 import Publications from "../pages/Publications";
 import News from "../pages/News";
+import NewsAll from "../pages/NewsAll";
 import NewsDetail from "../pages/NewsDetail";
 import Gallery from "../pages/Gallery";
 import Research from "../pages/Projects"; // Renamed from Projects to Research
+import ResearchDetail from "../pages/ResearchDetail";
 import ProjectDetail from "../pages/ProjectDetail";
 import NotFound from "../pages/NotFound";
 
@@ -23,10 +25,12 @@ const AppRouter: React.FC = () => {
           <Route path="/team" element={<Team />} />
           <Route path="/team/:id" element={<MemberDetail />} />
           <Route path="/publications" element={<Publications />} />
-          <Route path="/news" element={<News />} />
+          <Route path="/lectures" element={<News />} />
+          <Route path="/news" element={<NewsAll />} />
           <Route path="/news/:id" element={<NewsDetail />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/research" element={<Research />} />
+          <Route path="/research/:id" element={<ResearchDetail />} />
           <Route path="/projects/:id" element={<ProjectDetail />} />
 
           {/* 404 页面 */}
