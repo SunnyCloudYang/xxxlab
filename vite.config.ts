@@ -7,6 +7,6 @@ export default defineConfig({
   base: "/xxxlab/", // Add prefix to all static asset paths
   build: {
     outDir: "docs",
-    emptyOutDir: true, // Clean the output directory before each build
+    emptyOutDir: false,
   },
 });

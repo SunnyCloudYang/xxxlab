@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3DV 实验室 - 3D Vision Laboratory</title>
+    <script>
+      // GitHub Pages SPA routing solution
+      // This script redirects 404 errors to the main app with the original path
+      const segmentCount = 1; // Number of directories in the base path (xxxlab = 1)
+      const pathName = window.location.pathname;
+
+      // Check if this is a sub-route under /xxxlab/
+      if (pathName.startsWith("/xxxlab/") && pathName !== "/xxxlab/") {
+        // Store the original path in session storage
+        sessionStorage.setItem(
+          "pathToRedirect",
+          pathName + window.location.search + window.location.hash
+        );
+        // Redirect to the base path
+        window.location.replace("/xxxlab/");
+      } else {
+        // If not under /xxxlab/, redirect to the main page
+        window.location.replace("/xxxlab/");
+      }
+    </script>
+  </head>
+  <body>
+    <div>Redirecting...</div>
+  </body>
+</html>
