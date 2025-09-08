@@ -58,6 +58,13 @@ const MemberCard: React.FC<MemberCardProps> = ({
             <p className="text-sm text-gray-600">{member.nameEn}</p>
           )}
 
+          {/* 职称信息 */}
+          {member.title && (
+            <p className="text-sm text-primary-700 font-medium">
+              {member.title}
+            </p>
+          )}
+
           {/* 研究兴趣 - 减小间距 */}
           <div className="flex flex-wrap justify-center gap-1">
             {member.researchInterests

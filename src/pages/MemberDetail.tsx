@@ -11,6 +11,8 @@ import {
   MemberBasicInfo,
   MemberResearchInterests,
   MemberEducation,
+  MemberWorkExperience,
+  MemberRepresentativeWorks,
   MemberPublications,
   MemberProjects,
 } from "../components/member";
@@ -90,6 +92,14 @@ const MemberDetail: React.FC = () => {
 
         {/* 教育背景 - 导师、博士生或有教育背景的成员显示 */}
         {shouldShowEducation && <MemberEducation member={member} />}
+
+        {/* 工作经历 - 导师显示 */}
+        {member.role === "faculty" && <MemberWorkExperience member={member} />}
+
+        {/* 代表作 - 导师显示 */}
+        {member.role === "faculty" && (
+          <MemberRepresentativeWorks member={member} />
+        )}
 
         {/* 学术论文 - 导师、博士生或有论文的成员显示 */}
         {shouldShowPublications && <MemberPublications member={member} />}

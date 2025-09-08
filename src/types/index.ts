@@ -4,11 +4,15 @@ export interface TeamMember {
   name: string;
   nameEn?: string;
   role: "faculty" | "phd" | "master" | "alumni";
+  title?: string; // 职称
+  supervisorType?: string; // 导师类型：博士生导师、研究生导师等
   avatar?: string;
   email?: string;
   researchInterests: string[];
   bio?: string;
   education?: Education[];
+  workExperience?: WorkExperience[]; // 工作经历
+  representativeWorks?: string[]; // 代表作
   publications?: string[]; // 论文ID列表
   graduationYear?: number; // 毕业生专用
   currentPosition?: string; // 毕业生当前职位
@@ -22,6 +26,15 @@ export interface Education {
   institution: string;
   year: number;
   major?: string;
+}
+
+// 工作经历
+export interface WorkExperience {
+  position: string;
+  institution: string;
+  startYear: number;
+  endYear?: number;
+  description?: string;
 }
 
 // 论文类型

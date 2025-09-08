@@ -77,7 +77,22 @@ const MemberBasicInfo: React.FC<MemberBasicInfoProps> = ({ member }) => {
               {member.name}
             </h1>
             {member.nameEn && (
-              <p className="text-xl text-gray-600 mb-4">{member.nameEn}</p>
+              <p className="text-xl text-gray-600 mb-2">{member.nameEn}</p>
+            )}
+            {/* 职称和导师类型 */}
+            {(member.title || member.supervisorType) && (
+              <div className="flex flex-wrap justify-center lg:justify-start gap-2 mb-4">
+                {member.title && (
+                  <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-blue-100 text-blue-800">
+                    {member.title}
+                  </span>
+                )}
+                {member.supervisorType && (
+                  <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-green-100 text-green-800">
+                    {member.supervisorType}
+                  </span>
+                )}
+              </div>
             )}
             {member.bio && (
               <p className="text-lg text-gray-700 leading-relaxed max-w-3xl">
