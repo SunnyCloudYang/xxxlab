@@ -41,7 +41,7 @@ const MemberBasicInfo: React.FC<MemberBasicInfoProps> = ({ member }) => {
           <div className="relative w-32 h-32 mx-auto lg:mx-0">
             {member.avatar ? (
               <img
-                src={member.avatar}
+                src={`${import.meta.env.BASE_URL}${member.avatar}`}
                 alt={member.name}
                 className="w-full h-full rounded-full object-cover border-4 border-gray-100"
                 onError={(e) => {

@@ -25,21 +25,21 @@ const MemberCard: React.FC<MemberCardProps> = ({
           <div className="relative w-20 h-20 mx-auto mb-3">
             {member.avatar ? (
               <img
-                src={member.avatar}
+                src={`${import.meta.env.BASE_URL}${member.avatar}`}
                 alt={member.name}
                 className="w-full h-full rounded-full object-cover transition-transform"
                 onError={(e) => {
-                  // 头像加载失败时显示默认头像
+                  // 头像加载失败时显示默认头像，用最后两个字
                   const target = e.target as HTMLImageElement;
                   target.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(
-                    member.name
+                    member.name.slice(-2)
                   )}&background=00409c&color=fff&size=80`;
                 }}
               />
             ) : (
               <div className="w-full h-full bg-primary-100 rounded-full flex items-center justify-center transition-transform">
                 <span className="text-primary-900 font-semibold text-lg">
-                  {member.name.charAt(0)}
+                  {member.name.slice(-2)}
                 </span>
               </div>
             )}
