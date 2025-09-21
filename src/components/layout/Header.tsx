@@ -53,17 +53,22 @@ const Header: React.FC = () => {
               {/* Logo */}
               <div className="flex items-center">
                 <Link to="/" className="flex items-center space-x-3">
-                  <div className="h-10 w-10 bg-primary-900 rounded-md flex items-center justify-center">
-                    <span className="text-primary font-bold text-lg">3DV</span>
+                  <div className="h-10 w-auto bg-primary-900 rounded-md flex items-center justify-center">
+                    {/* <span className="text-primary font-bold text-lg">3DV</span>
+                     */}
+                    <img
+                      src={import.meta.env.BASE_URL + "/images/logo.png"}
+                      alt="OR Colearning Society"
+                      className="h-12 w-auto my-auto" />
                   </div>
-                  <div className="hidden sm:block">
+                  {/* <div className="hidden sm:block">
                     <h1 className="text-xl font-bold text-gray-900">
                       3DV 实验室
                     </h1>
                     <span className="text-sm text-gray-600">
                       3D Vision Laboratory
                     </span>
-                  </div>
+                  </div> */}
                 </Link>
               </div>
 

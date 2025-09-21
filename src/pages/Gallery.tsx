@@ -1,6 +1,6 @@
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useEffect } from "react";
 import {
-  PhotoIcon,
+  // PhotoIcon,
   CalendarIcon,
   XMarkIcon,
   ChevronLeftIcon,
@@ -16,6 +16,27 @@ const Gallery: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [selectedImage, setSelectedImage] = useState<GalleryImage | null>(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [numColumns, setNumColumns] = useState(4);
+
+  useEffect(() => {
+    const getNumColumns = () => {
+      if (typeof window === "undefined") return 4; // Default for SSR
+      const screenWidth = window.innerWidth;
+      if (screenWidth >= 1280) return 4; // xl
+      if (screenWidth >= 1024) return 3; // lg
+      if (screenWidth >= 640) return 2; // sm
+      return 1;
+    };
+
+    const onResize = () => {
+      setNumColumns(getNumColumns());
+    };
+
+    onResize();
+
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
+  }, []);
 
   // 获取分类选项
   const categoryOptions = useMemo(() => {
@@ -57,7 +78,7 @@ const Gallery: React.FC = () => {
       filtered = filtered.filter(
         (img) =>
           img.title.toLowerCase().includes(query) ||
-          img.description.toLowerCase().includes(query) ||
+          img.description?.toLowerCase().includes(query) ||
           (img.tags &&
             img.tags.some((tag) => tag.toLowerCase().includes(query)))
       );
@@ -75,6 +96,20 @@ const Gallery: React.FC = () => {
 
     return filtered;
   }, [searchQuery, selectedCategory]);
+
+  const reorderedImages = useMemo(() => {
+    if (!filteredImages.length) return [];
+
+    const result: GalleryImage[] = [];
+    for (let c = 0; c < numColumns; c++) {
+      for (let i = c; i < filteredImages.length; i += numColumns) {
+        if (filteredImages[i]) {
+          result.push(filteredImages[i]);
+        }
+      }
+    }
+    return result;
+  }, [filteredImages, numColumns]);
 
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString("zh-CN", {
@@ -104,12 +139,12 @@ const Gallery: React.FC = () => {
     return colorMap[category];
   };
 
-  const handleImageClick = (image: GalleryImage) => {
-    setSelectedImage(image);
-    setCurrentImageIndex(
-      filteredImages.findIndex((img) => img.id === image.id)
-    );
-  };
+  // const handleImageClick = (image: GalleryImage) => {
+  //   setSelectedImage(image);
+  //   setCurrentImageIndex(
+  //     filteredImages.findIndex((img) => img.id === image.id)
+  //   );
+  // };
 
   const handlePrevious = () => {
     if (currentImageIndex > 0) {
@@ -187,23 +222,23 @@ const Gallery: React.FC = () => {
         {/* 图片网格 */}
         {filteredImages.length > 0 ? (
           <div className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-6 space-y-6">
-            {filteredImages.map((image) => (
+            {reorderedImages.map((image) => (
               <div
                 key={image.id}
                 className="break-inside-avoid cursor-pointer group"
-                onClick={() => handleImageClick(image)}
+                // onClick={() => handleImageClick(image)}
               >
                 <div className="relative bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 group-hover:scale-[1.02]">
                   <div className="relative">
                     <img
-                      src={image.thumbnail}
+                      src={`${import.meta.env.BASE_URL}${image.thumbnail}`}
                       alt={image.title}
                       className="w-full h-auto object-cover"
                       loading="lazy"
                     />
-                    <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
+                    {/* <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
                       <PhotoIcon className="h-8 w-8 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                    </div>
+                    </div> */}
                   </div>
 
                   <div className="p-4">
@@ -301,7 +336,7 @@ const Gallery: React.FC = () => {
 
               {/* 图片 */}
               <img
-                src={selectedImage.url}
+                src={`${import.meta.env.BASE_URL}${selectedImage.url}`}
                 alt={selectedImage.title}
                 className="max-w-full max-h-full object-contain"
               />
