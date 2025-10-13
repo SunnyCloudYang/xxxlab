@@ -39,7 +39,8 @@ const Home: React.FC = () => {
                 运筹共学社
               </h1>
               <h2 className="text-xl md:text-2xl mb-8 text-blue-100">
-                OR Colearning Society
+                Laboratory for Intellectual Decision-making in Engineering and
+                Analytics
               </h2>
               <p className="text-lg md:text-xl mb-8 text-blue-100 leading-relaxed max-w-3xl">
                 运筹共学社隶属于中科大管理学院和“智能决策博弈与数字经济创新”安徽省哲学社会科学重点实验室，主要运用线性规划、组合优化、鲁棒优化、强化学习等运筹管理和人工智能等学科中的方法，通过数据分析、数学建模、模型解析、实验仿真的范式，对交通、物流、制造、应急等场景中的决策与博弈问题进行研究。

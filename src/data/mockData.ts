@@ -348,6 +348,52 @@ export const mockTeamMembers: TeamMember[] = [
     ],
     publications: ["8", "9", "10"],
   },
+  {
+    id: "7",
+    name: "刘文倩",
+    nameEn: "Lindong Liu",
+    role: "faculty",
+    title: "助理教授",
+    supervisorType: "",
+    avatar: "/images/avatars/liuwenjing.jpg",
+    email: "wenqian_liu@swjtu.edu.cn",
+    website: "https://faculty.swjtu.edu.cn/liuwenqian1/zh_CN/index.htm",
+    researchInterests: ["低空物流", "智慧调度"],
+    bio: "校外导师（西南交通大学助理教授）",
+    education: [
+      {
+        degree: "博士学位",
+        institution: "香港科技大学",
+        year: 2019,
+        major: "工业工程与决策分析",
+      },
+      {
+        degree: "学士学位",
+        institution: "南京大学",
+        year: 2015,
+        major: "自动化",
+      },
+    ],
+    workExperience: [
+      {
+        position: "助理教授",
+        institution: "西南交通大学经济管理学院信息系统与运营管理系",
+        startYear: 2025,
+      },
+      {
+        position: "博士后研究员",
+        institution: "香港科技大学工业工程与决策分析",
+        startYear: 2023,
+        endYear: 2024,
+      },
+    ],
+    representativeWorks: [
+      "Liu, W., Ke, G. Y., Chen, J., & Zhang, L. (2020). Scheduling the distribution of blood products: A vendor-managed inventory routing approach. Transportation Research Part E: Logistics and Transportation Review, 140, 101964.",
+      "Liu, W., Liu, L., & Qi, X. (2024). Drone resupply with multiple trucks and drones for on-time delivery along given truck routes. European Journal of Operational Research, 318(2), 457-468.",
+      "Liu, W., He, Y., Ke, G. Y., & Zhang, L. (2025). On-demand meal delivery: Drone scheduling with battery replacement optimization. Computers & Operations Research, 107295.",
+    ],
+    publications: ["11", "12", "13"],
+  },
   // 博士生
   {
     id: "7",
@@ -607,7 +653,7 @@ export const mockTeamMembers: TeamMember[] = [
     id: "19",
     name: "邢淦琛",
     role: "phd",
-    avatar: "/images/avatars/邢淦琛.jpg",
+    avatar: "/images/avatars/邢淦琛.png",
     email: "xingganchen@mail.ustc.edu.cn",
     researchInterests: ["分布鲁棒优化"],
     bio: "博士研究生，专注于分布鲁棒优化研究。",
