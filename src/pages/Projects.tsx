@@ -118,7 +118,7 @@ const Research: React.FC = () => {
             研究方向
           </h1>
           <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            探索前沿技术，推动科学研究，致力于计算机视觉、人工智能、数据科学等领域的创新与应用
+            探索前沿技术，推动科学研究，专注于优化理论与智能决策算法设计等前沿理论研究
           </p>
         </div>
 
@@ -168,13 +168,13 @@ const Research: React.FC = () => {
             {filteredAreas.map((area) => (
               <div key={area.id} className="break-inside-avoid group">
                 {/* <Link to={`/research/${area.id}`}> */}
-                  <Card
-                    className="hover:shadow-xl transition-all duration-300 group-hover:scale-[1.02] overflow-hidden cursor-pointer"
-                    hoverable
-                    padding="none"
-                  >
-                    {/* 图片 */}
-                    {/* <div className="h-48 overflow-hidden">
+                <Card
+                  className="hover:shadow-xl transition-all duration-300 group-hover:scale-[1.02] overflow-hidden cursor-pointer"
+                  hoverable
+                  padding="none"
+                >
+                  {/* 图片 */}
+                  {/* <div className="h-48 overflow-hidden">
                       <img
                         src={area.image}
                         alt={area.title}
@@ -183,65 +183,65 @@ const Research: React.FC = () => {
                       />
                     </div> */}
 
-                    <div className="p-6 space-y-4">
-                      {/* 标题和图标 */}
-                      <div className="flex items-center space-x-3">
-                        <div className={`p-2 rounded-lg ${area.color}`}>
-                          {area.icon}
-                        </div>
-                        <h3 className="font-bold text-lg text-gray-900 line-clamp-2">
-                          {area.title}
-                        </h3>
+                  <div className="p-6 space-y-4">
+                    {/* 标题和图标 */}
+                    <div className="flex items-center space-x-3">
+                      <div className={`p-2 rounded-lg ${area.color}`}>
+                        {area.icon}
                       </div>
+                      <h3 className="font-bold text-lg text-gray-900 line-clamp-2">
+                        {area.title}
+                      </h3>
+                    </div>
 
-                      {/* 描述 */}
-                      <p className="text-gray-600 text-sm leading-relaxed">
-                        {area.description}
-                      </p>
+                    {/* 描述 */}
+                    <p className="text-gray-600 text-sm leading-relaxed">
+                      {area.description}
+                    </p>
 
-                      {/* 技术栈 */}
-                      <div className="space-y-2">
-                        <h4 className="font-medium text-sm text-gray-900">
-                          关键词
-                        </h4>
-                        <div className="flex flex-wrap gap-1">
-                          {area.technologies.map((tech, index) => (
-                            <span
-                              key={index}
-                              className="inline-block bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded-full"
-                            >
-                              {tech}
-                            </span>
-                          ))}
-                        </div>
+                    {/* 技术栈 */}
+                    <div className="space-y-2">
+                      <h4 className="font-medium text-sm text-gray-900">
+                        关键词
+                      </h4>
+                      <div className="flex flex-wrap gap-1">
+                        {area.technologies.map((tech, index) => (
+                          <span
+                            key={index}
+                            className="inline-block bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded-full"
+                          >
+                            {tech}
+                          </span>
+                        ))}
                       </div>
+                    </div>
 
-                      {/* 研究成果 */}
-                      <div className="space-y-2">
-                        <h4 className="font-medium text-sm text-gray-900">
-                          招生要求
-                        </h4>
-                        <ul className="space-y-1">
-                          {area.achievements.map((achievement, index) => (
-                            <li
-                              key={index}
-                              className="text-xs text-gray-600 flex items-start"
-                            >
-                              <span className="w-1 h-1 bg-gray-400 rounded-full mt-2 mr-2 flex-shrink-0"></span>
-                              <span>{achievement}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
+                    {/* 研究成果 */}
+                    <div className="space-y-2">
+                      <h4 className="font-medium text-sm text-gray-900">
+                        招生要求
+                      </h4>
+                      <ul className="space-y-1">
+                        {area.achievements.map((achievement, index) => (
+                          <li
+                            key={index}
+                            className="text-xs text-gray-600 flex items-start"
+                          >
+                            <span className="w-1 h-1 bg-gray-400 rounded-full mt-2 mr-2 flex-shrink-0"></span>
+                            <span>{achievement}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
 
-                      {/* 查看详情提示 */}
-                      {/* <div className="text-center pt-2">
+                    {/* 查看详情提示 */}
+                    {/* <div className="text-center pt-2">
                         <span className="text-xs text-blue-600 group-hover:text-blue-800">
                           点击查看详情 →
                         </span>
                       </div> */}
-                    </div>
-                  </Card>
+                  </div>
+                </Card>
                 {/* </Link> */}
               </div>
             ))}

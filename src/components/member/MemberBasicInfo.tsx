@@ -61,7 +61,7 @@ const MemberBasicInfo: React.FC<MemberBasicInfoProps> = ({ member }) => {
 
             {/* 角色标签 */}
             <span
-              className={`absolute -bottom-2 left-1/2 transform -translate-x-1/2 px-3 py-1 rounded-full text-sm font-medium ${getRoleColor(
+              className={`absolute -bottom-2 left-1/2 transform -translate-x-1/2 px-3 py-1 rounded-full text-xs font-medium ${getRoleColor(
                 member.role
               )}`}
             >

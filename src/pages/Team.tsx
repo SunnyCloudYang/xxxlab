@@ -47,7 +47,7 @@ const Team: React.FC = () => {
           </h1>
           <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             我们的团队由经验丰富的导师和充满活力的学生组成，
-            专注于计算机视觉、3D重建、虚拟现实等前沿技术研究
+            专注于优化理论与智能决策算法设计等前沿理论研究
           </p>
         </div>
 

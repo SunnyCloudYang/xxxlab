@@ -19,15 +19,18 @@ const Footer: React.FC = () => {
             <div>
               <div className="flex items-center space-x-3 mb-4">
                 <div className="h-10 w-10 bg-primary-500 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-lg">3DV</span>
+                  <span className="text-white font-bold text-lg">LIDEA</span>
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold">3DV 实验室</h3>
-                  <p className="text-gray-400 text-sm">3D Vision Laboratory</p>
+                  <h3 className="text-xl font-bold">运筹共学社</h3>
+                  <p className="text-gray-400 text-sm">
+                    Laboratory for Intellectual Decision-making in Engineering
+                    and Analytics
+                  </p>
                 </div>
               </div>
               <p className="text-gray-300 mb-6 leading-relaxed">
-                致力于计算机视觉、3D重建、虚拟现实等前沿技术研究，
+                致力于优化理论与智能决策算法设计等前沿理论研究，
                 培养具有创新精神和实践能力的优秀人才。
               </p>
 
@@ -36,16 +39,16 @@ const Footer: React.FC = () => {
                 <div className="flex items-center space-x-3 text-gray-300">
                   <MapPinIcon className="h-5 w-5 text-primary-400" />
                   <span className="text-sm">
-                    北京市海淀区中关村南大街XX号 XX大学 XX楼XX室
+                    安徽省合肥市中国科学技术大学东区管理科研楼
                   </span>
                 </div>
                 <div className="flex items-center space-x-3 text-gray-300">
                   <EnvelopeIcon className="h-5 w-5 text-primary-400" />
-                  <span className="text-sm">3dv-lab@university.edu.cn</span>
+                  <span className="text-sm">ldliu@ustc.edu.cn</span>
                 </div>
                 <div className="flex items-center space-x-3 text-gray-300">
                   <PhoneIcon className="h-5 w-5 text-primary-400" />
-                  <span className="text-sm">+86 010-XXXX-XXXX</span>
+                  <span className="text-sm">+86-551-63606183</span>
                 </div>
               </div>
             </div>
