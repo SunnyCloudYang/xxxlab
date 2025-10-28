@@ -10,6 +10,7 @@ import Publications from "../pages/Publications";
 import News from "../pages/News";
 import NewsAll from "../pages/NewsAll";
 import NewsDetail from "../pages/NewsDetail";
+import Announcements from "../pages/Announcements";
 import Gallery from "../pages/Gallery";
 import Research from "../pages/Projects"; // Renamed from Projects to Research
 import ResearchDetail from "../pages/ResearchDetail";
@@ -28,6 +29,7 @@ const AppRouter: React.FC = () => {
           <Route path="/lectures" element={<News />} />
           <Route path="/news" element={<NewsAll />} />
           <Route path="/news/:id" element={<NewsDetail />} />
+          <Route path="/announcements" element={<Announcements />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/research" element={<Research />} />
           <Route path="/research/:id" element={<ResearchDetail />} />

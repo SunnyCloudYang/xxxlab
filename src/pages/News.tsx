@@ -183,9 +183,9 @@ const News: React.FC = () => {
                                   {talk.title}
                                 </h3>
                               </Link>
-                              <p className="text-sm text-gray-500 mt-1 line-clamp-2">
+                              {/* <p className="text-sm text-gray-500 mt-1 line-clamp-2">
                                 {talk.content}
-                              </p>
+                              </p> */}
                             </div>
                           </div>
                         </td>

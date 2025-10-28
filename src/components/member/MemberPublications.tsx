@@ -9,6 +9,7 @@ import {
 } from "../ui";
 import { mockPublications } from "../../data/mockData";
 import type { TeamMember } from "../../types";
+import { Link } from "react-router-dom";
 
 interface MemberPublicationsProps {
   member: TeamMember;
@@ -21,8 +22,8 @@ const MemberPublications: React.FC<MemberPublicationsProps> = ({ member }) => {
     if (member.publications && member.publications.length > 0) {
       return member.publications.includes(pub.id);
     }
-    // 否则根据作者姓名匹配
-    return pub.authors.includes(member.name);
+    // 否则根据作者姓名匹配（中文和英文）
+    return pub.authors.includes(member.name) || pub.authors.includes(member.nameEn || "");
   });
 
   if (memberPublications.length === 0) {
@@ -54,12 +55,12 @@ const MemberPublications: React.FC<MemberPublicationsProps> = ({ member }) => {
 
         {memberPublications.length >= 3 && (
           <div className="mt-6 text-center">
-            <a
-              href="/publications"
+            <Link
+              to="/publications"
               className="inline-flex items-center px-4 py-2 border border-primary-300 rounded-md text-sm font-medium text-primary-700 bg-primary-50 hover:bg-primary-100 transition-colors"
             >
               查看更多论文
-            </a>
+            </Link>
           </div>
         )}
       </CardContent>

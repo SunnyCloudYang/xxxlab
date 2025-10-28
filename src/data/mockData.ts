@@ -70,7 +70,7 @@ export const mockTeamMembers: TeamMember[] = [
       "Computing near-optimal stable cost allocations for cooperative games by lagrangian relaxation, INFORMS Journal on Computing, 2016, 28(4): 687-702",
       "Guo Qiuwei, Li Yifu*, Liu Lindong, Sheng Lifei. (2025). Maximizing customer retention in multi-session training service: Model and algorithm. Production and Operations Management. doi/10.1177/10591478251369160.",
     ],
-    publications: ["1", "2"],
+    publications: [],
   },
   {
     id: "2",
@@ -120,7 +120,7 @@ export const mockTeamMembers: TeamMember[] = [
     representativeWorks: [
       "Service Operations for Mixed Autonomous Paradigm: Lane Design and Subsidy, Production and Operations Management, 2022, 31(4): 1595-161",
     ],
-    publications: ["3"],
+    publications: [],
   },
   {
     id: "3",
@@ -184,7 +184,7 @@ export const mockTeamMembers: TeamMember[] = [
       "A Theory of Interior Peaks: Activity Sequencing and Selection for Service Design, Manufacturing & Service Operations Management, 2022, 24(2): 993-1001",
       "Guo Qiuwei, Li Yifu*, Liu Lindong, Sheng Lifei. (2025). Maximizing customer retention in multi-session training service: Model and algorithm. Production and Operations Management. doi/10.1177/10591478251369160.",
     ],
-    publications: ["4", "5"],
+    publications: [],
   },
   {
     id: "4",
@@ -235,7 +235,7 @@ export const mockTeamMembers: TeamMember[] = [
     representativeWorks: [
       "Nonsequential Appointment Scheduling with a Random Number of Requests, Production and Operations Management, 2024, 33(1): 184-204",
     ],
-    publications: ["6"],
+    publications: [],
   },
   {
     id: "5",
@@ -295,7 +295,7 @@ export const mockTeamMembers: TeamMember[] = [
     representativeWorks: [
       "Robust Actionable Prescriptive Analytics, with Chen Li, Melvyn Sim, Long Zhao, Minglong Zhou, Operations Research (Forthcoming)",
     ],
-    publications: ["7"],
+    publications: [],
   },
   {
     id: "6",
@@ -346,7 +346,7 @@ export const mockTeamMembers: TeamMember[] = [
       'Li, Cheng, Siyang Gao, and Jianzhong Du. "Convergence Analysis of Stochastic Kriging-Assisted Simulation with Random Covariates." INFORMS Journal on Computing, 2023, 35(2): 386-402.',
       'Du, Jianzhong, Siyang Gao, and Chun-Hung Chen. "A contextual ranking and selection method for personalized medicine." Manufacturing & Service Operations Management, 2023, 26(1): 167-181.',
     ],
-    publications: ["8", "9", "10"],
+    publications: [],
   },
   {
     id: "7",
@@ -392,7 +392,7 @@ export const mockTeamMembers: TeamMember[] = [
       "Liu, W., Liu, L., & Qi, X. (2024). Drone resupply with multiple trucks and drones for on-time delivery along given truck routes. European Journal of Operational Research, 318(2), 457-468.",
       "Liu, W., He, Y., Ke, G. Y., & Zhang, L. (2025). On-demand meal delivery: Drone scheduling with battery replacement optimization. Computers & Operations Research, 107295.",
     ],
-    publications: ["11", "12", "13"],
+    publications: [],
   },
   // 博士生
   {
@@ -1152,36 +1152,493 @@ export const mockTeamMembers: TeamMember[] = [
 export const mockPublications: Publication[] = [
   {
     id: "1",
-    title: "Deep Learning Approaches for 3D Reconstruction from Multiple Views",
-    authors: ["张教授", "李明", "王小华"],
-    venue: "IEEE Conference on Computer Vision and Pattern Recognition (CVPR)",
-    year: 2024,
-    type: "conference",
+    title:
+      "Computing Near-Optimal Stable Cost Allocations for Cooperative Games by Lagrangian Relaxation",
+    authors: ["Lindong Liu", "Xiangtong Qi*", "Zhou Xu"],
+    venue: "INFORMS Journal on Computing",
+    year: 2016,
+    type: "journal",
     abstract:
-      "This paper presents a novel deep learning approach for 3D reconstruction from multiple view images...",
+      "For a cost-sharing cooperative game with an empty core, we study the problem of calculating a near-optimal cost allocation that satisfies coalitional stability constraints and maximizes the total cost allocated to all players. One application of such a problem is finding the minimum level of subsidy required to stabilize the grand coalition. To obtain solutions, we propose a new generic framework based on Lagrangian relaxation, which has several advantages over existing work that exclusively relies on linear programming (LP) relaxation techniques.",
+    doi: "https://doi.org/10.1287/ijoc.2016.0707",
     featured: true,
-    doi: "10.1109/CVPR.2024.00001",
   },
   {
     id: "2",
-    title: "Real-time Object Detection in Virtual Reality Environments",
-    authors: ["李明", "张教授"],
-    venue: "ACM Transactions on Graphics",
-    year: 2023,
+    title:
+      "Simultaneous Penalization and Subsidization for Stabilizing Grand Cooperation",
+    authors: ["Lindong Liu", "Xiangtong Qi*", "Zhou Xu"],
+    venue: "Operations Research",
+    year: 2018,
     type: "journal",
     abstract:
-      "We propose a real-time object detection system specifically designed for VR applications...",
+      "In this paper we propose a new instrument, a simultaneous penalization and subsidization, for stabilizing the grand coalition and enabling cooperation among all players of an unbalanced cooperative game. The basic idea is to charge a penalty z from players who leave the grand coalition, and at the same time provide a subsidy ω to players who stay in the grand coalition.",
+    doi: "https://doi.org/10.1287/opre.2018.1723",
     featured: true,
   },
   {
     id: "3",
-    title: "Efficient Image Segmentation Using Attention Mechanisms",
-    authors: ["王小华", "张教授"],
-    venue: "International Conference on Computer Vision (ICCV)",
-    year: 2023,
+    title:
+      "On the Fixed and Flexible Funding Mechanisms in Reward-based Crowdfunding",
+    authors: ["Gongbing Bi", "Botao Geng", "Lindong Liu*"],
+    venue: "European Journal of Operational Research",
+    year: 2019,
+    type: "journal",
+    abstract:
+      "This study examines two types of crowdfunding mechanisms, namely, the fixed and the flexible funding mechanisms. Under the fixed funding mechanism, the pledges are returned to the backers if the crowdfunding project fails (All-or-Nothing), while under the flexible funding mechanism, the creators could keep all the raised pledges irrespective of whether the project succeeds or not (Keep-it-All).",
+    doi: "https://doi.org/10.1016/j.ejor.2019.05.019",
+  },
+  {
+    id: "4",
+    title: "Rate Analysis For Offline Simulation Online Application",
+    authors: ["Siyang Gao", "Cheng Li", "Jianzhong Du"],
+    venue: "Winter Simulation Conference",
+    year: 2019,
     type: "conference",
     abstract:
-      "This work introduces an efficient image segmentation method based on attention mechanisms...",
+      "We consider a recently proposed simulation-based decision-making framework, called offline-simulation-online-application (OSOA). In this framework, simulation experiments are not performed after the target problem is set up with all the input parameters; instead, they are performed before that with all the possible parameters that might come up in the target problem.",
+    doi: "https://doi.org/10.1109/WSC40007.2019.9004834",
+  },
+  {
+    id: "5",
+    title:
+      "Profit allocation in investment-based crowdfunding with investors of dynamic entry times",
+    authors: ["Yunshen Yang", "Gongbing Bi", "Lindong Liu*"],
+    venue: "European Journal of Operational Research",
+    year: 2020,
+    type: "journal",
+    abstract:
+      "Even distribution is a normal profit allocation mechanism for investment-based crowdfunding projects on many platforms. In other words, the investors with the same pledging funds will be paid evenly when the investment ends. The even allocation mechanism works well under the assumption that the investors arrive at the platform simultaneously. However, in practice, the investors are sequential, therefore, the stories are different when considering the dynamic entry times of the investors.",
+    doi: "https://doi.org/10.1016/j.ejor.2019.07.016",
+  },
+  {
+    id: "6",
+    title:
+      "Scheduling the distribution of blood products: A vendor-managed inventory routing approach",
+    authors: ["Liu Wenqian", "Ke Ginger Y", "Chen Jian", "Zhang Lianmin*"],
+    venue:
+      "Transportation Research Part E: Logistics and Transportation Review",
+    year: 2020,
+    type: "journal",
+    abstract:
+      "Blood shortage may lead to immeasurable losses. But the perishable nature of blood products limits the possibility of storing a large amount of it, and the quality of blood products reduces rapidly with transportation time. Specifically, in China, the management of blood products is even more complicated due to the significant demand for clinical blood, which increases every single year because of the reformation of the health system and the resulting scale expansion of hospitals.",
+    doi: "https://doi.org/10.1016/j.tre.2020.101964",
+  },
+  {
+    id: "7",
+    title: "Crowdsourcing contests with entry cost",
+    authors: ["Xu Tian", "Gongbing Bi", "Xiaobei Shen", "Lindong Liu*"],
+    venue: "International Transactions in Operational Research",
+    year: 2021,
+    type: "journal",
+    abstract:
+      "Today, companies can seek solutions to business problems by sponsoring cocreation activities such as crowdsourcing contests. This paper studies a crowdsourcing contest in which a sponsor seeks solutions from a number of independent contestants. Specifically, we reveal how the number of contestants affects the expected effort and maximum quality in a crowdsourcing contest.",
+    doi: "https://doi.org/10.1111/itor.12883",
+  },
+  {
+    id: "8",
+    title: "Supply chain with random yield and financing",
+    authors: ["Xiaoyong Yuan", "Gongbing Bi*", "Yalei Fei", "Lindong Liu"],
+    venue: "Omega",
+    year: 2021,
+    type: "journal",
+    abstract:
+      "In this paper, we consider a supply chain consisting of a well-capitalized manufacturer, a well-capitalized and reliable supplier, and a capital-constrained and unreliable supplier with random yield. The interactive relationship among them is modeled as a Stackelberg game with the manufacturer as the leader and the suppliers as the followers.",
+    doi: "https://doi.org/10.1016/j.omega.2020.102334",
+  },
+  {
+    id: "9",
+    title: "灾后运输网络中的最短路修复合作博弈",
+    authors: ["宣洪伟", "李振东", "盛舟山", "刘林冬*"],
+    venue: "运筹学学报",
+    year: 2021,
+    type: "journal",
+    abstract:
+      "在最短路修复合作博弈中,当灾后运输网络规模较大时,最优成本分摊问题难以直接求解。基于拉格朗日松弛理论,提出了一种最短路修复合作博弈成本分摊算法。该算法将最短路修复合作博弈分解为两个具有特殊结构的子博弈,进而利用两个子博弈的结构特性,可以高效地求解出二者的最优成本分摊,将这两个成本分摊相加,可以获得原博弈的一个近乎最优的稳定成本分摊。",
+    doi: "https://doi.org/10.15960/j.cnki.issn.1007-6093.2021.03.012",
+  },
+  {
+    id: "10",
+    title:
+      "Lagrangian heuristic for simultaneous subsidization and penalization: implementations on rooted travelling salesman games",
+    authors: ["Lindong Liu", "Yuqian Zhou", "Zikang Li"],
+    venue: "Mathematical Methods of Operations Research",
+    year: 2022,
+    type: "journal",
+    abstract:
+      "This work examines the problem of stabilizing the grand coalition of an unbalanced cooperative game under the concept of simultaneous subsidization and penalization (S&P). We design a generic framework for developing heuristic algorithms to evaluate the trade-off between subsidy and penalty in the S&P instrument.",
+    doi: "https://doi.org/10.1007/s00186-022-00771-3",
+  },
+  {
+    id: "11",
+    title: "Sequential recovery of disrupted facilities",
+    authors: ["Hongwei Xuan", "Chao Zhang", "Yugang Yu", "Lindong Liu*"],
+    venue: "Computers & Industrial Engineering",
+    year: 2022,
+    type: "journal",
+    abstract:
+      "For a bipartite graph with disrupted facilities, we confront the key concern that disrupted facilities can only be recovered one after one due to resource shortage. The objective of this paper is to design a sequential recovery schedule such that the summation of waiting time and transportation cost of all customers to regain service is minimized.",
+    doi: "https://doi.org/10.1016/j.cie.2021.107866",
+  },
+  {
+    id: "12",
+    title: "范数下无容量限制设施选址逆问题的求解方法",
+    authors: ["李子慷", "刘林冬*", "于成成"],
+    venue: "运筹与管理",
+    year: 2022,
+    type: "journal",
+    abstract:
+      "一个优化问题的逆问题是这样一类问题，在给定该优化问题的一个可行解时，通过最小化目标函数中参数的改变量(在某个范数下)使得该可行解成为改变参数后的该优化问题的最优解。对于本是NP-难问题的无容量限制设施选址问题，证明了其逆问题仍是NP-难的。",
+    doi: "https://doi.org/10.12005/orms.2022.0220",
+  },
+  {
+    id: "13",
+    title:
+      "A Theory of Interior Peaks: Activity Sequencing and Selection for Service Design",
+    authors: ["Yifu Li", "Tinglong Dai", "Xiangtong Qi"],
+    venue: "Manufacturing & Service Operations Management",
+    year: 2022,
+    type: "journal",
+    abstract:
+      "Putting customer experience at the heart of service design has become a governing principle of today's 'experience economy.' Echoing this principle, our paper addresses a service designer's problem of how to select and sequence activities in designing a service package. Empirical literature shows an ideal sequence often entails an interior peak; that is, the peak (i.e., highest-utility) activity is placed neither at the beginning nor the end of the package.",
+    doi: "https://doi.org/10.1287/msom.2021.0970",
+    featured: true,
+  },
+  {
+    id: "14",
+    title:
+      "A geometric branch-and-bound algorithm for the service bundle design problem",
+    authors: ["Yifu Li*", "Xiangtong Qi"],
+    venue: "European Journal of Operational Research",
+    year: 2022,
+    type: "journal",
+    abstract:
+      "In the service industry, a service provider may sell a collection of service activities as a package, also known as a service bundle. Empirical studies indicate that the customer's ex-post perception of a service bundle depends on not only the utility of each activity, but also the sequence of the activities being delivered.",
+    doi: "https://doi.org/10.1016/j.ejor.2022.03.044",
+  },
+  {
+    id: "15",
+    title:
+      "Service Operations for Mixed Autonomous Paradigm: Lane Design and Subsidy",
+    authors: ["Lan Lu", "Zheng Zhu", "Pengfei Guo", "Qiao-Chu He*"],
+    venue: "Production and Operations Management",
+    year: 2022,
+    type: "journal",
+    abstract:
+      "This study aims to examine and design operational strategies for mixed flows of autonomous vehicles (AVs) and human‐driven vehicles (HVs). We propose a stylized model wherein utilitarian individuals either drive HVs or take privately operated AVs that are collectively dispatched.",
+    doi: "https://doi.org/10.1111/poms.13633",
+  },
+  {
+    id: "16",
+    title:
+      "Task Assignment in Predictive Maintenance for Free-Float Bicycle Sharing Systems",
+    authors: ["Lan Lu", "Shichen Zhao", "Qiao-Chu He*", "Ning Zhu"],
+    venue: "Computers & Industrial Engineering",
+    year: 2022,
+    type: "journal",
+    abstract:
+      "The growth of Free-Float Bike-Sharing Systems (FFBSs) is heavily impeded by faulty bike maintenance among other operational challenges. In this paper, we aim to improve the efficiency of faulty bike maintenance by predicting faulty bikes in order to make better maintenance assignment decisions.",
+    doi: "https://doi.org/10.1016/j.cie.2022.108214",
+  },
+  {
+    id: "17",
+    title: "基于信息熵的实物捐助物资筛选和分拣优化策略研究",
+    authors: ["吴敏莲", "樊彧", "王熹徽*", "刘林冬", "李云博"],
+    venue: "中国管理科学",
+    year: 2023,
+    type: "journal",
+    abstract:
+      "实物捐助是社会力量参与灾害应急救援的重要途径之一，但低效和无效的实物捐助会大量占用应急管理部门的资源和人手，导致物资聚集效应，反而影响应急救援工作的开展。目前实物捐助管理的难点是如何筛选和分拣混合类型的物资，控制劣质和无效捐助造成的不利影响。",
+    doi: "https://doi.org/10.16381/j.cnki.issn1003-207x.2022.2046",
+  },
+  {
+    id: "18",
+    title:
+      "A branch-and-price algorithm to perform single-machine scheduling for additive manufacturing",
+    authors: ["Lindong Liu", "Zhenyu Wu", "Yugang Yu*"],
+    venue: "Journal of Management Science and Engineering",
+    year: 2023,
+    type: "journal",
+    abstract:
+      "Additive manufacturing (AM) has attracted significant attention in recent years based on its wide range of applications and growing demand. AM offers the advantages of production flexibility and design freedom. In this study, we considered a practical variant of the batch-processing-machine (BPM) scheduling problem that arises in AM industries.",
+    doi: "https://doi.org/10.1016/j.jmse.2022.10.001",
+  },
+  {
+    id: "19",
+    title:
+      "Crowdfunding or traditional mode? Strategy choices in product selling",
+    authors: ["Shengshuo Xu", "Liuyi Ling*", "Shaofu Du", "Lindong Liu"],
+    venue:
+      "Transportation Research Part E: Logistics and Transportation Review",
+    year: 2023,
+    type: "journal",
+    abstract:
+      "This study examines two selling strategies, namely, crowdfunding and traditional selling. Under traditional selling, the production behavior of the creator occurs before the purchases by consumers. In this case, the demand is uncertain, and the creator's production behavior is affected by the initial funding level.",
+    doi: "https://doi.org/10.1016/j.tre.2022.103011",
+  },
+  {
+    id: "20",
+    title:
+      "Stabilizing Grand Cooperation via Cost Adjustment: An Inverse Optimization Approach",
+    authors: ["Lindong Liu", "Xiangtong Qi", "Zhou Xu*"],
+    venue: "INFORMS Journal on Computing",
+    year: 2023,
+    type: "journal",
+    abstract:
+      "For an unbalanced cooperative game, its grand coalition can be stabilized by some instruments, such as subsidization and penalization, that impose new cost terms to certain coalitions. In this paper, we study an alternative instrument, referred to as cost adjustment, that does not need to impose any new coalition-specific cost terms.",
+    doi: "https://doi.org/10.1287/ijoc.2022.0268",
+    featured: true,
+  },
+  {
+    id: "21",
+    title:
+      "Experience-based territory planning and driver assignment with predicted demand and driver present condition",
+    authors: ["Yifu Li", "Chenhao Zhou*", "Peixue Yuan", "Thi Tu Anh Ngo"],
+    venue:
+      "Transportation Research Part E: Logistics and Transportation Review",
+    year: 2023,
+    type: "journal",
+    abstract:
+      "The parcel delivery industry has enjoyed rapid growth with the rise of the e-commerce business. To survive the highly competitive market, service providers have introduced various methods to improve the customer experience, for example, providing faster response or wider delivery coverage.",
+    doi: "https://doi.org/10.1016/j.tre.2023.103036",
+  },
+  {
+    id: "22",
+    title: "Optimal Sequencing in Single-Player Games",
+    authors: ["Yifu Li*", "Christopher Thomas Ryan", "Lifei Sheng"],
+    venue: "Management Science",
+    year: 2023,
+    type: "journal",
+    abstract:
+      "An important problem in single-player video game design is how to sequence game elements within a level (or 'chunk') of the game. Each element has two critical features: a reward (e.g., earning an item or being able to watch a cinematic) and a degree of difficulty (e.g., how much energy or focus is needed to interact with the game element).",
+    doi: "https://doi.org/10.1287/mnsc.2022.4665",
+    featured: true,
+  },
+  {
+    id: "23",
+    title:
+      "Convergence Analysis of Stochastic Kriging-Assisted Simulation with Random Covariates",
+    authors: ["Cheng Li", "Siyang Gao*", "Jianzhong Du"],
+    venue: "INFORMS Journal on Computing",
+    year: 2023,
+    type: "journal",
+    abstract:
+      "We consider performing simulation experiments in the presence of covariates. Here, covariates refer to some input information other than system designs to the simulation model that can also affect the system performance. To make decisions, decision makers need to know the covariate values of the problem.",
+    doi: "https://doi.org/10.1287/ijoc.2022.1263",
+  },
+  {
+    id: "24",
+    title:
+      "A Contextual Ranking and Selection Method for Personalized Medicine",
+    authors: ["Jianzhong Du", "Siyang Gao*", "Chun-Hung Chen"],
+    venue: "Manufacturing & Service Operations Management",
+    year: 2023,
+    type: "journal",
+    abstract:
+      "Personalized medicine (PM) seeks the best treatment for each patient among a set of available treatment methods. Because a specific treatment does not work well on all patients, traditionally, the best treatment was selected based on the doctor's personal experience and expertise, which is subject to human errors.",
+    doi: "https://doi.org/10.1287/msom.2022.0232",
+  },
+  {
+    id: "25",
+    title:
+      "Optimizing resource allocation in service systems via simulation: A Bayesian formulation",
+    authors: ["Chen Weiwei*", "Siyang Gao", "Wenjie Chen", "Jianzhong Du"],
+    venue: "Production and Operations Management",
+    year: 2023,
+    type: "journal",
+    abstract:
+      "The service sector has become increasingly important in today's economy. To meet the rising expectation of high‐quality services, efficiently allocating resources is vital for service systems to balance service qualities with costs. In particular, this paper focuses on a class of resource allocation problems where the service‐level objective and constraints are in the form of probabilistic measures.",
+    doi: "https://doi.org/10.1111/poms.13825",
+  },
+  {
+    id: "26",
+    title:
+      "Prepositioning network design for humanitarian relief purposes under correlated demand uncertainty",
+    authors: ["Xun Zhang", "Du Chen*"],
+    venue: "Computers & Industrial Engineering",
+    year: 2023,
+    type: "journal",
+    abstract:
+      "Prepositioning relief network is an effective strategy to mitigate the impact of natural disasters and public health emergencies, such as the COVID-19 pandemic. However, designing a proper network is challenging due to limited information and, more importantly, the correlated demand uncertainty that exists among affected areas.",
+    doi: "https://doi.org/10.1016/j.cie.2023.109365",
+  },
+  {
+    id: "27",
+    title: "Multiple-purchase choice model: estimation and optimization",
+    authors: ["Mengmeng Wang", "Xun Zhang*", "Xiaolong Li"],
+    venue: "International Journal of Production Economics",
+    year: 2023,
+    type: "journal",
+    abstract:
+      "Although multiple-purchase behavior is typical in retail practice, the choice model to portray such behavior is limited in existing research. This paper presents a new multiple-purchase (MP) choice model based on the multinomial logit (MNL) choice model, which allows customers to purchase more than one item in a single visit.",
+    doi: "https://doi.org/10.1016/j.ijpe.2023.109010",
+  },
+  {
+    id: "28",
+    title:
+      "Drone resupply with multiple trucks and drones for on-time delivery along given truck routes",
+    authors: ["Wenqian Liu", "Lindong Liu", "Xiangtong Qi*"],
+    venue: "European Journal of Operational Research",
+    year: 2024,
+    type: "journal",
+    abstract:
+      "Drones have been increasingly used for deliveries; however, delivering packages directly to customers is still challenging, particularly in densely populated urban areas. To overcome this, drone resupply has been proposed, where drones carry packages to trucks en route, and then trucks make the final deliveries.",
+    doi: "https://doi.org/10.1016/j.ejor.2024.05.025",
+  },
+  {
+    id: "29",
+    title: "非平衡合作博弈大联盟稳定解",
+    authors: ["刘林冬*", "吴子翔", "刘许成", "杨晓光"],
+    venue: "中国科学：数学",
+    year: 2024,
+    type: "journal",
+    abstract:
+      "在数字经济迅速发展的今天, 作为其基础理论之一的博弈论正在迎来新的发展机遇. 因强调集体理性, 故合作博弈在合作竞争等问题中应用广泛. 然而, 许多合作博弈的核心并不存在, 即所谓的非平衡博弈, 这导致了大联盟的不稳定.",
+    doi: "https://doi.org/10.1360/SSM-2024-0152",
+  },
+  {
+    id: "30",
+    title:
+      "Performance enhancement in two‐stage innovation contests: Feedback and elimination schemes",
+    authors: [
+      "Yifu Li",
+      "Peng Luo",
+      "Wei Zhang*",
+      "Xiaowei Fan",
+      "Shuijing Jie",
+    ],
+    venue: "International Transactions in Operational Research",
+    year: 2024,
+    type: "journal",
+    abstract:
+      "Innovation is one of the driving forces of economic development and social progress, and the crowdsourcing contest is a well-established mechanism for encouraging innovation. This paper examines two incentive schemes in two-stage innovation contests: feedback and elimination.",
+    doi: "https://doi.org/10.1111/itor.13440",
+  },
+  {
+    id: "31",
+    title:
+      "Non-sequential Appointment Scheduling With a Random Number of Requests",
+    authors: ["Yan Zhu", "Zhixin Liu", "Xiangtong Qi*"],
+    venue: "Production and Operations Management",
+    year: 2024,
+    type: "journal",
+    abstract:
+      "This article studies an appointment scheduling problem where a service provider dynamically receives appointment requests from a random number of customers. By leveraging the randomness of the number of potential customers, we develop a nonsequential appointment scheduling policy as an alternative to the conventional first-come-first-served (FCFS) policy.",
+    doi: "https://doi.org/10.1177/10591478231224926",
+  },
+  {
+    id: "32",
+    title:
+      "Target-oriented robust satisficing models for the single machine scheduling problems with release time",
+    authors: ["Xun Zhang*", "Du Chen"],
+    venue: "Computers & Operations Research",
+    year: 2024,
+    type: "journal",
+    abstract:
+      "In this paper, we investigate single machine scheduling problems with release times and random processing times, where the release times can be either deterministic or random. The objective is to determine a scheduling sequence that exhibits strong out-of-sample performance.",
+    doi: "https://doi.org/10.1016/j.cor.2024.106642",
+  },
+  {
+    id: "33",
+    title:
+      "Enhancing column generation by reinforcement learning-based hyper-heuristic for vehicle routing and scheduling problems",
+    authors: ["Kuan Xu", "Li Shen", "Lindong Liu*"],
+    venue: "Computers & Industrial Engineering",
+    year: 2025,
+    type: "journal",
+    abstract:
+      "Column generation (CG) is a crucial technique to solve large-scale problems by dynamically generating variables. It has extensive applications in common combinatorial optimization, such as vehicle routing and scheduling, where each iteration involves solving a constrained shortest path problem, which is NP-hard.",
+    doi: "https://doi.org/10.1016/j.cie.2025.111138",
+  },
+  {
+    id: "34",
+    title:
+      "Logistics cost optimisation and allocation for additive manufacturer make-to-order cooperation",
+    authors: ["Zhendong Li", "Lindong Liu", "Yan Zhu*", "Sheng Li", "Lan Lu"],
+    venue: "International Journal of Production Research",
+    year: 2025,
+    type: "journal",
+    abstract:
+      "Additive manufacturing is a key technology in cloud and smart manufacturing due to its high level of automation and customisation. Advancements in manufacturing technology have reshaped the traditional make-to-order model, enabling better resource coordination, supply chain optimisation, and production flexibility.",
+    doi: "https://doi.org/10.1080/00207543.2025.2513018",
+  },
+  {
+    id: "35",
+    title:
+      "Manufacturing resource outsourcing and matching: service mode selection and equilibrium evolution",
+    authors: ["Hongguang Bo", "Yuangang Zheng", "Yifu Li*", "Shiqi He"],
+    venue: "Journal of the Operational Research Society",
+    year: 2025,
+    type: "journal",
+    abstract:
+      "Manufacturing resource outsourcing platforms facilitate the meeting and matching of manufacturing service seekers and providers. The platform's service mode, the willingness of seekers to match, and providers' carbon emission reduction (CER) directly affect entities' decisions.",
+    doi: "https://doi.org/10.1080/01605682.2024.2392797",
+  },
+  {
+    id: "36",
+    title: "Dual pricing with purchase hassle",
+    authors: ["Xuelan Zhang", "Jun Lin*", "Yifu Li*"],
+    venue: "International Journal of Production Economics",
+    year: 2025,
+    type: "journal",
+    abstract:
+      "Previous research indicates that hassle cost reduces consumers' utility and hurts sellers' profits. However, counterintuitively, some sellers, particularly those who sell online, purposefully increase the hassle cost of purchasing their products.",
+    doi: "https://doi.org/10.1016/j.ijpe.2024.109479",
+  },
+  {
+    id: "37",
+    title:
+      "Maximizing customer retention in multi-session training service: Model and algorithm",
+    authors: ["Guo Qiuwei", "Li Yifu*", "Liu Lindong", "Sheng Lifei"],
+    venue: "Production and Operations Management",
+    year: 2025,
+    type: "journal",
+    abstract:
+      "Training is an important business in the service sector. Usually, a training program involves multiple sessions and each session contains multiple activities. Although it is essential for customers to participate in all training sessions and activities, many customers fail to complete the program because the training experience is too stressful.",
+    doi: "http://doi.org/10.1177/10591478251369160",
+    featured: true,
+  },
+  {
+    id: "38",
+    title:
+      "Reference alternatives based knockout-tournament procedure for ranking and selection",
+    authors: ["Zhong Ying", "Du Jianzhong", "Li Deng-Feng", "Hu Zhaolin*"],
+    venue: "European Journal of Operational Research",
+    year: 2025,
+    type: "journal",
+    abstract:
+      "The knockout-tournament (KT) procedure is an efficient parallel procedure recently developed to solve large-scale ranking and selection (R&S) problems. The procedure adopts a selection structure which is commonly used in many sports tournaments, and eliminates alternatives by conducting 'matches' between paired alternatives round-by-round.",
+    doi: "https://doi.org/10.1016/j.ejor.2024.08.031",
+  },
+  {
+    id: "39",
+    title: "Robust Actionable Prescriptive Analytics",
+    authors: [
+      "Li Chen",
+      "Melvyn Sim",
+      "Xun Zhang*",
+      "Long Zhao",
+      "Minglong Zhou*",
+    ],
+    venue: "Operations Research",
+    year: 2025,
+    type: "journal",
+    abstract:
+      "We propose a new robust actionable prescriptive analytics framework that leverages past data and side information to minimize a risk-based objective function under distributional ambiguity. Our framework aims to find a policy that directly transforms the side information into implementable decisions.",
+    doi: "https://doi.org/10.1287/opre.2023.0300",
+    featured: true,
+  },
+  {
+    id: "40",
+    title:
+      "On-demand meal delivery: Drone scheduling with battery replacement optimization",
+    authors: ["Liu Wenqian", "He Yandong*", "Ke Ginger Y", "Zhang Lianmin"],
+    venue: "Computers and Operations Research",
+    year: 2026,
+    type: "journal",
+    abstract:
+      "Drones have become a promising solution for on-demand delivery thanks to their ability to travel fast and navigate without road restrictions. In the context of direct meal delivery using drones, it is a common practice to replace the drone's battery after each round trip between the central launch site and customer locations to prevent power interruptions.",
+    doi: "https://doi.org/10.1016/j.cor.2025.107295",
   },
 ];
 
@@ -1189,67 +1646,521 @@ export const mockPublications: Publication[] = [
 export const mockLectures: NewsItem[] = [
   {
     id: "talk1",
-    title: "深度学习在3D视觉中的应用",
+    title: "Online Resource Allocation with Limited Flexibility",
     category: "talk",
-    content: "特邀斯坦福大学李教授进行学术报告，分享最新研究成果。",
-    publishDate: "2024-01-10",
+    content:
+      "香港科技大学王譞教授应邀进行学术报告，分享在线资源分配方面的最新研究成果。",
+    publishDate: "2017-09-12",
     status: "published",
-    featured: true,
-    tags: ["学术报告", "深度学习", "3D视觉"],
-    talkSpeaker: "李明教授（斯坦福大学）",
-    talkTime: "2024-02-20 14:00-16:00",
-    talkLocation: "计算机科学与技术学院报告厅",
+    tags: ["学术报告", "资源分配"],
+    talkSpeaker: "王譞（香港科技大学）",
+    talkTime: "2017-09-12",
+    talkLocation: "EMBA第三教室",
   },
   {
     id: "talk2",
-    title: "计算机视觉与深度学习的前沿研究",
+    title: "From Industrial Projects to Academic Research",
     category: "talk",
     content:
-      "清华大学陈教授将为我们带来计算机视觉与深度学习领域的最新前沿进展。",
-    publishDate: "2023-11-25",
+      "香港科技大学齐向彤教授应邀进行学术报告，分享从工业项目到学术研究的经验。",
+    publishDate: "2018-05-25",
     status: "published",
-    tags: ["学术报告", "计算机视觉", "深度学习"],
-    talkSpeaker: "陈华教授（清华大学）",
-    talkTime: "2023-12-05 10:00-12:00",
-    talkLocation: "学术报告厅B203",
+    tags: ["学术报告", "学术研究"],
+    talkSpeaker: "齐向彤（香港科技大学）",
+    talkTime: "2018-05-25",
+    talkLocation: "东区五教5106",
   },
   {
     id: "talk3",
-    title: "神经网络架构设计的新趋势",
+    title: "Markov Decision Processes and Its Applications in Operations",
     category: "talk",
-    content: "MIT的王教授将分享神经网络架构设计的最新进展和未来趋势。",
-    publishDate: "2024-02-01",
+    content:
+      "伊利诺伊大学香槟分校陈新教授应邀进行课程，讲授马尔可夫决策过程及其在运营管理中的应用。",
+    publishDate: "2020-08-01",
     status: "published",
-    tags: ["学术报告", "神经网络", "架构设计"],
-    talkSpeaker: "王建教授（MIT）",
-    talkTime: "2024-03-10 15:00-17:00",
-    talkLocation: "学术报告厅A101",
+    tags: ["课程", "马尔可夫决策过程", "运营管理"],
+    talkSpeaker: "陈新（伊利诺伊大学香槟分校）",
+    talkTime: "2020-08",
+    talkLocation: "线上",
   },
   {
     id: "talk4",
-    title: "多模态学习在医疗AI中的应用",
+    title: "Pairwise Stable Networks: Structure, Computation and Selection",
     category: "talk",
     content:
-      "来自约翰霍普金斯大学的专家将介绍多模态学习在医疗人工智能中的创新应用。",
-    publishDate: "2024-01-25",
+      "南京大学占杨教授应邀进行学术报告，分享网络结构、计算和选择方面的研究。",
+    publishDate: "2020-12-29",
     status: "published",
-    tags: ["学术报告", "多模态学习", "医疗AI"],
-    talkSpeaker: "张丽博士（约翰霍普金斯大学）",
-    talkTime: "2024-02-28 14:30-16:30",
-    talkLocation: "医学院会议室",
+    tags: ["学术报告", "网络结构"],
+    talkSpeaker: "占杨（南京大学）",
+    talkTime: "2020-12-29",
+    talkLocation: "EMBA第一教室",
   },
   {
     id: "talk5",
-    title: "强化学习在机器人控制中的最新进展",
+    title: "Reinforcement Learning in Dynamic Environments",
+    category: "talk",
+    content: "南京大学王志教授应邀进行学术报告，讲授动态环境中的强化学习。",
+    publishDate: "2020-12-29",
+    status: "published",
+    tags: ["学术报告", "强化学习"],
+    talkSpeaker: "王志（南京大学）",
+    talkTime: "2020-12-29",
+    talkLocation: "EMBA第一教室",
+  },
+  {
+    id: "talk6",
+    title:
+      "Service Operations for Mixed Autonomous Paradigm: Lane Design, Subsidy and Smart Navigation",
     category: "talk",
     content:
-      "Berkeley大学的机器人实验室主任将分享强化学习在机器人控制领域的突破性进展。",
-    publishDate: "2024-03-05",
+      "南方科技大学何翘楚教授应邀进行学术报告，分享混合自动驾驶服务运营的研究成果。",
+    publishDate: "2021-04-08",
     status: "published",
-    tags: ["学术报告", "强化学习", "机器人控制"],
-    talkSpeaker: "刘伟教授（UC Berkeley）",
-    talkTime: "2024-04-15 10:00-12:00",
-    talkLocation: "工程学院大礼堂",
+    tags: ["学术报告", "自动驾驶", "服务运营"],
+    talkSpeaker: "何翘楚（南方科技大学）",
+    talkTime: "2021-04-08",
+    talkLocation: "线上",
+  },
+  {
+    id: "talk7",
+    title:
+      "Is Price Commitment a Better Solution to Control Carbon Emissions and Promote Technology Investment?",
+    category: "talk",
+    content:
+      "南方科技大学樊潇帅教授应邀进行学术报告，探讨价格承诺对控制碳排放和促进技术投资的作用。",
+    publishDate: "2021-04-29",
+    status: "published",
+    tags: ["学术报告", "碳排放", "技术投资"],
+    talkSpeaker: "樊潇帅（南方科技大学）",
+    talkTime: "2021-04-29",
+    talkLocation: "线上",
+  },
+  {
+    id: "talk8",
+    title:
+      "Feeder Vessel Routing and Transshipment Coordination in a Hub-and-Spoke Maritime Shipping Network",
+    category: "talk",
+    content:
+      "上海交通大学金建刚教授应邀进行学术报告，分享枢纽辐射式海运网络中的支线船舶路径和转运协调研究。",
+    publishDate: "2021-05-14",
+    status: "published",
+    tags: ["学术报告", "航运网络", "路径优化"],
+    talkSpeaker: "金建刚（上海交通大学）",
+    talkTime: "2021-05-14",
+    talkLocation: "EMBA第一教室",
+  },
+  {
+    id: "talk9",
+    title: "考虑时间窗口和卸货队列的多行程车辆路径问题",
+    category: "talk",
+    content:
+      "华中科技大学秦虎教授应邀进行学术报告，探讨考虑时间窗口和卸货队列的车辆路径优化问题。",
+    publishDate: "2021-05-14",
+    status: "published",
+    tags: ["学术报告", "车辆路径", "时间窗"],
+    talkSpeaker: "秦虎（华中科技大学）",
+    talkTime: "2021-05-14",
+    talkLocation: "EMBA第一教室",
+  },
+  {
+    id: "talk10",
+    title: "Revenue Maximization and Learning in Products Ranking",
+    category: "talk",
+    content:
+      "伦敦政经学院李安然教授应邀进行学术报告，分享产品排序中的收益最大化和学习研究。",
+    publishDate: "2021-06-18",
+    status: "published",
+    tags: ["学术报告", "收益管理", "产品排序"],
+    talkSpeaker: "李安然（伦敦政经）",
+    talkTime: "2021-06-18",
+    talkLocation: "线上",
+  },
+  {
+    id: "talk11",
+    title:
+      "Vessel Deployment with Limited Information: Distributionally Robust Chance Constrained Models",
+    category: "talk",
+    content:
+      "同济大学张真真教授应邀进行学术报告，分享有限信息下船舶部署的分布鲁棒机会约束模型。",
+    publishDate: "2021-07-15",
+    status: "published",
+    tags: ["学术报告", "船舶部署", "鲁棒优化"],
+    talkSpeaker: "张真真（同济大学）",
+    talkTime: "2021-07-15",
+    talkLocation: "EMBA第一教室",
+  },
+  {
+    id: "talk12",
+    title:
+      "A General Model and Efficient Algorithms for Reliable Facility Location Problem under Uncertain Disruptions",
+    category: "talk",
+    content:
+      "电子科技大学舒嘉教授应邀进行学术报告，分享不确定干扰下可靠设施选址问题的通用模型和高效算法。",
+    publishDate: "2022-05-21",
+    status: "published",
+    tags: ["学术报告", "设施选址", "优化算法"],
+    talkSpeaker: "舒嘉（电子科技大学）",
+    talkTime: "2022-05-21",
+    talkLocation: "线上",
+  },
+  {
+    id: "talk13",
+    title: "考虑货物存置成本的连续时间运输服务网络设计",
+    category: "talk",
+    content:
+      "香港理工大学徐宙教授应邀进行学术报告，探讨考虑货物存置成本的连续时间运输服务网络设计。",
+    publishDate: "2022-05-21",
+    status: "published",
+    tags: ["学术报告", "运输网络", "网络设计"],
+    talkSpeaker: "徐宙（香港理工大学）",
+    talkTime: "2022-05-21",
+    talkLocation: "线上",
+  },
+  {
+    id: "talk14",
+    title:
+      "An Exponential Cone Programming Approach for Managing Electric Vehicle Charging",
+    category: "talk",
+    content:
+      "乔治华盛顿大学何龙教授应邀进行学术报告，分享电动汽车充电管理的指数锥规划方法。",
+    publishDate: "2022-05-21",
+    status: "published",
+    tags: ["学术报告", "电动汽车", "充电管理"],
+    talkSpeaker: "何龙（乔治华盛顿大学）",
+    talkTime: "2022-05-21",
+    talkLocation: "线上",
+  },
+  {
+    id: "talk15",
+    title:
+      "An Online Learning Approach to Dynamic Pricing and Capacity Sizing in Service Systems",
+    category: "talk",
+    content:
+      "北卡罗来纳州立大学刘雨楠教授应邀进行学术报告，分享服务系统中动态定价和容量规划的在线学习方法。",
+    publishDate: "2022-05-21",
+    status: "published",
+    tags: ["学术报告", "动态定价", "在线学习"],
+    talkSpeaker: "刘雨楠（北卡罗来纳州立大学）",
+    talkTime: "2022-05-21",
+    talkLocation: "线上",
+  },
+  {
+    id: "talk16",
+    title:
+      "To Pool or Not to Pool: Queueing Design for Large-Scale Service Systems",
+    category: "talk",
+    content:
+      "香港中文大学黄军飞教授应邀进行学术报告，探讨大规模服务系统的队列设计问题。",
+    publishDate: "2022-05-21",
+    status: "published",
+    tags: ["学术报告", "队列设计", "服务系统"],
+    talkSpeaker: "黄军飞（香港中文大学）",
+    talkTime: "2022-05-21",
+    talkLocation: "线上",
+  },
+  {
+    id: "talk17",
+    title:
+      "Pooling Servers for Customer-Intensive Services: Theory and Experimental Evidence",
+    category: "talk",
+    content:
+      "天津大学王钟彬教授应邀进行学术报告，分享客户密集型服务的服务器池化理论和实验证据。",
+    publishDate: "2022-05-21",
+    status: "published",
+    tags: ["学术报告", "服务运营", "实验研究"],
+    talkSpeaker: "王钟彬（天津大学）",
+    talkTime: "2022-05-21",
+    talkLocation: "线上",
+  },
+  {
+    id: "talk18",
+    title: "动态拼车模式下订单的拼车概率、预期行驶里程及预期共乘里程预测",
+    category: "talk",
+    content:
+      "同济大学王晓蕾教授应邀进行学术报告，分享动态拼车模式下的订单预测研究。",
+    publishDate: "2022-05-21",
+    status: "published",
+    tags: ["学术报告", "拼车", "预测模型"],
+    talkSpeaker: "王晓蕾（同济大学）",
+    talkTime: "2022-05-21",
+    talkLocation: "线上",
+  },
+  {
+    id: "talk19",
+    title:
+      "The Electric Vehicle Routing Problem with Nonlinear Charging Functions",
+    category: "talk",
+    content:
+      "南京大学罗志兴教授应邀进行学术报告，探讨非线性充电函数下的电动汽车路径问题。",
+    publishDate: "2022-05-21",
+    status: "published",
+    tags: ["学术报告", "电动汽车", "路径优化"],
+    talkSpeaker: "罗志兴（南京大学）",
+    talkTime: "2022-05-21",
+    talkLocation: "线上",
+  },
+  {
+    id: "talk20",
+    title: "Feature-Driven Robust Surgery Scheduling",
+    category: "talk",
+    content:
+      "西南财经大学章宇教授应邀进行学术报告，分享特征驱动的鲁棒手术排程研究。",
+    publishDate: "2022-05-21",
+    status: "published",
+    tags: ["学术报告", "手术排程", "鲁棒优化"],
+    talkSpeaker: "章宇（西南财经大学）",
+    talkTime: "2022-05-21",
+    talkLocation: "线上",
+  },
+  {
+    id: "talk21",
+    title:
+      "Dense and fast: Achieving shortest unimpeded retrieval with a minimum number of empty cells in puzzle-based storage systems",
+    category: "talk",
+    content:
+      "中国科学技术大学余虎教授应邀进行学术报告，分享拼图式存储系统的检索优化研究。",
+    publishDate: "2022-05-22",
+    status: "published",
+    tags: ["学术报告", "存储系统", "检索优化"],
+    talkSpeaker: "余虎（中国科学技术大学）",
+    talkTime: "2022-05-22",
+    talkLocation: "线上",
+  },
+  {
+    id: "talk22",
+    title:
+      'Escape the "Blackholes": Predictive and Prescriptive Analytics for Bicycle-Sharing Maintenance',
+    category: "talk",
+    content:
+      "中国科学技术大学逯兰教授应邀进行学术报告，分享共享单车维护的预测性和规范性分析研究。",
+    publishDate: "2022-05-22",
+    status: "published",
+    tags: ["学术报告", "共享单车", "预测分析"],
+    talkSpeaker: "逯兰（中国科学技术大学）",
+    talkTime: "2022-05-22",
+    talkLocation: "线上",
+  },
+  {
+    id: "talk23",
+    title: "Deep Reinforcement Learning",
+    category: "talk",
+    content: "南京大学王志教授应邀进行课程，讲授深度强化学习的理论与应用。",
+    publishDate: "2022-06-29",
+    status: "published",
+    tags: ["课程", "深度强化学习"],
+    talkSpeaker: "王志（南京大学）",
+    talkTime: "2022-06-29至2022-07-03",
+    talkLocation: "EMBA第二教室",
+  },
+  {
+    id: "talk24",
+    title:
+      "Mitigation Strategies and Operations in Confronting Infectious Deseases",
+    category: "talk",
+    content:
+      "香港科技大学齐向彤教授应邀进行学术报告，分享应对传染病的缓解策略和运营管理研究。",
+    publishDate: "2023-05-27",
+    status: "published",
+    tags: ["学术报告", "传染病", "运营管理"],
+    talkSpeaker: "齐向彤（香港科技大学）",
+    talkTime: "2023-05-27",
+    talkLocation: "管科楼第五教室",
+  },
+  {
+    id: "talk25",
+    title: "不确定优化简介",
+    category: "talk",
+    content:
+      "西南财经大学章宇教授应邀进行课程，讲授不确定优化的基本理论和方法。",
+    publishDate: "2023-07-12",
+    status: "published",
+    tags: ["课程", "不确定优化"],
+    talkSpeaker: "章宇（西南财经大学）",
+    talkTime: "2023-07-12至2023-07-13",
+    talkLocation: "第二教学楼2407",
+  },
+  {
+    id: "talk26",
+    title: "精确优化算法理论与实践",
+    category: "talk",
+    content:
+      "西北工业大学李纪柳教授应邀进行课程，讲授精确优化算法的理论与实践。",
+    publishDate: "2023-07-14",
+    status: "published",
+    tags: ["课程", "优化算法"],
+    talkSpeaker: "李纪柳（西北工业大学）",
+    talkTime: "2023-07-14至2023-07-15",
+    talkLocation: "第二教学楼2408",
+  },
+  {
+    id: "talk27",
+    title: "大规模整数规划",
+    category: "talk",
+    content: "同济大学张真真教授应邀进行课程，讲授大规模整数规划的理论和算法。",
+    publishDate: "2024-08-01",
+    status: "published",
+    tags: ["课程", "整数规划"],
+    talkSpeaker: "张真真（同济大学）",
+    talkTime: "2024-08-01至2024-08-04",
+    talkLocation: "第五教学楼5106",
+  },
+  {
+    id: "talk28",
+    title: "基于深度强化学习的库存与推荐系统协同",
+    category: "talk",
+    content:
+      "北京大学彭一杰教授应邀进行学术报告，分享基于深度强化学习的库存与推荐系统协同研究。",
+    publishDate: "2024-09-14",
+    status: "published",
+    tags: ["学术报告", "深度强化学习", "库存管理"],
+    talkSpeaker: "彭一杰（北京大学）",
+    talkTime: "2024-09-14",
+    talkLocation: "管科楼第三教室",
+  },
+  {
+    id: "talk29",
+    title: "自动驾驶：排队博弈、信息设计和人机交互",
+    category: "talk",
+    content:
+      "南方科技大学何翘楚教授应邀进行学术报告，分享自动驾驶中的排队博弈、信息设计和人机交互研究。",
+    publishDate: "2024-11-26",
+    status: "published",
+    tags: ["学术报告", "自动驾驶", "博弈论"],
+    talkSpeaker: "何翘楚（南方科技大学）",
+    talkTime: "2024-11-26",
+    talkLocation: "管科楼第四教室",
+  },
+  {
+    id: "talk30",
+    title: "考虑均值-方差模糊性和误设性的报童问题",
+    category: "talk",
+    content:
+      "香港中文大学陈植教授应邀进行学术报告，探讨考虑均值-方差模糊性和误设性的报童问题。",
+    publishDate: "2024-11-26",
+    status: "published",
+    tags: ["学术报告", "报童问题", "鲁棒优化"],
+    talkSpeaker: "陈植（香港中文大学）",
+    talkTime: "2024-11-26",
+    talkLocation: "管科楼第四教室",
+  },
+  {
+    id: "talk31",
+    title:
+      "一类有限时域马尔可夫决策过程的策略梯度目标函数非凸结构：在运筹模型中的应用",
+    category: "talk",
+    content:
+      "佐治亚理工学院陈新教授应邀进行学术报告，分享有限时域马尔可夫决策过程的策略梯度研究。",
+    publishDate: "2024-12-17",
+    status: "published",
+    tags: ["学术报告", "马尔可夫决策过程", "策略梯度"],
+    talkSpeaker: "陈新（佐治亚理工）",
+    talkTime: "2024-12-17",
+    talkLocation: "国际金融研究院5号楼301",
+  },
+  {
+    id: "talk32",
+    title: "共享经济下的奢侈品：顾客间点对点租赁对炫耀性消费的影响",
+    category: "talk",
+    content:
+      "杜伦大学董昶教授应邀进行学术报告，探讨共享经济下奢侈品点对点租赁对消费行为的影响。",
+    publishDate: "2025-01-09",
+    status: "published",
+    tags: ["学术报告", "共享经济", "消费行为"],
+    talkSpeaker: "董昶（杜伦大学）",
+    talkTime: "2025-01-09",
+    talkLocation: "管理学院一楼第二案例室",
+  },
+  {
+    id: "talk33",
+    title: "在线食品配送平台的实时匹配和路径优化决策",
+    category: "talk",
+    content:
+      "杜伦大学赵燕鲁教授应邀进行学术报告，分享在线食品配送平台的实时匹配和路径优化研究。",
+    publishDate: "2025-01-09",
+    status: "published",
+    tags: ["学术报告", "食品配送", "路径优化"],
+    talkSpeaker: "赵燕鲁（杜伦大学）",
+    talkTime: "2025-01-09",
+    talkLocation: "管理学院一楼第二案例室",
+  },
+  {
+    id: "talk34",
+    title: "向报童提供信息：廉价沟通与预测性人工智能",
+    category: "talk",
+    content:
+      "康涅狄格大学芦涛教授应邀进行学术报告，探讨向报童提供信息的廉价沟通与预测性人工智能研究。",
+    publishDate: "2025-01-09",
+    status: "published",
+    tags: ["学术报告", "信息设计", "人工智能"],
+    talkSpeaker: "芦涛（康涅狄格大学）",
+    talkTime: "2025-01-09",
+    talkLocation: "管理学院一楼第二案例室",
+  },
+  {
+    id: "talk35",
+    title: "基于矩—离散度的鲁棒优化",
+    category: "talk",
+    content:
+      "悉尼大学陈力教授应邀进行学术报告，分享基于矩—离散度的鲁棒优化研究。",
+    publishDate: "2025-01-14",
+    status: "published",
+    tags: ["学术报告", "鲁棒优化"],
+    talkSpeaker: "陈力（悉尼大学）",
+    talkTime: "2025-01-14",
+    talkLocation: "管理学院一楼第二案例室",
+  },
+  {
+    id: "talk36",
+    title: "考虑相关性的分布式鲁棒群检验",
+    category: "talk",
+    content:
+      "香港科技大学戚瑾教授应邀进行学术报告，探讨考虑相关性的分布式鲁棒群检验问题。",
+    publishDate: "2025-02-27",
+    status: "published",
+    tags: ["学术报告", "分布式鲁棒", "群检验"],
+    talkSpeaker: "戚瑾（香港科技大学）",
+    talkTime: "2025-02-27",
+    talkLocation: "管理学院一楼第二案例室",
+  },
+  {
+    id: "talk37",
+    title: "基于大语言模型的大规模优化模型自动构建：一种少样本学习方法",
+    category: "talk",
+    content:
+      "新加坡国立大学覃含章教授应邀进行学术报告，分享基于大语言模型的大规模优化模型自动构建研究。",
+    publishDate: "2025-05-14",
+    status: "published",
+    tags: ["学术报告", "大语言模型", "优化模型"],
+    talkSpeaker: "覃含章（新加坡国立大学）",
+    talkTime: "2025-05-14",
+    talkLocation: "管理学院一楼第二案例室",
+  },
+  {
+    id: "talk38",
+    title: "冲刺还是漫步？在设施生产能力投资之前管理初创企业的增长",
+    category: "talk",
+    content:
+      "HEC蒙特利尔商学院李媛媛教授应邀进行学术报告，探讨初创企业增长管理策略。",
+    publishDate: "2025-08-29",
+    status: "published",
+    tags: ["学术报告", "创业管理", "产能投资"],
+    talkSpeaker: "李媛媛（HEC蒙特利尔商学院）",
+    talkTime: "2025-08-29",
+    talkLocation: "管理学院一楼第一教室",
+  },
+  {
+    id: "talk39",
+    title: "基于Birkhoff-von Neumann分解的仓库商品组合选择启发式方法",
+    category: "talk",
+    content:
+      "杜伦大学刘方教授应邀进行学术报告，分享基于Birkhoff-von Neumann分解的仓库商品组合选择启发式方法研究。",
+    publishDate: "2025-08-29",
+    status: "published",
+    tags: ["学术报告", "仓库管理", "启发式算法"],
+    talkSpeaker: "刘方（杜伦大学）",
+    talkTime: "2025-08-29",
+    talkLocation: "管理学院一楼第一教室",
   },
 ];
 

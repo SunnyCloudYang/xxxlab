@@ -12,6 +12,7 @@ const navigation: NavItem[] = [
   { name: "学术论文", path: "/publications" },
   { name: "新闻动态", path: "/news" },
   { name: "学术讲座", path: "/lectures" },
+  { name: "通知公告", path: "/announcements" },
   { name: "团队风采", path: "/gallery" },
   { name: "研究方向", path: "/research" },
 ];
@@ -59,7 +60,8 @@ const Header: React.FC = () => {
                     <img
                       src={import.meta.env.BASE_URL + "/images/logo.png"}
                       alt="OR Colearning Society"
-                      className="h-12 w-auto my-auto" />
+                      className="h-12 w-auto my-auto"
+                    />
                   </div>
                   {/* <div className="hidden sm:block">
                     <h1 className="text-xl font-bold text-gray-900">
