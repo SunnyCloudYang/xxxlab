@@ -29,10 +29,10 @@ const AppRouter: React.FC = () => {
           <Route path="/lectures" element={<News />} />
           <Route path="/news" element={<NewsAll />} />
           <Route path="/news/:id" element={<NewsDetail />} />
-          <Route path="/announcements" element={<Announcements />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/research" element={<Research />} />
           <Route path="/research/:id" element={<ResearchDetail />} />
+          <Route path="/timeline" element={<Announcements />} />
           <Route path="/projects/:id" element={<ProjectDetail />} />
 
           {/* 404 页面 */}

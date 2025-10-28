@@ -12,9 +12,9 @@ const navigation: NavItem[] = [
   { name: "学术论文", path: "/publications" },
   { name: "新闻动态", path: "/news" },
   { name: "学术讲座", path: "/lectures" },
-  { name: "通知公告", path: "/announcements" },
   { name: "团队风采", path: "/gallery" },
   { name: "研究方向", path: "/research" },
+  { name: "时间线", path: "/timeline" },
 ];
 
 const Header: React.FC = () => {

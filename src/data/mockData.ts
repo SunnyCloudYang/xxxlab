@@ -2164,6 +2164,154 @@ export const mockLectures: NewsItem[] = [
   },
 ];
 
+// 通知公告数据（时间线）
+export const mockTimeline: NewsItem[] = [
+  {
+    id: "news1",
+    title:
+      "祝贺郭秋炜拿到了POM小修、刘许成拿到了POM的R&R，卢蔚乾拿到了IEEE EM的大修！！",
+    category: "achievement",
+    content:
+      "祝贺郭秋炜同学的论文拿到了Production and Operations Management 小修、刘许成同学的论文拿到了Production and Operations Management 的R&R，卢蔚乾同学的论文拿到了IEEE Transactions on Engineering Management 的大修！！",
+    publishDate: "2025-07-14",
+    status: "published",
+    featured: true,
+    tags: ["论文", "学术成果"],
+    author: "实验室办公室",
+  },
+  {
+    id: "news2",
+    title: "祝贺于成成同学论文被omega接受！！",
+    category: "achievement",
+    content:
+      "",
+    publishDate: "2025-06-15",
+    status: "published",
+    featured: true,
+    tags: ["论文", "学术成果"],
+    author: "实验室办公室",
+  },
+  {
+    id: "news3",
+    title: "祝贺张佳洛、江毅同学获得国际供应链建模设计大赛特等奖！",
+    category: "achievement",
+    content:
+      "中国科大管理学院MLE代表队荣获第五届国际供应链建模设计大赛特等奖、一等奖",
+    publishDate: "2025-05-23",
+    status: "published",
+    featured: true,
+    tags: ["竞赛获奖", "特等奖"],
+    author: "实验室办公室",
+  },
+  {
+    id: "news4",
+    title: "祝贺陆运阳和于成成获得EJOR大修！！",
+    category: "achievement",
+    content:
+      "祝贺陆运阳和于成成同学完成的论文被 EUROPEAN JOURNAL OF OPERATIONAL RESEARCH 大修！",
+    publishDate: "2025-05-17",
+    status: "published",
+    tags: ["论文", "学术成果"],
+    author: "实验室办公室",
+  },
+  {
+    id: "news5",
+    title: "祝贺李振东获得IJPR小修！！",
+    category: "achievement",
+    content:
+      "",
+    publishDate: "2025-05-17",
+    status: "published",
+    tags: ["论文", "学术成果"],
+    author: "实验室办公室",
+  },
+  {
+    id: "news6",
+    title: "祝贺徐宽完成的论文被CIE接受！！",
+    category: "achievement",
+    content:
+      "",
+    publishDate: "2025-04-14",
+    status: "published",
+    tags: ["论文", "学术成果"],
+    author: "实验室办公室",
+  },
+  {
+    id: "news7",
+    title: "祝贺郭秋炜获得POMS大修！！",
+    category: "achievement",
+    content:
+      "",
+    publishDate: "2025-02-26",
+    status: "published",
+    tags: ["论文", "学术成果"],
+    author: "实验室办公室",
+  },
+  {
+    id: "news8",
+    title: "祝贺于成成获得POMS大修！！",
+    category: "achievement",
+    content:
+      '祝贺于成成同学完成的论文"Mitigating the "Black Holes":Periodic Repair and Maintenance Problem of Shared Bikes"被 Production and OperationsManagement 大修！',
+    publishDate: "2025-02-26",
+    status: "published",
+    tags: ["论文", "学术成果"],
+    author: "实验室办公室",
+  },
+  {
+    id: "news9",
+    title: "祝贺郑晨龙与吴子翔获得国家奖学金！",
+    category: "achievement",
+    content: "祝贺郑晨龙与吴子翔获得2024年度研究生国家奖学金",
+    publishDate: "2024-11-14",
+    status: "published",
+    featured: true,
+    tags: ["奖学金", "荣誉奖项"],
+    author: "实验室办公室",
+  },
+  {
+    id: "news10",
+    title: "祝贺刘林冬老师、朱龑老师在《经济日报》刊发文章",
+    category: "achievement",
+    content: "《经济日报》刊发中国科大管理学院刘林冬教授文章",
+    publishDate: "2024-11-04",
+    status: "published",
+    tags: ["论文发表", "教师成果"],
+    author: "实验室办公室",
+  },
+  {
+    id: "news11",
+    title: "祝贺汪勐航获得POMS最佳论文奖！",
+    category: "achievement",
+    content: "祝贺汪勐航同学在2024年6月9日获得2024POMS会议的最佳论文奖！",
+    publishDate: "2024-06-29",
+    status: "published",
+    featured: true,
+    tags: ["获奖", "最佳论文", "学术成果"],
+    author: "实验室办公室",
+  },
+  {
+    id: "news12",
+    title: "祝贺李想、郑晨龙、王勇康获得日日顺金奖！",
+    category: "achievement",
+    content: "祝贺李想、郑晨龙、王勇康获得2023第8届日日顺创客训练营金奖！",
+    publishDate: "2023-11-15",
+    status: "published",
+    tags: ["竞赛获奖", "金奖"],
+    author: "实验室办公室",
+  },
+  {
+    id: "news13",
+    title: "祝贺李胜获得国家奖学金！！",
+    category: "achievement",
+    content: "祝贺李胜获得2023年度研究生国家奖学金！",
+    publishDate: "2023-11-14",
+    status: "published",
+    tags: ["奖学金", "荣誉奖项"],
+    author: "实验室办公室",
+  },
+];
+
 // 新闻动态数据（包含多种类型）
 export const mockNews: NewsItem[] = [
   {
