@@ -10,31 +10,13 @@ import {
 import { mockTeamMembers, mockNews, mockPublications } from "../data/mockData";
 
 const Home: React.FC = () => {
-  // 滚动到指定部分的函数，添加顶部偏移量以避免导航栏遮挡
-  // const scrollToSection = (sectionId: string) => {
-  //   const section = document.getElementById(sectionId);
-  //   if (section) {
-  //     // 获取元素的位置
-  //     const elementPosition = section.getBoundingClientRect().top;
-  //     // 当前滚动位置
-  //     const offsetPosition = elementPosition + window.pageYOffset;
-  //     // 添加偏移量（这里设置为80px，可根据导航栏高度调整）
-  //     const offsetY = 120;
-
-  //     // 滚动到目标位置减去偏移量
-  //     window.scrollTo({
-  //       top: offsetPosition - offsetY,
-  //       behavior: "smooth",
-  //     });
-  //   }
-  // };
   return (
     <div className="space-y-16">
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-primary-900 via-primary-800 to-blue-900 text-white">
         <Container>
           <div className="py-24 md:py-32">
-            <div className="max-w-4xl">
+            <div className="max-w-4xl mx-auto">
               <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
                 运筹共学社
               </h1>
@@ -47,23 +29,6 @@ const Home: React.FC = () => {
                 <br />
                 运筹共学社的研究工作得到了国家自然科学基金、中科院、安徽省自然科学基金，以及芯片研发、制造业头部等企业的资助，研究方向为智能决策与博弈，包括复杂系统博弈与合作治理、大规模随机系统协同管理优化、行为调度决策与经济效用分析、强化学习在组合优化中的应用、数据驱动的运营管理、仿真优化、智慧交通物流、智慧电网、智能制造、非常规情境应急管理等智能决策应用。
               </p>
-              {/* <div className="flex flex-col sm:flex-row gap-4">
-                <Button
-                  size="lg"
-                  variant="secondary"
-                  onClick={() => scrollToSection("team-section")}
-                >
-                  了解更多
-                </Button>
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="border-white text-white hover:bg-white hover:text-primary-900"
-                  onClick={() => scrollToSection("contact-section")}
-                >
-                  加入我们
-                </Button>
-              </div> */}
             </div>
           </div>
         </Container>
@@ -153,6 +118,7 @@ const Home: React.FC = () => {
                     publication={publication}
                     layout="horizontal"
                     showAbstract={true}
+                    highlightAuthors={true}
                   />
                 ))}
             </div>

@@ -1,6 +1,6 @@
 import type { TeamMember, Publication, NewsItem, Project } from "../types";
 
-// 示例团队成员数据
+// 团队成员数据
 export const mockTeamMembers: TeamMember[] = [
   {
     id: "1",
@@ -351,11 +351,11 @@ export const mockTeamMembers: TeamMember[] = [
   {
     id: "7",
     name: "刘文倩",
-    nameEn: "Wenjing Liu",
+    nameEn: "Wenqian Liu",
     role: "faculty",
     title: "助理教授",
     supervisorType: "",
-    avatar: "/images/avatars/liuwenjing.jpg",
+    avatar: "/images/avatars/liuwenqian.jpg",
     email: "wenqian_liu@swjtu.edu.cn",
     website: "https://faculty.swjtu.edu.cn/liuwenqian1/zh_CN/index.htm",
     researchInterests: ["低空物流", "智慧调度"],
@@ -398,6 +398,7 @@ export const mockTeamMembers: TeamMember[] = [
   {
     id: "7",
     name: "卢蔚乾",
+    nameEn: "Weiqian Lu",
     role: "phd",
     avatar: "/images/avatars/卢蔚乾.jpg",
     email: "wqlu@mail.ustc.edu.cn",
@@ -422,6 +423,7 @@ export const mockTeamMembers: TeamMember[] = [
     id: "8",
     name: "李振东",
     role: "phd",
+    nameEn: "Zhendong Li",
     avatar: "/images/avatars/李振东.jpg",
     email: "sa204186@mail.ustc.edu.cn",
     researchInterests: [
@@ -444,6 +446,7 @@ export const mockTeamMembers: TeamMember[] = [
   {
     id: "9",
     name: "刘许成",
+    nameEn: "Xucheng Liu",
     role: "phd",
     avatar: "/images/avatars/刘许成.jpg",
     email: "lkdn@mail.ustc.edu.cn",
@@ -466,6 +469,7 @@ export const mockTeamMembers: TeamMember[] = [
   {
     id: "10",
     name: "汪勐航",
+    nameEn: "Menghang Wang",
     role: "phd",
     avatar: "/images/avatars/汪勐航.jpg",
     email: "wmh0205@mail.ustc.edu.cn",
@@ -488,6 +492,7 @@ export const mockTeamMembers: TeamMember[] = [
   {
     id: "11",
     name: "欧阳志凤",
+    nameEn: "Zhifeng Ou Yang",
     role: "phd",
     avatar: "/images/avatars/欧阳志凤.jpg",
     email: "ouyangzf98@mail.ustc.edu.cn",
@@ -506,6 +511,7 @@ export const mockTeamMembers: TeamMember[] = [
   {
     id: "12",
     name: "廖祥斌",
+    nameEn: "Xiangbin Liao",
     role: "phd",
     avatar: "/images/avatars/廖祥斌.jpg",
     email: "liao1999@mail.ustc.edu.cn",
@@ -524,6 +530,7 @@ export const mockTeamMembers: TeamMember[] = [
   {
     id: "13",
     name: "谭政",
+    nameEn: "Zheng Tan",
     role: "phd",
     avatar: "/images/avatars/谭政.png",
     email: "tangle@mail.ustc.edu.cn",
@@ -546,6 +553,7 @@ export const mockTeamMembers: TeamMember[] = [
   {
     id: "14",
     name: "徐宽",
+    nameEn: "Kuan Xu",
     role: "phd",
     avatar: "/images/avatars/徐宽.jpg",
     email: "mathkxu@mail.ustc.edu.cn",
@@ -564,6 +572,7 @@ export const mockTeamMembers: TeamMember[] = [
   {
     id: "15",
     name: "王耀",
+    nameEn: "Yao Wang",
     role: "phd",
     avatar: "/images/avatars/王耀.jpg",
     email: "yaowang2022@ustc.edu.cn",
@@ -586,6 +595,7 @@ export const mockTeamMembers: TeamMember[] = [
   {
     id: "16",
     name: "郭秋炜",
+    nameEn: "Qiuwei Guo",
     role: "phd",
     avatar: "/images/avatars/郭秋炜.jpg",
     email: "guoqw@mail.ustc.edu.cn",
@@ -604,6 +614,7 @@ export const mockTeamMembers: TeamMember[] = [
   {
     id: "17",
     name: "吴子翔",
+    nameEn: "Zixiang Wu",
     role: "phd",
     avatar: "/images/avatars/吴子翔.jpg",
     email: "wuzixiang@mail.ustc.edu.cn",
@@ -622,6 +633,7 @@ export const mockTeamMembers: TeamMember[] = [
   {
     id: "18",
     name: "李淑宇",
+    nameEn: "Shuyu Li",
     role: "phd",
     avatar: "/images/avatars/李淑宇.jpg",
     email: "lisy2020@mail.ustc.edu.cn",
@@ -640,6 +652,7 @@ export const mockTeamMembers: TeamMember[] = [
   {
     id: "19",
     name: "邢淦琛",
+    nameEn: "Ganchen Xing",
     role: "phd",
     avatar: "/images/avatars/邢淦琛.png",
     email: "xingganchen@mail.ustc.edu.cn",
@@ -658,6 +671,7 @@ export const mockTeamMembers: TeamMember[] = [
   {
     id: "20",
     name: "孙钰清",
+    nameEn: "Yujing Sun",
     role: "phd",
     avatar: "/images/avatars/孙钰清.jpg",
     email: "sunyuqing@mail.ustc.edu.cn",
@@ -681,6 +695,7 @@ export const mockTeamMembers: TeamMember[] = [
   {
     id: "21",
     name: "王勇康",
+    nameEn: "Yongkang Wang",
     role: "master",
     avatar: "/images/avatars/王勇康.jpg",
     email: "yoka_wang@mail.ustc.edu.cn",
@@ -699,6 +714,7 @@ export const mockTeamMembers: TeamMember[] = [
   {
     id: "22",
     name: "陈龙",
+    nameEn: "Long Chen",
     role: "master",
     avatar: "/images/avatars/陈龙.jpg",
     email: "lchen1307@mail.ustc.edu.cn",
@@ -717,6 +733,7 @@ export const mockTeamMembers: TeamMember[] = [
   {
     id: "23",
     name: "郭朝阳",
+    nameEn: "Chaoyang Guo",
     role: "master",
     avatar: "/images/avatars/郭朝阳.jpg",
     email: "chaoyang23@mail.ustc.edu.cn",
@@ -735,6 +752,7 @@ export const mockTeamMembers: TeamMember[] = [
   {
     id: "24",
     name: "许仁静",
+    nameEn: "Rengjing Xu",
     role: "master",
     avatar: "/images/avatars/许仁静.png",
     email: "rjxu@mail.ustc.edu.cn",
@@ -753,6 +771,7 @@ export const mockTeamMembers: TeamMember[] = [
   {
     id: "25",
     name: "张耀太",
+    nameEn: "Yaota Zhang",
     role: "master",
     avatar: "/images/avatars/张耀太.jpg",
     email: "zyt01@mail.ustc.edu.cn",
@@ -771,6 +790,7 @@ export const mockTeamMembers: TeamMember[] = [
   {
     id: "26",
     name: "许璟钊",
+    nameEn: "Jingzhao Xu",
     role: "master",
     avatar: "/images/avatars/许璟钊.jpg",
     email: "xujingzhao@mail.ustc.edu.cn",
@@ -789,6 +809,7 @@ export const mockTeamMembers: TeamMember[] = [
   {
     id: "27",
     name: "肖涵菲",
+    nameEn: "Hanfei Xiao",
     role: "master",
     avatar: "/images/avatars/肖涵菲.jpg",
     email: "xhf857@mail.ustc.edu.cn",
@@ -807,6 +828,7 @@ export const mockTeamMembers: TeamMember[] = [
   {
     id: "28",
     name: "李泽西",
+    nameEn: "Zexi Li",
     role: "master",
     avatar: "/images/avatars/李泽西.jpg",
     email: "zexil@mail.ustc.edu.cn",
@@ -825,6 +847,7 @@ export const mockTeamMembers: TeamMember[] = [
   {
     id: "29",
     name: "赵俊喆",
+    nameEn: "Junzhe Zhao",
     role: "master",
     avatar: "/images/avatars/赵俊喆.jpg",
     email: "jzzhao@mail.ustc.edu.cn",
@@ -843,6 +866,7 @@ export const mockTeamMembers: TeamMember[] = [
   {
     id: "30",
     name: "段睿",
+    nameEn: "Rui Duan",
     role: "master",
     avatar: "/images/avatars/段睿.jpg",
     email: "duanrui@mail.ustc.edu.cn",
@@ -861,6 +885,7 @@ export const mockTeamMembers: TeamMember[] = [
   {
     id: "31",
     name: "李昊洋",
+    nameEn: "Haoyang Li",
     role: "master",
     avatar: "/images/avatars/李昊洋.jpg",
     email: "lhyif9@mail.ustc.edu.cn",
@@ -879,6 +904,7 @@ export const mockTeamMembers: TeamMember[] = [
   {
     id: "32",
     name: "金楷然",
+    nameEn: "Kairan Jin",
     role: "master",
     avatar: "/images/avatars/金楷然.jpg",
     email: "jkr@mail.ustc.edu.cn",
@@ -897,6 +923,7 @@ export const mockTeamMembers: TeamMember[] = [
   {
     id: "33",
     name: "吴天阳",
+    nameEn: "Tianyang Wu",
     role: "master",
     avatar: "/images/avatars/吴天阳.jpg",
     email: "wutianyang@mail.ustc.edu.cn",
@@ -915,6 +942,7 @@ export const mockTeamMembers: TeamMember[] = [
   {
     id: "34",
     name: "张佳洛",
+    nameEn: "Jialuo Zhang",
     role: "master",
     avatar: "/images/avatars/张佳洛.jpg",
     email: "jialuozhang@mail.ustc.edu.cn",
@@ -933,6 +961,7 @@ export const mockTeamMembers: TeamMember[] = [
   {
     id: "35",
     name: "邢伯韬",
+    nameEn: "Botao Xing",
     role: "master",
     avatar: "/images/avatars/邢伯韬.jpg",
     email: "xingbotao@mail.ustc.edu.cn",
@@ -951,6 +980,7 @@ export const mockTeamMembers: TeamMember[] = [
   {
     id: "36",
     name: "王梓声",
+    nameEn: "Zizhi Wang",
     role: "master",
     avatar: "/images/avatars/王梓声.jpg",
     email: "ziziwong@mail.ustc.edu.cn",
@@ -969,6 +999,7 @@ export const mockTeamMembers: TeamMember[] = [
   {
     id: "37",
     name: "靳志强",
+    nameEn: "Zhiqiang Jin",
     role: "master",
     avatar: "/images/avatars/靳志强.jpg",
     email: "jinzhiqiang@mail.ustc.edu.cn",
@@ -987,6 +1018,7 @@ export const mockTeamMembers: TeamMember[] = [
   {
     id: "38",
     name: "江毅",
+    nameEn: "Yi Jiang",
     role: "master",
     avatar: "/images/avatars/江毅.jpg",
     email: "jiangyi24mle@mail.ustc.edu.cn",
@@ -1005,6 +1037,7 @@ export const mockTeamMembers: TeamMember[] = [
   {
     id: "39",
     name: "林家祥",
+    nameEn: "Jiaxiang Lin",
     role: "master",
     avatar: "/images/avatars/林家祥.jpg",
     email: "jxlin@mail.ustc.edu.cn",
@@ -1023,6 +1056,7 @@ export const mockTeamMembers: TeamMember[] = [
   {
     id: "40",
     name: "李鉴岐",
+    nameEn: "Jianqi Li",
     role: "master",
     avatar: "/images/avatars/李鉴岐.jpg",
     email: "lijianqi@mail.ustc.edu.cn",
@@ -1041,6 +1075,7 @@ export const mockTeamMembers: TeamMember[] = [
   {
     id: "41",
     name: "李绪泰",
+    nameEn: "Xuta Li",
     role: "master",
     avatar: "/images/avatars/李绪泰.jpg",
     email: "xutaili@mail.ustc.edu.cn",
@@ -1059,6 +1094,7 @@ export const mockTeamMembers: TeamMember[] = [
   {
     id: "42",
     name: "徐光辉",
+    nameEn: "Guangxu Xu",
     role: "master",
     avatar: "/images/avatars/徐光辉.jpg",
     email: "sa25204201@mail.ustc.edu.cn",
@@ -1077,6 +1113,7 @@ export const mockTeamMembers: TeamMember[] = [
   {
     id: "43",
     name: "张芳菲",
+    nameEn: "Fangfei Zhang",
     role: "master",
     avatar: "/images/avatars/张芳菲.jpg",
     email: "fangfeizhang@mail.ustc.edu.cn",
@@ -1095,6 +1132,7 @@ export const mockTeamMembers: TeamMember[] = [
   {
     id: "44",
     name: "郑永胜",
+    nameEn: "Yongsheng Zheng",
     role: "master",
     avatar: "/images/avatars/郑永胜.jpg",
     email: "zhengys30@mail.ustc.edu.cn",
@@ -1113,6 +1151,7 @@ export const mockTeamMembers: TeamMember[] = [
   {
     id: "45",
     name: "彭薏仰",
+    nameEn: "Yiyang Peng",
     role: "master",
     avatar: "/images/avatars/彭薏仰.jpg",
     email: "pengyiyang@mail.ustc.edu.cn",
@@ -1131,6 +1170,7 @@ export const mockTeamMembers: TeamMember[] = [
   {
     id: "46",
     name: "朱传奇",
+    nameEn: "Chuanqi Zhu",
     role: "master",
     avatar: "/images/avatars/朱传奇.jpg",
     email: "zhuchuanqi@mail.ustc.edu.cn",
@@ -1148,7 +1188,7 @@ export const mockTeamMembers: TeamMember[] = [
   },
 ];
 
-// 示例论文数据
+// 论文数据
 export const mockPublications: Publication[] = [
   {
     id: "1",
@@ -1161,6 +1201,8 @@ export const mockPublications: Publication[] = [
     abstract:
       "For a cost-sharing cooperative game with an empty core, we study the problem of calculating a near-optimal cost allocation that satisfies coalitional stability constraints and maximizes the total cost allocated to all players. One application of such a problem is finding the minimum level of subsidy required to stabilize the grand coalition. To obtain solutions, we propose a new generic framework based on Lagrangian relaxation, which has several advantages over existing work that exclusively relies on linear programming (LP) relaxation techniques.",
     doi: "https://doi.org/10.1287/ijoc.2016.0707",
+    pdfUrl:
+      "pubs/1_Computing_Near_Optimal_Stable_Cost_Allocations_for_Cooperative_Games_by_Lagrangian_Relaxation.pdf",
     featured: true,
   },
   {
@@ -1173,6 +1215,8 @@ export const mockPublications: Publication[] = [
     type: "journal",
     abstract:
       "In this paper we propose a new instrument, a simultaneous penalization and subsidization, for stabilizing the grand coalition and enabling cooperation among all players of an unbalanced cooperative game. The basic idea is to charge a penalty z from players who leave the grand coalition, and at the same time provide a subsidy ω to players who stay in the grand coalition.",
+    pdfUrl:
+      "pubs/2_Simultaneous_Penalization_and_Subsidization_for_Stabilizing_Grand_Cooperation.pdf",
     doi: "https://doi.org/10.1287/opre.2018.1723",
     featured: true,
   },
@@ -1187,6 +1231,8 @@ export const mockPublications: Publication[] = [
     abstract:
       "This study examines two types of crowdfunding mechanisms, namely, the fixed and the flexible funding mechanisms. Under the fixed funding mechanism, the pledges are returned to the backers if the crowdfunding project fails (All-or-Nothing), while under the flexible funding mechanism, the creators could keep all the raised pledges irrespective of whether the project succeeds or not (Keep-it-All).",
     doi: "https://doi.org/10.1016/j.ejor.2019.05.019",
+    pdfUrl:
+      "pubs/3_On_the_Fixed_and_Flexible_Funding_Mechanisms_in_Reward_based_Crowdfunding.pdf",
   },
   {
     id: "4",
@@ -1198,6 +1244,8 @@ export const mockPublications: Publication[] = [
     abstract:
       "We consider a recently proposed simulation-based decision-making framework, called offline-simulation-online-application (OSOA). In this framework, simulation experiments are not performed after the target problem is set up with all the input parameters; instead, they are performed before that with all the possible parameters that might come up in the target problem.",
     doi: "https://doi.org/10.1109/WSC40007.2019.9004834",
+    pdfUrl:
+      "pubs/4_Rate_Analysis_For_Offline_Simulation_Online_Application.pdf",
   },
   {
     id: "5",
@@ -1209,6 +1257,8 @@ export const mockPublications: Publication[] = [
     type: "journal",
     abstract:
       "Even distribution is a normal profit allocation mechanism for investment-based crowdfunding projects on many platforms. In other words, the investors with the same pledging funds will be paid evenly when the investment ends. The even allocation mechanism works well under the assumption that the investors arrive at the platform simultaneously. However, in practice, the investors are sequential, therefore, the stories are different when considering the dynamic entry times of the investors.",
+    pdfUrl:
+      "pubs/5_Profit_allocation_in_investment_based_crowdfunding_with_investors_of_dynamic_entry_times.pdf",
     doi: "https://doi.org/10.1016/j.ejor.2019.07.016",
   },
   {
@@ -1222,6 +1272,8 @@ export const mockPublications: Publication[] = [
     type: "journal",
     abstract:
       "Blood shortage may lead to immeasurable losses. But the perishable nature of blood products limits the possibility of storing a large amount of it, and the quality of blood products reduces rapidly with transportation time. Specifically, in China, the management of blood products is even more complicated due to the significant demand for clinical blood, which increases every single year because of the reformation of the health system and the resulting scale expansion of hospitals.",
+    pdfUrl:
+      "pubs/6_Scheduling_the_distribution_of_blood_products_A_vendor_managed_inventory_routing_approach.pdf",
     doi: "https://doi.org/10.1016/j.tre.2020.101964",
   },
   {
@@ -1234,6 +1286,7 @@ export const mockPublications: Publication[] = [
     abstract:
       "Today, companies can seek solutions to business problems by sponsoring cocreation activities such as crowdsourcing contests. This paper studies a crowdsourcing contest in which a sponsor seeks solutions from a number of independent contestants. Specifically, we reveal how the number of contestants affects the expected effort and maximum quality in a crowdsourcing contest.",
     doi: "https://doi.org/10.1111/itor.12883",
+    pdfUrl: "pubs/7_Crowdsourcing_contests_with_entry_cost.pdf",
   },
   {
     id: "8",
@@ -1245,6 +1298,7 @@ export const mockPublications: Publication[] = [
     abstract:
       "In this paper, we consider a supply chain consisting of a well-capitalized manufacturer, a well-capitalized and reliable supplier, and a capital-constrained and unreliable supplier with random yield. The interactive relationship among them is modeled as a Stackelberg game with the manufacturer as the leader and the suppliers as the followers.",
     doi: "https://doi.org/10.1016/j.omega.2020.102334",
+    pdfUrl: "pubs/8_Supply_chain_with_random_yield_and_financing.pdf",
   },
   {
     id: "9",
@@ -1256,6 +1310,7 @@ export const mockPublications: Publication[] = [
     abstract:
       "在最短路修复合作博弈中,当灾后运输网络规模较大时,最优成本分摊问题难以直接求解。基于拉格朗日松弛理论,提出了一种最短路修复合作博弈成本分摊算法。该算法将最短路修复合作博弈分解为两个具有特殊结构的子博弈,进而利用两个子博弈的结构特性,可以高效地求解出二者的最优成本分摊,将这两个成本分摊相加,可以获得原博弈的一个近乎最优的稳定成本分摊。",
     doi: "https://doi.org/10.15960/j.cnki.issn.1007-6093.2021.03.012",
+    pdfUrl: "pubs/9_灾后运输网络中的最短路修复合作博弈.pdf",
   },
   {
     id: "10",
@@ -1268,6 +1323,8 @@ export const mockPublications: Publication[] = [
     abstract:
       "This work examines the problem of stabilizing the grand coalition of an unbalanced cooperative game under the concept of simultaneous subsidization and penalization (S&P). We design a generic framework for developing heuristic algorithms to evaluate the trade-off between subsidy and penalty in the S&P instrument.",
     doi: "https://doi.org/10.1007/s00186-022-00771-3",
+    pdfUrl:
+      "pubs/10_Lagrangian_heuristic_for_simultaneous_subsidization_and_penalization_implementations_on_rooted_travelling_salesman_games.pdf",
   },
   {
     id: "11",
@@ -1279,6 +1336,7 @@ export const mockPublications: Publication[] = [
     abstract:
       "For a bipartite graph with disrupted facilities, we confront the key concern that disrupted facilities can only be recovered one after one due to resource shortage. The objective of this paper is to design a sequential recovery schedule such that the summation of waiting time and transportation cost of all customers to regain service is minimized.",
     doi: "https://doi.org/10.1016/j.cie.2021.107866",
+    pdfUrl: "pubs/11_Sequential_recovery_of_disrupted_facilities.pdf",
   },
   {
     id: "12",
@@ -1290,6 +1348,7 @@ export const mockPublications: Publication[] = [
     abstract:
       "一个优化问题的逆问题是这样一类问题，在给定该优化问题的一个可行解时，通过最小化目标函数中参数的改变量(在某个范数下)使得该可行解成为改变参数后的该优化问题的最优解。对于本是NP-难问题的无容量限制设施选址问题，证明了其逆问题仍是NP-难的。",
     doi: "https://doi.org/10.12005/orms.2022.0220",
+    pdfUrl: "pubs/12_范数下无容量限制设施选址逆问题的求解方法.pdf",
   },
   {
     id: "13",
@@ -1303,6 +1362,8 @@ export const mockPublications: Publication[] = [
       "Putting customer experience at the heart of service design has become a governing principle of today's 'experience economy.' Echoing this principle, our paper addresses a service designer's problem of how to select and sequence activities in designing a service package. Empirical literature shows an ideal sequence often entails an interior peak; that is, the peak (i.e., highest-utility) activity is placed neither at the beginning nor the end of the package.",
     doi: "https://doi.org/10.1287/msom.2021.0970",
     featured: true,
+    pdfUrl:
+      "pubs/13_A_Theory_of_Interior_Peaks_Activity_Sequencing_and_Selection_for_Service_Design.pdf",
   },
   {
     id: "14",
@@ -1315,6 +1376,8 @@ export const mockPublications: Publication[] = [
     abstract:
       "In the service industry, a service provider may sell a collection of service activities as a package, also known as a service bundle. Empirical studies indicate that the customer's ex-post perception of a service bundle depends on not only the utility of each activity, but also the sequence of the activities being delivered.",
     doi: "https://doi.org/10.1016/j.ejor.2022.03.044",
+    pdfUrl:
+      "pubs/14_A_geometric_branch_and_bound_algorithm_for_the_service_bundle_design_problem.pdf",
   },
   {
     id: "15",
@@ -1327,6 +1390,8 @@ export const mockPublications: Publication[] = [
     abstract:
       "This study aims to examine and design operational strategies for mixed flows of autonomous vehicles (AVs) and human‐driven vehicles (HVs). We propose a stylized model wherein utilitarian individuals either drive HVs or take privately operated AVs that are collectively dispatched.",
     doi: "https://doi.org/10.1111/poms.13633",
+    pdfUrl:
+      "pubs/15_Service_Operations_for_Mixed_Autonomous_Paradigm_Lane_Design_and_Subsidy.pdf",
   },
   {
     id: "16",
@@ -1339,6 +1404,8 @@ export const mockPublications: Publication[] = [
     abstract:
       "The growth of Free-Float Bike-Sharing Systems (FFBSs) is heavily impeded by faulty bike maintenance among other operational challenges. In this paper, we aim to improve the efficiency of faulty bike maintenance by predicting faulty bikes in order to make better maintenance assignment decisions.",
     doi: "https://doi.org/10.1016/j.cie.2022.108214",
+    pdfUrl:
+      "pubs/16_Task_Assignment_in_Predictive_Maintenance_for_Free_Float_Bicycle_Sharing_Systems.pdf",
   },
   {
     id: "17",
@@ -1350,6 +1417,7 @@ export const mockPublications: Publication[] = [
     abstract:
       "实物捐助是社会力量参与灾害应急救援的重要途径之一，但低效和无效的实物捐助会大量占用应急管理部门的资源和人手，导致物资聚集效应，反而影响应急救援工作的开展。目前实物捐助管理的难点是如何筛选和分拣混合类型的物资，控制劣质和无效捐助造成的不利影响。",
     doi: "https://doi.org/10.16381/j.cnki.issn1003-207x.2022.2046",
+    pdfUrl: "pubs/17_基于信息熵的实物捐助物资筛选和分拣优化策略研究.pdf",
   },
   {
     id: "18",
@@ -1362,6 +1430,8 @@ export const mockPublications: Publication[] = [
     abstract:
       "Additive manufacturing (AM) has attracted significant attention in recent years based on its wide range of applications and growing demand. AM offers the advantages of production flexibility and design freedom. In this study, we considered a practical variant of the batch-processing-machine (BPM) scheduling problem that arises in AM industries.",
     doi: "https://doi.org/10.1016/j.jmse.2022.10.001",
+    pdfUrl:
+      "pubs/18_A_branch_and_price_algorithm_to_perform_single_machine_scheduling_for_additive_manufacturing.pdf",
   },
   {
     id: "19",
@@ -1375,6 +1445,8 @@ export const mockPublications: Publication[] = [
     abstract:
       "This study examines two selling strategies, namely, crowdfunding and traditional selling. Under traditional selling, the production behavior of the creator occurs before the purchases by consumers. In this case, the demand is uncertain, and the creator's production behavior is affected by the initial funding level.",
     doi: "https://doi.org/10.1016/j.tre.2022.103011",
+    pdfUrl:
+      "pubs/19_Crowdfunding_or_traditional_mode_Strategy_choices_in_product_selling.pdf",
   },
   {
     id: "20",
@@ -1388,6 +1460,8 @@ export const mockPublications: Publication[] = [
       "For an unbalanced cooperative game, its grand coalition can be stabilized by some instruments, such as subsidization and penalization, that impose new cost terms to certain coalitions. In this paper, we study an alternative instrument, referred to as cost adjustment, that does not need to impose any new coalition-specific cost terms.",
     doi: "https://doi.org/10.1287/ijoc.2022.0268",
     featured: true,
+    pdfUrl:
+      "pubs/20_Stabilizing_Grand_Cooperation_via_Cost_Adjustment_An_Inverse_Optimization_Approach.pdf",
   },
   {
     id: "21",
@@ -1401,6 +1475,8 @@ export const mockPublications: Publication[] = [
     abstract:
       "The parcel delivery industry has enjoyed rapid growth with the rise of the e-commerce business. To survive the highly competitive market, service providers have introduced various methods to improve the customer experience, for example, providing faster response or wider delivery coverage.",
     doi: "https://doi.org/10.1016/j.tre.2023.103036",
+    pdfUrl:
+      "pubs/21_Experience_based_territory_planning_and_driver_assignment_with_predicted_demand_and_driver_present_condition.pdf",
   },
   {
     id: "22",
@@ -1413,6 +1489,7 @@ export const mockPublications: Publication[] = [
       "An important problem in single-player video game design is how to sequence game elements within a level (or 'chunk') of the game. Each element has two critical features: a reward (e.g., earning an item or being able to watch a cinematic) and a degree of difficulty (e.g., how much energy or focus is needed to interact with the game element).",
     doi: "https://doi.org/10.1287/mnsc.2022.4665",
     featured: true,
+    pdfUrl: "pubs/22_Optimal_Sequencing_in_Single_Player_Games.pdf",
   },
   {
     id: "23",
@@ -1425,6 +1502,8 @@ export const mockPublications: Publication[] = [
     abstract:
       "We consider performing simulation experiments in the presence of covariates. Here, covariates refer to some input information other than system designs to the simulation model that can also affect the system performance. To make decisions, decision makers need to know the covariate values of the problem.",
     doi: "https://doi.org/10.1287/ijoc.2022.1263",
+    pdfUrl:
+      "pubs/23_Convergence_Analysis_of_Stochastic_Kriging_Assisted_Simulation_with_Random_Covariates.pdf",
   },
   {
     id: "24",
@@ -1437,6 +1516,8 @@ export const mockPublications: Publication[] = [
     abstract:
       "Personalized medicine (PM) seeks the best treatment for each patient among a set of available treatment methods. Because a specific treatment does not work well on all patients, traditionally, the best treatment was selected based on the doctor's personal experience and expertise, which is subject to human errors.",
     doi: "https://doi.org/10.1287/msom.2022.0232",
+    pdfUrl:
+      "pubs/24_A_Contextual_Ranking_and_Selection_Method_for_Personalized_Medicine.pdf",
   },
   {
     id: "25",
@@ -1449,6 +1530,8 @@ export const mockPublications: Publication[] = [
     abstract:
       "The service sector has become increasingly important in today's economy. To meet the rising expectation of high‐quality services, efficiently allocating resources is vital for service systems to balance service qualities with costs. In particular, this paper focuses on a class of resource allocation problems where the service‐level objective and constraints are in the form of probabilistic measures.",
     doi: "https://doi.org/10.1111/poms.13825",
+    pdfUrl:
+      "pubs/25_Optimizing_resource_allocation_in_service_systems_via_simulation_A_Bayesian_formulation.pdf",
   },
   {
     id: "26",
@@ -1461,6 +1544,8 @@ export const mockPublications: Publication[] = [
     abstract:
       "Prepositioning relief network is an effective strategy to mitigate the impact of natural disasters and public health emergencies, such as the COVID-19 pandemic. However, designing a proper network is challenging due to limited information and, more importantly, the correlated demand uncertainty that exists among affected areas.",
     doi: "https://doi.org/10.1016/j.cie.2023.109365",
+    pdfUrl:
+      "pubs/26_Prepositioning_network_design_for_humanitarian_relief_purposes_under_correlated_demand_uncertainty.pdf",
   },
   {
     id: "27",
@@ -1472,6 +1557,8 @@ export const mockPublications: Publication[] = [
     abstract:
       "Although multiple-purchase behavior is typical in retail practice, the choice model to portray such behavior is limited in existing research. This paper presents a new multiple-purchase (MP) choice model based on the multinomial logit (MNL) choice model, which allows customers to purchase more than one item in a single visit.",
     doi: "https://doi.org/10.1016/j.ijpe.2023.109010",
+    pdfUrl:
+      "pubs/27_Multiple_purchase_choice_model_estimation_and_optimization.pdf",
   },
   {
     id: "28",
@@ -1484,6 +1571,8 @@ export const mockPublications: Publication[] = [
     abstract:
       "Drones have been increasingly used for deliveries; however, delivering packages directly to customers is still challenging, particularly in densely populated urban areas. To overcome this, drone resupply has been proposed, where drones carry packages to trucks en route, and then trucks make the final deliveries.",
     doi: "https://doi.org/10.1016/j.ejor.2024.05.025",
+    pdfUrl:
+      "pubs/28_Drone_resupply_with_multiple_trucks_and_drones_for_on_time_delivery_along_given_truck_routes.pdf",
   },
   {
     id: "29",
@@ -1495,6 +1584,7 @@ export const mockPublications: Publication[] = [
     abstract:
       "在数字经济迅速发展的今天, 作为其基础理论之一的博弈论正在迎来新的发展机遇. 因强调集体理性, 故合作博弈在合作竞争等问题中应用广泛. 然而, 许多合作博弈的核心并不存在, 即所谓的非平衡博弈, 这导致了大联盟的不稳定.",
     doi: "https://doi.org/10.1360/SSM-2024-0152",
+    pdfUrl: "pubs/29_非平衡合作博弈大联盟稳定解.pdf",
   },
   {
     id: "30",
@@ -1513,6 +1603,8 @@ export const mockPublications: Publication[] = [
     abstract:
       "Innovation is one of the driving forces of economic development and social progress, and the crowdsourcing contest is a well-established mechanism for encouraging innovation. This paper examines two incentive schemes in two-stage innovation contests: feedback and elimination.",
     doi: "https://doi.org/10.1111/itor.13440",
+    pdfUrl:
+      "pubs/30_Performance_enhancement_in_two_stage_innovation_contests_Feedback_and_elimination_schemes.pdf",
   },
   {
     id: "31",
@@ -1525,6 +1617,8 @@ export const mockPublications: Publication[] = [
     abstract:
       "This article studies an appointment scheduling problem where a service provider dynamically receives appointment requests from a random number of customers. By leveraging the randomness of the number of potential customers, we develop a nonsequential appointment scheduling policy as an alternative to the conventional first-come-first-served (FCFS) policy.",
     doi: "https://doi.org/10.1177/10591478231224926",
+    pdfUrl:
+      "pubs/31_Non_sequential_Appointment_Scheduling_With_a_Random_Number_of_Requests.pdf",
   },
   {
     id: "32",
@@ -1537,6 +1631,8 @@ export const mockPublications: Publication[] = [
     abstract:
       "In this paper, we investigate single machine scheduling problems with release times and random processing times, where the release times can be either deterministic or random. The objective is to determine a scheduling sequence that exhibits strong out-of-sample performance.",
     doi: "https://doi.org/10.1016/j.cor.2024.106642",
+    pdfUrl:
+      "pubs/32_Target_oriented_robust_satisficing_models_for_the_single_machine_scheduling_problems_with_release_time.pdf",
   },
   {
     id: "33",
@@ -1549,6 +1645,8 @@ export const mockPublications: Publication[] = [
     abstract:
       "Column generation (CG) is a crucial technique to solve large-scale problems by dynamically generating variables. It has extensive applications in common combinatorial optimization, such as vehicle routing and scheduling, where each iteration involves solving a constrained shortest path problem, which is NP-hard.",
     doi: "https://doi.org/10.1016/j.cie.2025.111138",
+    pdfUrl:
+      "pubs/33_Enhancing_column_generation_by_reinforcement_learning_based_hyper_heuristic_for_vehicle_routing_and_scheduling_problems.pdf",
   },
   {
     id: "34",
@@ -1561,6 +1659,8 @@ export const mockPublications: Publication[] = [
     abstract:
       "Additive manufacturing is a key technology in cloud and smart manufacturing due to its high level of automation and customisation. Advancements in manufacturing technology have reshaped the traditional make-to-order model, enabling better resource coordination, supply chain optimisation, and production flexibility.",
     doi: "https://doi.org/10.1080/00207543.2025.2513018",
+    pdfUrl:
+      "pubs/34_Logistics_cost_optimisation_and_allocation_for_additive_manufacturer_make_to_order_cooperation.pdf",
   },
   {
     id: "35",
@@ -1573,6 +1673,8 @@ export const mockPublications: Publication[] = [
     abstract:
       "Manufacturing resource outsourcing platforms facilitate the meeting and matching of manufacturing service seekers and providers. The platform's service mode, the willingness of seekers to match, and providers' carbon emission reduction (CER) directly affect entities' decisions.",
     doi: "https://doi.org/10.1080/01605682.2024.2392797",
+    pdfUrl:
+      "pubs/35_Manufacturing_resource_outsourcing_and_matching_service_mode_selection_and_equilibrium_evolution.pdf",
   },
   {
     id: "36",
@@ -1584,6 +1686,7 @@ export const mockPublications: Publication[] = [
     abstract:
       "Previous research indicates that hassle cost reduces consumers' utility and hurts sellers' profits. However, counterintuitively, some sellers, particularly those who sell online, purposefully increase the hassle cost of purchasing their products.",
     doi: "https://doi.org/10.1016/j.ijpe.2024.109479",
+    pdfUrl: "pubs/36_Dual_pricing_with_purchase_hassle.pdf",
   },
   {
     id: "37",
@@ -1597,6 +1700,8 @@ export const mockPublications: Publication[] = [
       "Training is an important business in the service sector. Usually, a training program involves multiple sessions and each session contains multiple activities. Although it is essential for customers to participate in all training sessions and activities, many customers fail to complete the program because the training experience is too stressful.",
     doi: "http://doi.org/10.1177/10591478251369160",
     featured: true,
+    pdfUrl:
+      "pubs/37_maximizing_customer_retention_in_multi_session_training_service_model_and_algorithm.pdf",
   },
   {
     id: "38",
@@ -1609,6 +1714,8 @@ export const mockPublications: Publication[] = [
     abstract:
       "The knockout-tournament (KT) procedure is an efficient parallel procedure recently developed to solve large-scale ranking and selection (R&S) problems. The procedure adopts a selection structure which is commonly used in many sports tournaments, and eliminates alternatives by conducting 'matches' between paired alternatives round-by-round.",
     doi: "https://doi.org/10.1016/j.ejor.2024.08.031",
+    pdfUrl:
+      "pubs/38_Reference_alternatives_based_knockout_tournament_procedure_for_ranking_and_selection.pdf",
   },
   {
     id: "39",
@@ -1627,6 +1734,7 @@ export const mockPublications: Publication[] = [
       "We propose a new robust actionable prescriptive analytics framework that leverages past data and side information to minimize a risk-based objective function under distributional ambiguity. Our framework aims to find a policy that directly transforms the side information into implementable decisions.",
     doi: "https://doi.org/10.1287/opre.2023.0300",
     featured: true,
+    pdfUrl: "pubs/39_Robust_Actionable_Prescriptive_Analytics.pdf",
   },
   {
     id: "40",
@@ -1639,6 +1747,8 @@ export const mockPublications: Publication[] = [
     abstract:
       "Drones have become a promising solution for on-demand delivery thanks to their ability to travel fast and navigate without road restrictions. In the context of direct meal delivery using drones, it is a common practice to replace the drone's battery after each round trip between the central launch site and customer locations to prevent power interruptions.",
     doi: "https://doi.org/10.1016/j.cor.2025.107295",
+    pdfUrl:
+      "pubs/40_On_demand_meal_delivery_Drone_scheduling_with_battery_replacement_optimization.pdf",
   },
 ];
 
@@ -2164,7 +2274,7 @@ export const mockLectures: NewsItem[] = [
   },
 ];
 
-// 通知公告数据（时间线）
+// 通知公告数据（单独的时间线页面）
 export const mockTimeline: NewsItem[] = [
   {
     id: "news1",
@@ -2504,7 +2614,7 @@ export const mockProjects: Project[] = [
   },
 ];
 
-// 示例画廊图片数据
+// 团队风采页面数据
 export const mockGalleryImages = [
   {
     id: "1",
@@ -2707,3 +2817,4 @@ export const mockGalleryImages = [
     tags: ["团建", "团队活动"],
   },
 ];
+

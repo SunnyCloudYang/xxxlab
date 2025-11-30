@@ -2,38 +2,57 @@ import React, { useState } from "react";
 import Container from "../components/layout/Container";
 import { MemberCard } from "../components/ui";
 import { mockTeamMembers } from "../data/mockData";
-import type { TeamMember } from "../types";
 
 const Team: React.FC = () => {
-  const [selectedRole, setSelectedRole] = useState<TeamMember["role"] | "all">(
-    "all"
-  );
+  type RoleType =
+    | "faculty"
+    | "phd"
+    | "academic_master"
+    | "professional_master"
+    | "alumni"
+    | "all";
+  const [selectedRole, setSelectedRole] = useState<RoleType>("all");
 
   // 按角色过滤团队成员
   const filteredMembers =
     selectedRole === "all"
       ? mockTeamMembers
+      : selectedRole === "academic_master"
+      ? mockTeamMembers.filter(
+          (m) => m.role === "master" && m.bio?.includes("（学术）")
+        )
+      : selectedRole === "professional_master"
+      ? mockTeamMembers.filter(
+          (m) => m.role === "master" && m.bio?.includes("（工程）")
+        )
       : mockTeamMembers.filter((member) => member.role === selectedRole);
 
-  // 按角色分组显示
+  // 按角色分组显示，将硕士生分为学硕和专硕
   const membersByRole = {
     faculty: mockTeamMembers.filter((m) => m.role === "faculty"),
     phd: mockTeamMembers.filter((m) => m.role === "phd"),
-    master: mockTeamMembers.filter((m) => m.role === "master"),
+    academic_master: mockTeamMembers.filter(
+      (m) => m.role === "master" && m.bio?.includes("（学术）")
+    ),
+    professional_master: mockTeamMembers.filter(
+      (m) => m.role === "master" && m.bio?.includes("（工程）")
+    ),
     alumni: mockTeamMembers.filter((m) => m.role === "alumni"),
   };
 
   const roleDisplayNames = {
     faculty: "导师",
     phd: "博士生",
-    master: "硕士生",
+    academic_master: "学术型硕士",
+    professional_master: "专业型硕士",
     alumni: "毕业生",
   };
 
   const roleColors = {
     faculty: "bg-purple-100 text-purple-800 border-purple-200",
     phd: "bg-blue-100 text-blue-800 border-blue-200",
-    master: "bg-green-100 text-green-800 border-green-200",
+    academic_master: "bg-green-100 text-green-800 border-green-200",
+    professional_master: "bg-teal-100 text-teal-800 border-teal-200",
     alumni: "bg-gray-100 text-gray-800 border-gray-200",
   };
 

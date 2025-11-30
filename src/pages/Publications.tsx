@@ -18,8 +18,9 @@ const Publications: React.FC = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [showFilters, setShowFilters] = useState(false);
   const [sortBy, setSortBy] = useState("year-desc");
+  const [highlightAuthors, setHighlightAuthors] = useState(true); // 是否高亮作者
 
-  const pageSize = 6; // 每页显示的数量
+  const pageSize = 10; // 每页显示的数量
 
   // 获取筛选选项
   const typeOptions = useMemo(() => {
@@ -186,6 +187,18 @@ const Publications: React.FC = () => {
               <span className="text-sm text-gray-600">
                 共 {filteredPublications.length} 篇论文
               </span>
+
+              {/* 高亮实验室成员开关 */}
+              <label className="flex items-center space-x-2 cursor-pointer">
+                <input
+                  type="checkbox"
+                  checked={highlightAuthors}
+                  onChange={(e) => setHighlightAuthors(e.target.checked)}
+                  className="w-4 h-4 text-primary-600 border-gray-300 rounded focus:ring-primary-500"
+                />
+                <span className="text-sm text-gray-700">高亮实验室成员</span>
+              </label>
+
               <FilterSelect
                 value={sortBy}
                 onChange={setSortBy}
@@ -245,6 +258,7 @@ const Publications: React.FC = () => {
                   publication={publication}
                   layout="horizontal"
                   showAbstract={true}
+                  highlightAuthors={highlightAuthors}
                 />
               ))}
             </div>

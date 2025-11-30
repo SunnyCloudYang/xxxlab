@@ -8,19 +8,55 @@ import {
 } from "@heroicons/react/24/outline";
 import Card from "./Card";
 import type { Publication } from "../../types";
+import { mockTeamMembers } from "../../data/mockData";
 
 interface PublicationCardProps {
   publication: Publication;
   layout?: "horizontal" | "vertical";
   showAbstract?: boolean;
   className?: string;
+  highlightAuthors?: boolean; // 是否高亮实验室成员
 }
+
+// 从团队成员数据生成实验室成员姓名列表（用于匹配和加粗）
+// 包含三种格式：中文名、西方格式英文名（名+姓）、东亚格式英文名（姓+名）
+const generateLabMemberNames = () => {
+  const names: string[] = [];
+
+  mockTeamMembers.forEach((member) => {
+    // 添加中文名
+    if (member.name) {
+      names.push(member.name);
+    }
+
+    // 处理英文名
+    if (member.nameEn) {
+      // 添加原始英文名（通常是 名+姓 格式，如 "Lindong Liu"）
+      names.push(member.nameEn);
+
+      // 生成 姓+名 格式（如 "Liu Lindong"）
+      const nameParts = member.nameEn.trim().split(/\s+/);
+      if (nameParts.length >= 2) {
+        // 假设最后一部分是姓，其余是名
+        const lastName = nameParts[nameParts.length - 1];
+        const firstName = nameParts.slice(0, -1).join(" ");
+        const reversedName = `${lastName} ${firstName}`;
+        names.push(reversedName);
+      }
+    }
+  });
+
+  return names;
+};
+
+const LAB_MEMBERS = generateLabMemberNames();
 
 const PublicationCard: React.FC<PublicationCardProps> = ({
   publication,
   layout = "horizontal",
   showAbstract = true,
   className = "",
+  highlightAuthors = true, // 默认开启高亮
 }) => {
   const getTypeDisplayName = (type: Publication["type"]) => {
     const typeMap = {
@@ -47,6 +83,37 @@ const PublicationCard: React.FC<PublicationCardProps> = ({
       workshop: UserGroupIcon,
     };
     return iconMap[type];
+  };
+
+  // 判断作者是否是实验室成员
+  const isLabMember = (author: string): boolean => {
+    // 移除通讯作者标记和首尾空格
+    const cleanAuthor = author.replace(/\*/g, "").trim();
+
+    // 完全匹配（不区分大小写）
+    // 只匹配三种格式：中文名、Firstname Lastname、Lastname Firstname
+    return LAB_MEMBERS.some(
+      (member) => cleanAuthor.toLowerCase() === member.toLowerCase()
+    );
+  };
+
+  // 渲染作者列表（带高亮功能）
+  const renderAuthors = () => {
+    if (!highlightAuthors) {
+      return publication.authors.join(", ");
+    }
+
+    return publication.authors.map((author, index) => {
+      const isLab = isLabMember(author);
+      return (
+        <React.Fragment key={index}>
+          {index > 0 && ", "}
+          <span className={isLab ? "font-bold text-gray-900" : ""}>
+            {author}
+          </span>
+        </React.Fragment>
+      );
+    });
   };
 
   const TypeIcon = getTypeIcon(publication.type);
@@ -86,9 +153,7 @@ const PublicationCard: React.FC<PublicationCardProps> = ({
           </h3>
 
           {/* 作者 */}
-          <p className="text-gray-600 text-sm">
-            作者：{publication.authors.join(", ")}
-          </p>
+          <p className="text-gray-600 text-sm">作者：{renderAuthors()}</p>
 
           {/* 发表期刊/会议 */}
           <p className="text-gray-600 text-sm font-medium">
@@ -106,7 +171,7 @@ const PublicationCard: React.FC<PublicationCardProps> = ({
           <div className="flex items-center space-x-4 pt-2">
             {publication.pdfUrl && (
               <a
-                href={publication.pdfUrl}
+                href={`${import.meta.env.BASE_URL}${publication.pdfUrl}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center text-primary-600 hover:text-primary-700 text-sm transition-colors"
@@ -181,7 +246,7 @@ const PublicationCard: React.FC<PublicationCardProps> = ({
           {/* 作者 */}
           <p className="text-gray-600 mb-2">
             <span className="font-medium">作者：</span>
-            {publication.authors.join(", ")}
+            {renderAuthors()}
           </p>
 
           {/* 发表期刊/会议 */}
