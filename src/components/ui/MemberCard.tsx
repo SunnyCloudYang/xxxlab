@@ -97,10 +97,10 @@ const MemberCard: React.FC<MemberCardProps> = ({
               {member.role === "alumni" && (
                 <div className="text-sm text-gray-600">
                   {member.graduationYear && (
-                    <div>毕业年份：{member.graduationYear}</div>
+                    <div>毕业年份：{member.graduationYear}年</div>
                   )}
                   {member.currentPosition && (
-                    <div>当前职位：{member.currentPosition}</div>
+                    <div>当前去向：{member.currentPosition}</div>
                   )}
                 </div>
               )}
