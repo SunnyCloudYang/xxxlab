@@ -14,9 +14,7 @@ export const mockTeamMembers: TeamMember[] = [
     website: "https://bs.ustc.edu.cn/chinese/profile-315.html",
     researchInterests: [
       "优化理论、算法及其应用",
-      "智慧交通",
       "智慧物流",
-      "智能制造",
     ],
     bio: "特任教授，博士生导师，专注于优化理论、算法及其应用研究，在智慧交通、智慧物流、智能制造等领域有重要贡献。",
     education: [
@@ -84,12 +82,9 @@ export const mockTeamMembers: TeamMember[] = [
     website: "https://bs.ustc.edu.cn/chinese/profile-1928.html",
     researchInterests: [
       "智慧城市运营管理",
-      "收益管理（应用层面）",
       "分布式鲁棒优化",
-      "博弈论",
-      "动态规划（理论层面）",
     ],
-    bio: "特任副教授，研究生导师，专注于智慧城市运营管理和收益管理的应用研究，在分布式鲁棒优化、博弈论、动态规划等理论层面有深入研究。",
+    bio: "特任副教授，研究生导师，专注于智慧城市运营管理和收益管理的应用研究，在分布式鲁棒优化、动态规划等理论层面有深入研究。",
     education: [
       {
         degree: "博士学位",
@@ -198,13 +193,9 @@ export const mockTeamMembers: TeamMember[] = [
     website: "https://bs.ustc.edu.cn/chinese/profile-2118.html",
     researchInterests: [
       "预约调度",
-      "资源规划",
-      "服务系统管理（应用层面）",
       "动态规划",
-      "整数规划",
-      "算法设计（理论层面）",
     ],
-    bio: "特任副研究员，研究生导师，专注于预约调度、资源规划、服务系统管理的应用研究，在动态规划、整数规划、算法设计等理论层面有深入研究。",
+    bio: "特任副研究员，研究生导师，专注于预约调度、资源规划的应用研究，在动态规划、整数规划、算法设计等理论层面有深入研究。",
     education: [
       {
         degree: "博士学位",
@@ -249,8 +240,6 @@ export const mockTeamMembers: TeamMember[] = [
     researchInterests: [
       "数据驱动的运营管理",
       "分布式鲁棒优化",
-      "机器学习",
-      "计量经济学与优化模型的结合",
     ],
     bio: "特任副研究员，专注于数据驱动的运营管理研究，在分布式鲁棒优化、机器学习、计量经济学与优化模型结合等领域有重要贡献。",
     education: [
@@ -404,11 +393,9 @@ export const mockTeamMembers: TeamMember[] = [
     email: "wqlu@mail.ustc.edu.cn",
     researchInterests: [
       "Consumer Search",
-      "Information Design",
-      "Retail and Platform Operations",
       "Behavioral Pricing",
     ],
-    bio: "博士研究生，专注于消费者搜索、信息设计和行为定价研究。",
+    bio: "专注于消费者搜索和行为定价研究。",
     joinYear: 2018,
     education: [
       {
@@ -429,10 +416,8 @@ export const mockTeamMembers: TeamMember[] = [
     researchInterests: [
       "vehicle platoon",
       "cooperative game",
-      "vehicle routing problem",
-      "electric vehicle",
     ],
-    bio: "博士研究生，专注于车辆编队、合作博弈和车辆路径问题研究。",
+    bio: "专注于车辆编队、合作博弈和车辆路径问题研究。",
     joinYear: 2019,
     education: [
       {
@@ -453,9 +438,8 @@ export const mockTeamMembers: TeamMember[] = [
     researchInterests: [
       "cooperative game",
       "assortment optimization",
-      "operation research",
     ],
-    bio: "博士研究生，专注于合作博弈、品类优化和运筹学研究。",
+    bio: "专注于合作博弈、品类优化和运筹学研究。",
     joinYear: 2019,
     education: [
       {
@@ -476,9 +460,8 @@ export const mockTeamMembers: TeamMember[] = [
     researchInterests: [
       "vehicle routing problem",
       "cooperative game",
-      "distributionally robust optimization",
     ],
-    bio: "博士研究生，专注于车辆路径问题、合作博弈和分布式鲁棒优化研究。",
+    bio: "专注于车辆路径问题、合作博弈和分布式鲁棒优化研究。",
     joinYear: 2019,
     education: [
       {
@@ -497,7 +480,7 @@ export const mockTeamMembers: TeamMember[] = [
     avatar: "/images/avatars/欧阳志凤.jpg",
     email: "ouyangzf98@mail.ustc.edu.cn",
     researchInterests: ["合作博弈", "组合优化", "交通运输"],
-    bio: "博士研究生，专注于合作博弈、组合优化和交通运输研究。",
+    bio: "专注于合作博弈、组合优化和交通运输研究。",
     joinYear: 2020,
     education: [
       {
@@ -516,7 +499,7 @@ export const mockTeamMembers: TeamMember[] = [
     avatar: "/images/avatars/廖祥斌.jpg",
     email: "liao1999@mail.ustc.edu.cn",
     researchInterests: ["合作博弈", "并行机调度"],
-    bio: "博士研究生，专注于合作博弈和并行机调度研究。",
+    bio: "专注于合作博弈和并行机调度研究。",
     joinYear: 2021,
     education: [
       {
@@ -536,10 +519,8 @@ export const mockTeamMembers: TeamMember[] = [
     email: "tangle@mail.ustc.edu.cn",
     researchInterests: [
       "Stochastic dynamic programming",
-      "Online matching",
-      "Network design",
     ],
-    bio: "博士研究生，专注于随机动态规划、在线匹配和网络设计研究。",
+    bio: "专注于随机动态规划和网络设计研究。",
     joinYear: 2021,
     education: [
       {
@@ -558,7 +539,7 @@ export const mockTeamMembers: TeamMember[] = [
     avatar: "/images/avatars/徐宽.jpg",
     email: "mathkxu@mail.ustc.edu.cn",
     researchInterests: ["组合优化"],
-    bio: "博士研究生，专注于组合优化研究。",
+    bio: "专注于组合优化研究。",
     joinYear: 2021,
     education: [
       {
@@ -578,10 +559,9 @@ export const mockTeamMembers: TeamMember[] = [
     email: "yaowang2022@ustc.edu.cn",
     researchInterests: [
       "Cooperative Game",
-      "Distributionally Robust Optimization",
       "Vehicle Routing Problem",
     ],
-    bio: "博士研究生，专注于合作博弈、分布式鲁棒优化和车辆路径问题研究。",
+    bio: "专注于合作博弈和车辆路径问题研究。",
     joinYear: 2022,
     education: [
       {
@@ -600,7 +580,7 @@ export const mockTeamMembers: TeamMember[] = [
     avatar: "/images/avatars/郭秋炜.jpg",
     email: "guoqw@mail.ustc.edu.cn",
     researchInterests: ["体验型服务设计", "组合优化"],
-    bio: "博士研究生，专注于体验型服务设计和组合优化研究。",
+    bio: "专注于体验型服务设计和组合优化研究。",
     joinYear: 2022,
     education: [
       {
@@ -619,7 +599,7 @@ export const mockTeamMembers: TeamMember[] = [
     avatar: "/images/avatars/吴子翔.jpg",
     email: "wuzixiang@mail.ustc.edu.cn",
     researchInterests: ["服务运营", "合作博弈"],
-    bio: "博士研究生，专注于服务运营和合作博弈研究。",
+    bio: "专注于服务运营和合作博弈研究。",
     joinYear: 2022,
     education: [
       {
@@ -638,7 +618,7 @@ export const mockTeamMembers: TeamMember[] = [
     avatar: "/images/avatars/李淑宇.jpg",
     email: "lisy2020@mail.ustc.edu.cn",
     researchInterests: ["生产调度", "优化算法"],
-    bio: "博士研究生，专注于生产调度和优化算法研究。",
+    bio: "专注于生产调度和优化算法研究。",
     joinYear: 2022,
     education: [
       {
@@ -657,7 +637,7 @@ export const mockTeamMembers: TeamMember[] = [
     avatar: "/images/avatars/邢淦琛.png",
     email: "xingganchen@mail.ustc.edu.cn",
     researchInterests: ["分布鲁棒优化"],
-    bio: "博士研究生，专注于分布鲁棒优化研究。",
+    bio: "专注于分布鲁棒优化研究。",
     joinYear: 2024,
     education: [
       {
@@ -678,9 +658,8 @@ export const mockTeamMembers: TeamMember[] = [
     researchInterests: [
       "Vehicle Routing Problem",
       "Robust Optimization",
-      "Reinforcement Learning",
     ],
-    bio: "博士研究生，专注于车辆路径问题、鲁棒优化和强化学习研究。",
+    bio: "专注于车辆路径问题和鲁棒优化研究。",
     joinYear: 2022,
     education: [
       {
@@ -700,7 +679,8 @@ export const mockTeamMembers: TeamMember[] = [
     avatar: "/images/avatars/王勇康.jpg",
     email: "yoka_wang@mail.ustc.edu.cn",
     researchInterests: ["Vehicle routing problems"],
-    bio: "硕士研究生（学术），专注于车辆路径问题研究。",
+    type: "academic",
+    bio: "专注于车辆路径问题研究。",
     joinYear: 2022,
     education: [
       {
@@ -719,7 +699,8 @@ export const mockTeamMembers: TeamMember[] = [
     avatar: "/images/avatars/陈龙.jpg",
     email: "lchen1307@mail.ustc.edu.cn",
     researchInterests: ["组合优化"],
-    bio: "硕士研究生（学术），专注于组合优化研究。",
+    type: "academic",
+    bio: "专注于组合优化研究。",
     joinYear: 2023,
     education: [
       {
@@ -738,7 +719,8 @@ export const mockTeamMembers: TeamMember[] = [
     avatar: "/images/avatars/郭朝阳.jpg",
     email: "chaoyang23@mail.ustc.edu.cn",
     researchInterests: ["Operations Research"],
-    bio: "硕士研究生（学术），专注于运筹学研究。",
+    type: "academic",
+    bio: "专注于运筹学研究。",
     joinYear: 2023,
     education: [
       {
@@ -757,7 +739,8 @@ export const mockTeamMembers: TeamMember[] = [
     avatar: "/images/avatars/许仁静.png",
     email: "rjxu@mail.ustc.edu.cn",
     researchInterests: ["动态规划", "农业优化", "可持续运营"],
-    bio: "硕士研究生（学术），专注于动态规划、农业优化和可持续运营研究。",
+    type: "academic",
+    bio: "专注于动态规划、农业优化和可持续运营研究。",
     joinYear: 2023,
     education: [
       {
@@ -776,7 +759,8 @@ export const mockTeamMembers: TeamMember[] = [
     avatar: "/images/avatars/张耀太.jpg",
     email: "zyt01@mail.ustc.edu.cn",
     researchInterests: ["组合优化", "二维装箱", "车间调度"],
-    bio: "硕士研究生（工程），专注于组合优化、二维装箱和车间调度研究。",
+    type: "engineer",
+    bio: "专注于组合优化、二维装箱和车间调度研究。",
     joinYear: 2023,
     education: [
       {
@@ -795,7 +779,8 @@ export const mockTeamMembers: TeamMember[] = [
     avatar: "/images/avatars/许璟钊.jpg",
     email: "xujingzhao@mail.ustc.edu.cn",
     researchInterests: ["Operations Research"],
-    bio: "硕士研究生（工程），专注于运筹学研究。",
+    type: "engineer",
+    bio: "专注于运筹学研究。",
     joinYear: 2023,
     education: [
       {
@@ -814,7 +799,8 @@ export const mockTeamMembers: TeamMember[] = [
     avatar: "/images/avatars/肖涵菲.jpg",
     email: "xhf857@mail.ustc.edu.cn",
     researchInterests: ["博弈论", "收益管理"],
-    bio: "硕士研究生（工程），专注于博弈论和收益管理应用层面研究。",
+    type: "engineer",
+    bio: "专注于博弈论和收益管理应用层面研究。",
     joinYear: 2023,
     education: [
       {
@@ -833,7 +819,8 @@ export const mockTeamMembers: TeamMember[] = [
     avatar: "/images/avatars/李泽西.jpg",
     email: "zexil@mail.ustc.edu.cn",
     researchInterests: ["服务调度", "机器学习"],
-    bio: "硕士研究生（学术），专注于服务调度和机器学习研究。",
+    type: "academic",
+    bio: "专注于服务调度和机器学习研究。",
     joinYear: 2024,
     education: [
       {
@@ -852,7 +839,8 @@ export const mockTeamMembers: TeamMember[] = [
     avatar: "/images/avatars/赵俊喆.jpg",
     email: "jzzhao@mail.ustc.edu.cn",
     researchInterests: ["Cooperative Games", "Sustainable Operations"],
-    bio: "硕士研究生（学术），专注于合作博弈和可持续运营研究。",
+    type: "academic",
+    bio: "专注于合作博弈和可持续运营研究。",
     joinYear: 2024,
     education: [
       {
@@ -871,7 +859,8 @@ export const mockTeamMembers: TeamMember[] = [
     avatar: "/images/avatars/段睿.jpg",
     email: "duanrui@mail.ustc.edu.cn",
     researchInterests: ["设施选址", "组合优化"],
-    bio: "硕士研究生（学术），专注于设施选址和组合优化研究。",
+    type: "academic",
+    bio: "专注于设施选址和组合优化研究。",
     joinYear: 2024,
     education: [
       {
@@ -890,7 +879,8 @@ export const mockTeamMembers: TeamMember[] = [
     avatar: "/images/avatars/李昊洋.jpg",
     email: "lhyif9@mail.ustc.edu.cn",
     researchInterests: ["information design", "mechanism design"],
-    bio: "硕士研究生（学术），专注于信息设计和机制设计研究。",
+    type: "academic",
+    bio: "专注于信息设计和机制设计研究。",
     joinYear: 2024,
     education: [
       {
@@ -909,7 +899,8 @@ export const mockTeamMembers: TeamMember[] = [
     avatar: "/images/avatars/金楷然.jpg",
     email: "jkr@mail.ustc.edu.cn",
     researchInterests: ["Game Theory", "Bundle Sales"],
-    bio: "硕士研究生（学术），专注于博弈论和捆绑销售研究。",
+    type: "academic",
+    bio: "专注于博弈论和捆绑销售研究。",
     joinYear: 2024,
     education: [
       {
@@ -928,7 +919,8 @@ export const mockTeamMembers: TeamMember[] = [
     avatar: "/images/avatars/吴天阳.jpg",
     email: "wutianyang@mail.ustc.edu.cn",
     researchInterests: ["体验型服务设计", "推荐系统"],
-    bio: "硕士研究生（学术），专注于体验型服务设计和推荐系统研究。",
+    type: "academic",
+    bio: "专注于体验型服务设计和推荐系统研究。",
     joinYear: 2024,
     education: [
       {
@@ -947,7 +939,8 @@ export const mockTeamMembers: TeamMember[] = [
     avatar: "/images/avatars/张佳洛.jpg",
     email: "jialuozhang@mail.ustc.edu.cn",
     researchInterests: ["Operations Research"],
-    bio: "硕士研究生（工程），专注于运筹学研究。",
+    type: "engineer",
+    bio: "专注于运筹学研究。",
     joinYear: 2024,
     education: [
       {
@@ -966,7 +959,8 @@ export const mockTeamMembers: TeamMember[] = [
     avatar: "/images/avatars/邢伯韬.jpg",
     email: "xingbotao@mail.ustc.edu.cn",
     researchInterests: ["机器学习", "优化算法"],
-    bio: "硕士研究生（工程），专注于机器学习和优化算法研究。",
+    type: "engineer",
+    bio: "专注于机器学习和优化算法研究。",
     joinYear: 2024,
     education: [
       {
@@ -985,7 +979,8 @@ export const mockTeamMembers: TeamMember[] = [
     avatar: "/images/avatars/王梓声.jpg",
     email: "ziziwong@mail.ustc.edu.cn",
     researchInterests: ["人工智能", "大模型应用"],
-    bio: "硕士研究生（工程），专注于人工智能和大模型应用研究。",
+    type: "engineer",
+    bio: "专注于人工智能和大模型应用研究。",
     joinYear: 2024,
     education: [
       {
@@ -1004,7 +999,8 @@ export const mockTeamMembers: TeamMember[] = [
     avatar: "/images/avatars/靳志强.jpg",
     email: "jinzhiqiang@mail.ustc.edu.cn",
     researchInterests: ["Machine learning", "Operations Research"],
-    bio: "硕士研究生（工程），专注于机器学习和运筹学研究。",
+    type: "engineer",
+    bio: "专注于机器学习和运筹学研究。",
     joinYear: 2024,
     education: [
       {
@@ -1023,7 +1019,8 @@ export const mockTeamMembers: TeamMember[] = [
     avatar: "/images/avatars/江毅.jpg",
     email: "jiangyi24mle@mail.ustc.edu.cn",
     researchInterests: ["Operation Research"],
-    bio: "硕士研究生（工程），专注于运筹学研究。",
+    type: "engineer",
+    bio: "专注于运筹学研究。",
     joinYear: 2024,
     education: [
       {
@@ -1042,7 +1039,8 @@ export const mockTeamMembers: TeamMember[] = [
     avatar: "/images/avatars/林家祥.jpg",
     email: "jxlin@mail.ustc.edu.cn",
     researchInterests: ["仿真优化", "组合优化"],
-    bio: "硕士研究生（学术），专注于仿真优化和组合优化研究。",
+    type: "academic",
+    bio: "专注于仿真优化和组合优化研究。",
     joinYear: 2025,
     education: [
       {
@@ -1061,7 +1059,8 @@ export const mockTeamMembers: TeamMember[] = [
     avatar: "/images/avatars/李鉴岐.jpg",
     email: "lijianqi@mail.ustc.edu.cn",
     researchInterests: ["组合优化"],
-    bio: "硕士研究生（学术），专注于组合优化研究。",
+    type: "academic",
+    bio: "专注于组合优化研究。",
     joinYear: 2025,
     education: [
       {
@@ -1080,7 +1079,8 @@ export const mockTeamMembers: TeamMember[] = [
     avatar: "/images/avatars/李绪泰.jpg",
     email: "xutaili@mail.ustc.edu.cn",
     researchInterests: ["服务调度", "体验设计"],
-    bio: "硕士研究生（学术），专注于服务调度和体验设计研究。",
+    type: "academic",
+    bio: "专注于服务调度和体验设计研究。",
     joinYear: 2025,
     education: [
       {
@@ -1099,7 +1099,8 @@ export const mockTeamMembers: TeamMember[] = [
     avatar: "/images/avatars/徐光辉.jpg",
     email: "sa25204201@mail.ustc.edu.cn",
     researchInterests: ["组合优化", "强化学习"],
-    bio: "硕士研究生（学术），专注于组合优化和强化学习研究。",
+    type: "academic",
+    bio: "专注于组合优化和强化学习研究。",
     joinYear: 2025,
     education: [
       {
@@ -1118,7 +1119,8 @@ export const mockTeamMembers: TeamMember[] = [
     avatar: "/images/avatars/张芳菲.jpg",
     email: "fangfeizhang@mail.ustc.edu.cn",
     researchInterests: ["服务调度", "应急物流"],
-    bio: "硕士研究生（学术），专注于服务调度和应急物流研究。",
+    type: "academic",
+    bio: "专注于服务调度和应急物流研究。",
     joinYear: 2025,
     education: [
       {
@@ -1137,7 +1139,8 @@ export const mockTeamMembers: TeamMember[] = [
     avatar: "/images/avatars/郑永胜.jpg",
     email: "zhengys30@mail.ustc.edu.cn",
     researchInterests: ["组合优化"],
-    bio: "硕士研究生（学术），专注于组合优化研究。",
+    type: "academic",
+    bio: "专注于组合优化研究。",
     joinYear: 2025,
     education: [
       {
@@ -1156,7 +1159,8 @@ export const mockTeamMembers: TeamMember[] = [
     avatar: "/images/avatars/彭薏仰.jpg",
     email: "pengyiyang@mail.ustc.edu.cn",
     researchInterests: ["运筹优化"],
-    bio: "硕士研究生（工程），专注于运筹优化研究。",
+    type: "engineer",
+    bio: "专注于运筹优化研究。",
     joinYear: 2025,
     education: [
       {
@@ -1175,7 +1179,8 @@ export const mockTeamMembers: TeamMember[] = [
     avatar: "/images/avatars/朱传奇.jpg",
     email: "zhuchuanqi@mail.ustc.edu.cn",
     researchInterests: ["动态规划", "机器学习"],
-    bio: "硕士研究生（工程），专注于动态规划和机器学习研究。",
+    type: "engineer",
+    bio: "专注于动态规划和机器学习研究。",
     joinYear: 2025,
     education: [
       {
@@ -2823,6 +2828,52 @@ export const mockTimeline: NewsItem[] = [
     tags: ["奖学金", "荣誉奖项"],
     author: "实验室办公室",
   },
+  {
+    id: "news16",
+    title: "祝贺秋炜与佳洛获得国奖",
+    category: "achievement",
+    content: "祝贺秋炜与佳洛获得国奖！",
+    publishDate: "2025-10-16",
+    status: "published",
+    tags: ["基金", "荣誉奖项"],
+  },
+  {
+    id: "news17",
+    title: "祝贺刘林冬教授团队获2025年度长鑫科技集团股份有限公司鑫火奖",
+    category: "achievement",
+    images: ["images/gallery/20251115102915.jpg"],
+    content: "祝贺刘林冬教授团队获2025年度长鑫科技集团股份有限公司鑫火奖",
+    publishDate: "2025-11-15",
+    status: "published",
+    tags: ["基金", "荣誉奖项"],
+  },
+  {
+    id: "news18",
+    title: "祝贺刘林冬受邀担任Decision Science副主编",
+    category: "achievement",
+    content: "祝贺刘林冬受邀担任Decision Science副主编",
+    publishDate: "2025-12-15",
+    status: "published",
+    tags: ["荣誉奖项"],
+  },
+  {
+    id: "news19",
+    title: "祝贺徐宽与郑晨龙论文被CIE接收、汪勐航与逯兰TRE小修、蔚乾NRL大修",
+    category: "achievement",
+    content: "祝贺徐宽与郑晨龙论文被CIE接收、汪勐航与逯兰TRE小修、蔚乾NRL大修",
+    publishDate: "2025-10-15",
+    status: "published",
+    tags: ["论文", "学术成果"],
+  },
+  {
+    id: "news20",
+    title: "祝贺谭政拿到TS大修",
+    category: "achievement",
+    content: "祝贺谭政拿到TS大修",
+    publishDate: "2025-12-27",
+    status: "published",
+    tags: ["论文", "学术成果"],
+  },
 ];
 
 // 新闻动态数据（包含多种类型）
@@ -2989,8 +3040,53 @@ export const mockNews: NewsItem[] = [
     status: "published",
     tags: ["基金", "荣誉奖项"],
   },
+  {
+    id: "news16",
+    title: "祝贺秋炜与佳洛获得国奖",
+    category: "achievement",
+    content: "祝贺秋炜与佳洛获得国奖！",
+    publishDate: "2025-10-16",
+    status: "published",
+    tags: ["基金", "荣誉奖项"],
+  },
+  {
+    id: "news17",
+    title: "祝贺刘林冬教授团队获2025年度长鑫科技集团股份有限公司鑫火奖",
+    category: "achievement",
+    images: ["images/gallery/20251115102915.jpg"],
+    content: "祝贺刘林冬教授团队获2025年度长鑫科技集团股份有限公司鑫火奖",
+    publishDate: "2025-11-15",
+    status: "published",
+    tags: ["基金", "荣誉奖项"],
+  },
+  {
+    id: "news18",
+    title: "祝贺刘林冬受邀担任Decision Science副主编",
+    category: "achievement",
+    content: "祝贺刘林冬受邀担任Decision Science副主编",
+    publishDate: "2025-12-15",
+    status: "published",
+    tags: ["荣誉奖项"],
+  },
+  {
+    id: "news19",
+    title: "祝贺徐宽与郑晨龙论文被CIE接收、汪勐航与逯兰TRE小修、蔚乾NRL大修",
+    category: "achievement",
+    content: "祝贺徐宽与郑晨龙论文被CIE接收、汪勐航与逯兰TRE小修、蔚乾NRL大修",
+    publishDate: "2025-10-15",
+    status: "published",
+    tags: ["论文", "学术成果"],
+  },
+  {
+    id: "news20",
+    title: "祝贺谭政拿到TS大修",
+    category: "achievement",
+    content: "祝贺谭政拿到TS大修",
+    publishDate: "2025-12-27",
+    status: "published",
+    tags: ["论文", "学术成果"],
+  },
 ];
-
 // 示例项目数据
 export const mockProjects: Project[] = [
   {

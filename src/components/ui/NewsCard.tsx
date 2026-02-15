@@ -86,7 +86,7 @@ const NewsCard: React.FC<NewsCardProps> = ({
   return (
     <Link to={`/news/${news.id}`} className="block">
       <Card
-        className={`group hover:shadow-lg transition-all duration-200 ${className}`}
+        className={`group hover:shadow-lg transition-all duration-200 h-full ${className}`}
         hoverable
       >
         <div className="space-y-3">

@@ -15,19 +15,19 @@ const Home: React.FC = () => {
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-primary-900 via-primary-800 to-blue-900 text-white">
         <Container>
-          <div className="py-24 md:py-32">
-            <div className="max-w-4xl mx-auto">
-              <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-                运筹共学社
+          <div className="py-8 md:py-16">
+            <div className="max-w-6xl mx-auto">
+              <h1 className="text-5xl font-bold mb-2 leading-tight">
+                智能决策博弈与数字经济创新
               </h1>
               <h2 className="text-xl md:text-2xl mb-8 text-blue-100">
                 Laboratory for Intellectual Decision-making in Engineering and
                 Analytics
               </h2>
-              <p className="text-lg md:text-xl mb-8 text-blue-100 leading-relaxed max-w-3xl">
-                运筹共学社隶属于中科大管理学院和“智能决策博弈与数字经济创新”安徽省哲学社会科学重点实验室，主要运用线性规划、组合优化、鲁棒优化、强化学习等运筹管理和人工智能等学科中的方法，通过数据分析、数学建模、模型解析、实验仿真的范式，对交通、物流、制造、应急等场景中的决策与博弈问题进行研究。
-                <br />
-                运筹共学社的研究工作得到了国家自然科学基金、中科院、安徽省自然科学基金，以及芯片研发、制造业头部等企业的资助，研究方向为智能决策与博弈，包括复杂系统博弈与合作治理、大规模随机系统协同管理优化、行为调度决策与经济效用分析、强化学习在组合优化中的应用、数据驱动的运营管理、仿真优化、智慧交通物流、智慧电网、智能制造、非常规情境应急管理等智能决策应用。
+              <p className="text-lg mb-4 text-white leading-relaxed max-w-5xl">
+                隶属于中科大管理学院和“智能决策博弈与数字经济创新”安徽省哲学社会科学重点实验室，主要运用线性规划、组合优化、鲁棒优化、强化学习等运筹管理和人工智能等学科中的方法，通过数据分析、数学建模、模型解析、实验仿真的范式，对交通、物流、制造、应急等场景中的决策与博弈问题进行研究。</p>
+                <p className="text-lg mb-4 text-white leading-relaxed max-w-5xl">
+                实验室的研究工作得到了国家自然科学基金、中科院、安徽省自然科学基金，以及芯片研发、制造业头部等企业的资助，研究方向为智能决策与博弈，包括复杂系统博弈与合作治理、大规模随机系统协同管理优化、行为调度决策与经济效用分析、强化学习在组合优化中的应用、数据驱动的运营管理、仿真优化、智慧交通物流、智慧电网、智能制造、非常规情境应急管理等智能决策应用。
               </p>
             </div>
           </div>
@@ -51,8 +51,8 @@ const Home: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 mb-6">
-            {/* 显示前4个团队成员 */}
-            {mockTeamMembers.slice(0, 6).map((member) => (
+            {/* 显示所有老师 */}
+            {mockTeamMembers.filter((member) => member.role === "faculty").map((member) => (
               <MemberCard key={member.id} member={member} />
             ))}
           </div>

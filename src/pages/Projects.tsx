@@ -82,6 +82,27 @@ const researchAreas = [
   },
 ];
 
+// 研究生课题/学位论文数据（姓名、学位/类型、年份、研究课题）
+const researchTheses = [
+  { name: "宣洪伟", degree: "博士", year: 2022, topic: "灾后网络修复背景下的路径优化设施选址及成本分摊研究" },
+  { name: "周余倩", degree: "博士", year: 2022, topic: "考虑质量差异与第三方回收的企业运营策略研究" },
+  { name: "张超", degree: "硕士(学术)", year: 2019, topic: "设施灾后恢复研究" },
+  { name: "李子慷", degree: "硕士(学术)", year: 2021, topic: "相同并行机器调度合作博弈中的定价式稳定策略研究" },
+  { name: "吴振宇", degree: "硕士(学术)", year: 2022, topic: "增材制造背景下包含二维装箱的机器调度优化" },
+  { name: "王磊", degree: "硕士(工程)", year: 2022, topic: "Z公司塑料管道业务竞争战略研究" },
+  { name: "余烁", degree: "硕士(学术)", year: 2023, topic: "基于多因子理论的投资组合选择模型" },
+  { name: "杨迪", degree: "硕士(工程)", year: 2023, topic: "内嵌阶梯式雪球期权的结构化产品设计" },
+  { name: "李胜", degree: "硕士(工程)", year: 2024, topic: "多站点增材制造商合作交付物流成本优化与分摊" },
+  { name: "林秋满", degree: "硕士(学术)", year: 2024, topic: "分布式3D打印背景下生产和运输综合优化问题研究" },
+  { name: "陆甜甜", degree: "硕士(学术)", year: 2024, topic: "基于合作博弈与逆优化的共享储能系统利益协同机制研究" },
+  { name: "杨梦格", degree: "硕士(工程)", year: 2024, topic: "" },
+  { name: "于成成", degree: "博士", year: 2025, topic: "共享微出行维修与换电:单运营商运维与多运营商合作研究" },
+  { name: "王建志", degree: "硕士(学术)", year: 2025, topic: "竞争环境下考虑双目标企业的渠道入侵和信息共享策略研究" },
+  { name: "陆运阳", degree: "硕士(工程)", year: 2025, topic: "—" },
+  { name: "李想", degree: "硕士(工程)", year: 2025, topic: "基于强化学习的零售物流装箱策略研究" },
+  { name: "郑晨龙", degree: "硕士(工程)", year: 2025, topic: "基于学习搜索的多时间窗路径规划问题求解方法" },
+];
+
 const Research: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState("");
 
@@ -160,6 +181,63 @@ const Research: React.FC = () => {
               </span>
             </div>
           </div> */}
+        </div>
+
+        {/* 研究生课题/学位论文表格 */}
+        <div className="mb-14">
+          <div className="overflow-x-auto rounded-xl border border-gray-200 bg-white shadow-sm">
+            <table className="min-w-full divide-y divide-gray-200">
+              <thead>
+                <tr className="bg-gray-50">
+                  <th
+                    scope="col"
+                    className="px-4 py-3 text-left text-sm font-semibold text-gray-900"
+                  >
+                    姓名
+                  </th>
+                  <th
+                    scope="col"
+                    className="px-4 py-3 text-left text-sm font-semibold text-gray-900 whitespace-nowrap"
+                  >
+                    学位/类型
+                  </th>
+                  <th
+                    scope="col"
+                    className="px-4 py-3 text-left text-sm font-semibold text-gray-900 whitespace-nowrap"
+                  >
+                    年份
+                  </th>
+                  <th
+                    scope="col"
+                    className="px-4 py-3 text-left text-sm font-semibold text-gray-900"
+                  >
+                    研究课题
+                  </th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-200 bg-white">
+                {researchTheses.map((row, index) => (
+                  <tr
+                    key={index}
+                    className="hover:bg-gray-50/80 transition-colors"
+                  >
+                    <td className="px-4 py-3 text-sm font-medium text-gray-900 whitespace-nowrap">
+                      {row.name}
+                    </td>
+                    <td className="px-4 py-3 text-sm text-gray-600 whitespace-nowrap">
+                      {row.degree}
+                    </td>
+                    <td className="px-4 py-3 text-sm text-gray-600 whitespace-nowrap">
+                      {row.year}
+                    </td>
+                    <td className="px-4 py-3 text-sm text-gray-600">
+                      {row.topic || "—"}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
 
         {/* 研究领域网格 - 瀑布流布局 */}

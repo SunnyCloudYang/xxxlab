@@ -19,11 +19,11 @@ const Team: React.FC = () => {
       ? mockTeamMembers
       : selectedRole === "academic_master"
       ? mockTeamMembers.filter(
-          (m) => m.role === "master" && m.bio?.includes("（学术）")
+          (m) => m.role === "master" && m.type === "academic"
         )
       : selectedRole === "professional_master"
       ? mockTeamMembers.filter(
-          (m) => m.role === "master" && m.bio?.includes("（工程）")
+          (m) => m.role === "master" && m.type === "engineer"
         )
       : mockTeamMembers.filter((member) => member.role === selectedRole);
 
@@ -32,10 +32,10 @@ const Team: React.FC = () => {
     faculty: mockTeamMembers.filter((m) => m.role === "faculty"),
     phd: mockTeamMembers.filter((m) => m.role === "phd"),
     academic_master: mockTeamMembers.filter(
-      (m) => m.role === "master" && m.bio?.includes("（学术）")
+      (m) => m.role === "master" && m.type === "academic"
     ),
     professional_master: mockTeamMembers.filter(
-      (m) => m.role === "master" && m.bio?.includes("（工程）")
+      (m) => m.role === "master" && m.type === "engineer"
     ),
     alumni: mockTeamMembers.filter((m) => m.role === "alumni"),
   };

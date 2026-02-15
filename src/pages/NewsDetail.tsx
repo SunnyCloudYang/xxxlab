@@ -139,7 +139,7 @@ const NewsDetail: React.FC = () => {
                     className="relative aspect-video bg-gray-100 rounded-lg overflow-hidden"
                   >
                     <img
-                      src={image}
+                      src={`${import.meta.env.BASE_URL}${image}`}
                       alt={`${news.title} - 图片 ${index + 1}`}
                       className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                     />
