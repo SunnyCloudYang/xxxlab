@@ -22,7 +22,9 @@ const Footer: React.FC = () => {
                   <span className="text-white font-bold text-lg">LIDEA</span>
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold">运筹共学社</h3>
+                  <h3 className="text-xl font-bold">
+                    智能决策博弈与数字经济创新
+                  </h3>
                   <p className="text-gray-400 text-sm">
                     Laboratory for Intellectual Decision-making in Engineering
                     and Analytics
