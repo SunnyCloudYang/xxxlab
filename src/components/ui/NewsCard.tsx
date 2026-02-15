@@ -89,9 +89,9 @@ const NewsCard: React.FC<NewsCardProps> = ({
         className={`group hover:shadow-lg transition-all duration-200 h-full ${className}`}
         hoverable
       >
-        <div className="space-y-3">
+        <div className="flex flex-col h-full">
           {/* 标签和日期 */}
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-between mb-2">
             <span
               className={`inline-block px-3 py-1 rounded-full text-xs font-medium ${getCategoryColor(
                 news.category
@@ -106,33 +106,35 @@ const NewsCard: React.FC<NewsCardProps> = ({
           </div>
 
           {/* 标题 */}
-          <h3 className="font-semibold text-lg group-hover:text-primary-600 transition-colors line-clamp-2">
+          <h3 className="font-semibold text-lg group-hover:text-primary-600 transition-colors line-clamp-2 mb-2">
             {news.title}
           </h3>
 
-          {/* 内容摘要 */}
-          <p className="text-gray-600 text-sm leading-relaxed line-clamp-3">
-            {news.content}
-          </p>
+          <div className="flex flex-col flex-1 justify-between">
+            {/* 内容摘要 */}
+            <p className="text-gray-600 text-sm leading-relaxed line-clamp-3 mb-2 flex-1">
+              {news.content}
+            </p>
 
-          {/* 标签 */}
-          {news.tags && news.tags.length > 0 && (
-            <div className="flex flex-wrap gap-1 pt-2">
-              {news.tags.slice(0, 3).map((tag, index) => (
-                <span
-                  key={index}
-                  className="inline-block bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded"
-                >
-                  #{tag}
-                </span>
-              ))}
-              {news.tags.length > 3 && (
-                <span className="inline-block text-gray-500 text-xs px-2 py-1">
-                  +{news.tags.length - 3}
-                </span>
-              )}
-            </div>
-          )}
+            {/* 标签 */}
+            {news.tags && news.tags.length > 0 && (
+              <div className="flex flex-wrap gap-1 pt-2">
+                {news.tags.slice(0, 3).map((tag, index) => (
+                  <span
+                    key={index}
+                    className="inline-block bg-gray-100 text-gray-500 text-xs px-2 py-1 rounded"
+                  >
+                    #{tag}
+                  </span>
+                ))}
+                {news.tags.length > 3 && (
+                  <span className="inline-block text-gray-500 text-xs px-2 py-1">
+                    +{news.tags.length - 3}
+                  </span>
+                )}
+              </div>
+            )}
+          </div>
         </div>
       </Card>
     </Link>

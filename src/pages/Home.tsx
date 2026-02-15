@@ -18,7 +18,7 @@ const Home: React.FC = () => {
           <div className="py-8 md:py-16">
             <div className="max-w-6xl mx-auto">
               <h1 className="text-5xl font-bold mb-2 leading-tight">
-                智能决策博弈与数字经济创新
+                智能决策博弈与数字经济创新实验室
               </h1>
               <h2 className="text-xl md:text-2xl mb-8 text-blue-100">
                 Laboratory for Intellectual Decision-making in Engineering and
@@ -50,7 +50,7 @@ const Home: React.FC = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 mb-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-6">
             {/* 显示所有老师 */}
             {mockTeamMembers.filter((member) => member.role === "faculty").map((member) => (
               <MemberCard key={member.id} member={member} />

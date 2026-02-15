@@ -417,7 +417,7 @@ export const mockTeamMembers: TeamMember[] = [
       "vehicle platoon",
       "cooperative game",
     ],
-    bio: "专注于车辆编队、合作博弈和车辆路径问题研究。",
+    bio: "专注于车辆编队和合作博弈问题研究。",
     joinYear: 2019,
     education: [
       {
@@ -461,7 +461,7 @@ export const mockTeamMembers: TeamMember[] = [
       "vehicle routing problem",
       "cooperative game",
     ],
-    bio: "专注于车辆路径问题、合作博弈和分布式鲁棒优化研究。",
+    bio: "专注于合作博弈和分布式鲁棒优化研究。",
     joinYear: 2019,
     education: [
       {
@@ -740,7 +740,7 @@ export const mockTeamMembers: TeamMember[] = [
     email: "rjxu@mail.ustc.edu.cn",
     researchInterests: ["动态规划", "农业优化", "可持续运营"],
     type: "academic",
-    bio: "专注于动态规划、农业优化和可持续运营研究。",
+    bio: "专注于动态规划和可持续运营研究。",
     joinYear: 2023,
     education: [
       {
