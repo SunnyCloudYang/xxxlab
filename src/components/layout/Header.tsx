@@ -44,7 +44,7 @@ const Header: React.FC = () => {
         "fixed top-0 w-full z-50 transition-all duration-200 border-b backdrop-blur-lg",
         isScrolled
           ? "bg-white/90 border-gray-200"
-          : "bg-transparent border-transparent"
+          : "bg-transparent border-transparent",
       )}
     >
       {({ open }) => (
@@ -55,7 +55,7 @@ const Header: React.FC = () => {
               <div className="flex items-center">
                 <Link to="/" className="flex items-center space-x-3">
                   <div className="h-10 w-auto bg-primary-900 rounded-md flex items-center justify-center">
-                    {/* <span className="text-primary font-bold text-lg">3DV</span>
+                    {/* <span className="text-primary font-bold text-lg">智能决策博弈与数字经济创新</span>
                      */}
                     <img
                       src={import.meta.env.BASE_URL + "/images/logo.png"}
@@ -65,7 +65,7 @@ const Header: React.FC = () => {
                   </div>
                   {/* <div className="hidden sm:block">
                     <h1 className="text-xl font-bold text-gray-900">
-                      3DV 实验室
+                      智能决策博弈与数字经济创新 实验室
                     </h1>
                     <span className="text-sm text-gray-600">
                       3D Vision Laboratory
@@ -85,7 +85,7 @@ const Header: React.FC = () => {
                         "px-2.5 py-2 text-sm font-medium border-b-2 border-transparent transition-colors duration-150",
                         isCurrentPath(item.path)
                           ? "text-primary-900 border-primary-900"
-                          : "text-gray-700 hover:text-primary-900 hover:border-gray-300"
+                          : "text-gray-700 hover:text-primary-900 hover:border-gray-300",
                       )}
                     >
                       {item.name}
@@ -120,7 +120,7 @@ const Header: React.FC = () => {
                     "block px-3 py-2 text-base font-medium border-l-2 border-transparent transition-colors duration-150",
                     isCurrentPath(item.path)
                       ? "text-primary-900 border-primary-900"
-                      : "text-gray-700 hover:text-primary-900 hover:border-gray-300"
+                      : "text-gray-700 hover:text-primary-900 hover:border-gray-300",
                   )}
                 >
                   {item.name}

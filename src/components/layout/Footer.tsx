@@ -96,7 +96,7 @@ const Footer: React.FC = () => {
         <div className="border-t border-gray-800 py-6">
           <div className="flex flex-col sm:flex-row justify-between items-center space-y-2 sm:space-y-0">
             <p className="text-gray-400 text-sm">
-              © {currentYear} 3DV 实验室. 保留所有权利.
+              © {currentYear} 智能决策博弈与数字经济创新 实验室. 保留所有权利.
             </p>
             <div className="flex space-x-6 text-sm text-gray-400">
               <Link
